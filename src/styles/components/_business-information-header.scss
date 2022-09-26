@@ -1,0 +1,74 @@
+.business-information-header {
+    border: 0.7px solid $primary-color;
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem 3rem;
+    margin: 1rem auto 1.5rem auto;
+    background-color: $light-grey-4;
+    box-shadow: $input-box-shadow;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    &__add-new-logo-icon {
+        margin-right: 5px;
+    }
+    &__logo {
+        display: inline-block;
+        margin: 1.5rem 0 1rem 0;
+    }
+    &__add-logo-section {
+        display: flex;
+        justify-content: center;
+    }
+    &__add-logo-text {
+        font-size: 1.4rem;
+    }
+    &__company-logo-section {
+        border: 0.5px dashed $primary-color;
+        background-color: $light-grey-3;
+        justify-content: center;
+        text-align: center;
+        border-radius: 4px;
+        width: 14.2rem;
+        height: 9.2rem;
+        cursor: pointer;
+    }
+    &__company-text-information {
+        text-align: center;
+    }
+    &__company-name {
+        font-size: 2.5rem;
+        color: $primary-color;
+    }
+    &__company-address,
+    &__company-profile {
+        font-size: 1.4rem;
+        color: $dark-grey-5;
+    }
+    &__company-profile {
+        font-size: 1.4rem;
+        &__icon {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.company-logo {
+    vertical-align: middle;
+    border-style: none;
+    width: 13rem;
+    height: 8.6rem;
+    padding-top: 0.5rem;
+    &__options {
+        display: flex;
+        justify-content: space-around;
+        font-size: small;
+        width: 13.5rem;
+        margin-top: 0.5rem;
+    }
+    &__error {
+        color: $error;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+}

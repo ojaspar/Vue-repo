@@ -1,0 +1,86 @@
+.dashboard-stats {
+    width: 100%;
+    margin: 1.4375rem 0;
+    display: flex;
+    justify-content: space-between;
+    @include media-breakpoint-between(xs, md) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include media-breakpoint-up(md) {
+        display: flex;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @include media-breakpoint-between(sm, md) {
+        margin-bottom: 0;
+    }
+    &__stat {
+        background: $primary-white;
+        box-shadow: $card-shadow;
+        border-radius: 0.25rem;
+        padding: 12px 10px 5px;
+        min-height: 96px;
+        margin-right: 20px;
+        width: 100%;
+        @include media-breakpoint-between(xs, md) {
+            margin-bottom: 15px;
+            margin-right: 10px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.left > .title,
+.right > .title {
+    font-size: 16px;
+    letter-spacing: 0.0622rem;
+    text-transform: uppercase;
+    color: $title-color;
+    font-weight: 500;
+}
+.figure {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.06px;
+    color: $primary-color;
+
+    margin: 10px 0 6px;
+}
+.meta {
+    font-weight: normal;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark-blue;
+    margin-bottom: 0;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.portlet-items {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.0375px;
+}
+
+.portlet {
+    margin-bottom: 0;
+
+    &__count {
+        @extend .portlet-items;
+        color: $success;
+    }
+    &__text {
+        @extend .portlet-items;
+        color: $dark-blue;
+    }
+}

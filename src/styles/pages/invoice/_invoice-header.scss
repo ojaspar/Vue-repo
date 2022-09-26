@@ -1,0 +1,32 @@
+.invoice-header {
+    display: flex;
+    align-items: center;
+    background-color: $light-blue-9;
+    height: 4rem;
+    font-size: 1.6rem;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    &__wrapper {
+        padding: 0;
+        margin: 0;
+    }
+    &__name {
+        margin-left: 0.5rem;
+        color: $primary-color;
+        font-weight: bolder;
+    }
+    &__header-text {
+        color: $color-black-3;
+        font-weight: 600;
+    }
+    &__change-name {
+        font-size: 1.4rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: $primary-black;
+        border-bottom: 1px dotted;
+        @include media-breakpoint-between(xs, md) {
+            font-size: 0.9rem;
+        }
+    }
+}

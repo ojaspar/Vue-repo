@@ -1,0 +1,113 @@
+.new-product-form {
+    box-shadow: $input-box-shadow;
+    border-radius: 1rem;
+
+    &__heading {
+        width: 100%;
+        padding: 0 13px;
+        border-radius: 5px 5px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--text {
+            color: $primary-white;
+            font-size: 16px;
+        }
+    }
+
+    &__input-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 34px;
+        margin: 0 10px;
+        border: 1px solid $light-brown-4;
+        box-sizing: border-box;
+        border-radius: 4px;
+        font-size: 13px;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    &__description-container {
+        @extend .new-product-form__input-container;
+        height: 5.85rem;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    &__save-btn {
+        background-color: $primary-color;
+        color: $primary-white;
+        padding: 10px;
+        border-radius: 4px;
+        height: 34px;
+        width: 30%;
+        &:active,
+        &:focus {
+            background-color: $primary-color;
+            color: $primary-white;
+        }
+    }
+}
+
+.form-input {
+    border: none;
+    display: inline-block;
+
+    > .form-control {
+        &::placeholder {
+            font-size: 14px;
+        }
+    }
+
+    &__container {
+        width: 100%;
+    }
+}
+
+.select {
+    &__container {
+        margin-top: 1px;
+        width: 100%;
+    }
+    &__new-product-form {
+        border: none;
+        display: inline-block;
+        margin-top: 4px !important;
+        font-size: 14px;
+    }
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.close-btn {
+    color: $dark-grey-1;
+    font-size: 25px;
+}
+
+#new-product-form {
+    &___BV_modal_header_ {
+        border: none;
+        padding: 0;
+    }
+    &___BV_modal_body_ {
+        border: none;
+        padding: 0 13px;
+    }
+    &___BV_modal_footer_ {
+        display: none;
+    }
+    &___BV_modal_content_ {
+        border: none;
+        border-radius: 5px;
+    }
+}

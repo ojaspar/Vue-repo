@@ -1,0 +1,16 @@
+.search-create {
+    &__input {
+        height: 35px;
+    }
+}
+
+.search-create > .form-control {
+    width: unset;
+    padding: 2.5rem;
+}
+
+.search-create > .search {
+    width: 360px;
+    padding: 2rem;
+    background: $primary-white;
+}

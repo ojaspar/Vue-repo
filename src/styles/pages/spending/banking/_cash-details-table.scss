@@ -1,0 +1,111 @@
+//desktp styles
+.cash-account-table {
+    margin: 20px 15px;
+    &__header {
+        display: flex;
+        text-align: left;
+        justify-content: space-between;
+        background: $banking-dashboard-header-grey;
+        border-radius: 4px 4px 0px 0px;
+        padding: 9.45px 0 7.55px;
+        font-size: 14px;
+        font-weight: bold;
+        color: $primary-black;
+    }
+    &__content {
+        display: flex;
+        text-align: left;
+        justify-content: space-between;
+        padding: 24px 0 13px;
+        font-size: 14px;
+        line-height: 17px;
+        color: $primary-black;
+        border-bottom: 0.5px solid $faint-grey;
+        &--no-data {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            padding: 20px 0;
+            font-size: 14px;
+            line-height: 17px;
+            border-bottom: 0.5px solid $faint-grey;
+        }
+        &--loding {
+            color: $color-grey-medium;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            padding: 35px 0;
+            font-size: 35px;
+            line-height: 17px;
+            border-bottom: 0.5px solid $faint-grey;
+        }
+        &--empty {
+            margin-left: 50px;
+        }
+    }
+    &__amount {
+        @include media-breakpoint-between(lg, lg) {
+            text-align: end;
+            margin-right: 15px;
+        }
+        &--excess {
+            font-size: 14px;
+            color: $primary-black;
+            line-height: 17px;
+            @include media-breakpoint-between(lg, lg) {
+                text-align: end;
+                margin-right: 15px;
+            }
+        }
+        &--deficit {
+            font-size: 14px;
+            color: $notification-red;
+            line-height: 17px;
+            @include media-breakpoint-between(lg, lg) {
+                text-align: end;
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+//mobile styles
+
+.account-mobile-table {
+    margin: 20px 0;
+    border-bottom: 1px solid $faint-grey;
+    @include media-breakpoint-down(sm) {
+        margin-top: 20px;
+    }
+}
+.transaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__date {
+        font-size: 12px;
+        line-height: 14px;
+        color: $primary-color;
+    }
+    &__details {
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark-grey-1;
+    }
+    &__type {
+        font-size: 14px;
+        line-height: 17px;
+        color: $primary-black;
+    }
+    &__amount {
+        font-size: 14px;
+        line-height: 17px;
+        color: $primary-black;
+        &--deficit {
+            font-size: 14px;
+            line-height: 17px;
+            color: $notification-red;
+        }
+    }
+}

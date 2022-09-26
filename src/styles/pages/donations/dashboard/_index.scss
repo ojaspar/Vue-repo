@@ -1,0 +1,96 @@
+.donations-dashboard {
+    &__header-section {
+        display: none;
+        @include media-breakpoint-down(lg) {
+            display: inline;
+            background-color: $light-blue-9;
+            padding: 10px 8px;
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+        }
+    }
+    &__header-text {
+        font-size: 18px;
+        padding: 0 13px;
+        color: $color-black-3;
+        text-align: center;
+    }
+    &__stats {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include media-breakpoint-between(xs, md) {
+            flex-direction: column;
+        }
+    }
+    &__card-container {
+        &--donations {
+            border-radius: 8px 5px 5px 8px !important;
+            border-left: 6px solid $finance-green;
+        }
+        &--donations-count {
+            @extend .donations-dashboard__card-container--donations;
+            border-left: 6px solid #ffa290;
+        }
+        &--pledges {
+            @extend .donations-dashboard__card-container--donations;
+            border-left: 6px solid #2482da;
+            margin-right: 0 !important;
+        }
+    }
+    &__card-title {
+        display: contents;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.996px;
+        text-transform: uppercase;
+        color: $primary-black;
+    }
+
+    &__card-text {
+        font-size: 14px;
+        letter-spacing: -0.0428571px;
+        &--dark {
+            color: $color-black-3;
+        }
+    }
+
+    &__mid-section {
+        margin-top: 14px;
+        display: flex;
+    }
+
+    &__table {
+        margin: 15px 0;
+        padding: 0;
+    }
+
+    &__button-row {
+        margin: 15px -15px;
+        display: none;
+
+        @include media-breakpoint-down(lg) {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__filter-buttons {
+        display: flex;
+        flex-flow: row wrap;
+
+        @media screen and (min-width: 536px) {
+            &--add-donation {
+                margin-left: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 536px) {
+            flex-direction: column;
+
+            &--add-donation {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

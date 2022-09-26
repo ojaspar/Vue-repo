@@ -1,0 +1,192 @@
+.product-summary-page {
+    &__table-body {
+        background: $primary-white;
+        font-size: 14px;
+        border-radius: 4px;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 8px;
+        padding: 7px 15px 7px 4px;
+        border: 1px solid $primary-color;
+        box-shadow: 0px 1px 15px rgba(145, 144, 144, 0.15);
+    }
+    &__table-heading {
+        font-size: 14px;
+        color: $color-black-3;
+
+        &--number-truncated {
+            width: 2.8%;
+        }
+
+        &--item-truncated {
+            width: 40.2%;
+        }
+
+        &--costing-truncated {
+            width: 30%;
+        }
+        &--supply-status-truncated {
+            width: 27%;
+        }
+
+        &--icon {
+            width: 2%;
+        }
+
+        &--number {
+            width: 2.2%;
+        }
+        &--item {
+            width: 16.8%;
+        }
+        &--costing {
+            width: 19%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--total-excluding-vat {
+            width: 13%;
+        }
+
+        &--sub-total {
+            width: 10%;
+        }
+
+        &--vat {
+            width: 9%;
+        }
+
+        &--total {
+            width: 11%;
+        }
+
+        &--sub-total {
+            width: 10%;
+        }
+
+        &--supply-status {
+            width: 11%;
+            display: flex;
+            align-items: center;
+        }
+        &--discount-text {
+            display: block;
+        }
+        &__status-text {
+            margin: 0;
+
+            &--supplied {
+                color: $primary-green;
+            }
+
+            &--pending {
+                color: $primary-orange;
+            }
+
+            &--cancelled {
+                color: $dark-grey-1;
+            }
+
+            &--none {
+                color: $danger-red;
+            }
+        }
+        &__icons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &--attachment-icon {
+            width: 1.5%;
+            margin-right: 14px;
+        }
+        &--edit-icon {
+            width: 1.5%;
+            margin-right: 14px;
+        }
+        &--delete-icon {
+            width: 1.5%;
+        }
+    }
+    &__total-section {
+        &--xl {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            border-top: 1px solid $dark-grey-1;
+            padding-top: 10px;
+            margin-top: 8px;
+        }
+    }
+    &__total-amount-section,
+    &__amount-paid-amount-section,
+    &__balance-amount-section {
+        &--xl {
+            display: flex;
+        }
+    }
+    &__balance-amount-section {
+        &--xl {
+            font-weight: 600;
+        }
+    }
+    &__text {
+        &--pull-right {
+            margin-left: 15px;
+        }
+
+        &--italics {
+            font-style: italic;
+        }
+    }
+
+    &__total-amount-row {
+        margin: 6px 0;
+    }
+
+    &__total-amount {
+        border-top: 2px solid $light-grey-2;
+        border-bottom: 2px solid $light-grey-2;
+        padding: 3px 0;
+    }
+
+    &__mobile {
+        font-size: 14px;
+
+        &--dropdown-icon,
+        &--status-text {
+            text-align: right;
+        }
+
+        .col,
+        .col-12 {
+            margin-bottom: 8px;
+        }
+
+        &--icons-section {
+            max-width: 175px;
+            font-size: 12px;
+            margin-top: 12px;
+        }
+
+        &--edit,
+        &--delete {
+            display: flex;
+            max-width: 50%;
+        }
+
+        &--edit {
+            padding-right: 0;
+        }
+
+        &--delete {
+            padding-left: 0;
+        }
+
+        &--edit-icon,
+        &--delete-icon {
+            margin-right: 8px;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.business-stat-card {
+    width: 280px;
+    height: 82px;
+    padding: 4px 15px;
+    background: #ffffff;
+    box-shadow: 0px 4.6814px 18.7256px rgba(53, 55, 81, 0.06);
+    border-radius: 10.9233px;
+    font-weight: 500;
+    font-size: 14px;    
+
+    // @media screen and (min-width: 1440px) {
+    //     width: 343px;
+    // }
+
+    // @media screen and (min-width: 1700px) {
+    //     width: 390px;
+    // }
+
+    // @media screen and (min-width: 1900px) {
+    //     width: 425px;
+    // }
+
+    @include media-breakpoint-between(lg, lg) {
+        height: 70px;
+    }
+
+    @include media-breakpoint-down(md) {
+        font-size: 12px;
+        padding: 15px 23px;
+    }
+
+    &__title {
+        font-size: 14.0442px;
+        line-height: 17px;
+        margin-bottom: 5px;
+        color: rgba(46, 46, 46, 0.6);
+
+        @include media-breakpoint-down(md) {
+            font-size: 12px;
+        }
+    }
+
+    &__total {
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 120%;
+        color: #2e2e2e;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__text {
+        font-size: 10px;
+        line-height: 120%;
+        color: #878787;
+
+        &--cash {
+            color: $primary-green;
+        }
+
+        &--credit {
+            color: $notification-red;
+        }
+    }
+}

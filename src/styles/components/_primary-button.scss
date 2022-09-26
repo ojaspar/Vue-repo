@@ -1,0 +1,30 @@
+.app-primary-btn {
+    color: $primary-white;
+    border: none;
+    width: fit-content;
+    min-width: 145px;
+    height: 34px;
+    background: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+    @include media-breakpoint-up(sm) {
+        min-width: 150px;
+    }
+
+    &:hover {
+        color: $primary-white;
+    }
+    &:active,
+    &:focus {
+        background-color: $primary-color;
+        color: $primary-white;
+    }
+    &:disabled {
+        color: $primary-white;
+        cursor: not-allowed;
+        background: none $light-grey-2;
+    }
+}

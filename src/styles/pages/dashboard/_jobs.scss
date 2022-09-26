@@ -1,0 +1,120 @@
+.jobs {
+    width: 100%;
+    background: $primary-white;
+    box-shadow: 0rem 0.0625rem 0.1875rem rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+    border-radius: 0.25rem;
+    min-height: 30rem;
+    &__header {
+        line-height: 1.25rem;
+        letter-spacing: -0.0031rem;
+        color: #3a3b3f;
+        font-size: 14px;
+    }
+
+    &__divider {
+        background: rgba(239, 239, 239, 0.7);
+        box-shadow: 0px 0px 0px #e4e7eb;
+        font-size: 14px;
+    }
+
+    &__unavailable {
+        display: flex;
+        min-height: 100%;
+        font-size: 14px;
+        margin-top: 50px;
+        color: #7c7c7c;
+    }
+    &__outstanding-orders-section {
+        border-radius: 4px;
+    }
+    &__outstanding-orders-primary-heading {
+        background-color: $light-grey-9;
+        align-items: center;
+        font-size: 14px;
+        height: 34px;
+        padding: 0px 13px;
+    }
+    &__outstanding-orders-text {
+        margin: 0;
+        font-weight: 500;
+    }
+    &__view-details-text {
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        margin: 0;
+    }
+    &__outstanding-orders-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 13px;
+        margin: 0;
+        border-bottom: 1px solid $light-grey-9;
+    }
+    &__outstanding-orders-customer-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__outstanding-orders-customer-text {
+        font-size: 14px;
+        margin: 0 0 10px;
+    }
+    &__outstanding-orders-products-text {
+        font-size: 12px;
+        line-height: 12px;
+        color: $dark-grey-1;
+        margin: 0;
+    }
+    &__outstanding-orders-update-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__outstanding-orders-update-text {
+        font-size: 10px;
+        padding: 0 2px;
+        height: 22px;
+        border: 1px solid $primary-black;
+        cursor: pointer;
+        border-radius: 5px;
+        background: #FFFFFF;
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+    }
+    &__outstanding-orders-number-of-orders-text {
+        font-size: 12px;
+        line-height: 12px;
+        color: $dark-grey-1;
+        margin: 0;
+    }
+    &__no-outstanding-orders-text {
+        font-size: 1.3rem;
+        margin: 1rem 0;
+        text-align: center;
+    }
+}
+
+.job {
+    margin: 2rem 0;
+    font-size: 13px;
+
+    &__decision {
+        width: 8rem;
+    }
+}
+
+.bullet {
+    background: $primary-orange;
+    padding: 1px 6px;
+    border-radius: 50%;
+}
+
+.sort {
+    height: 20px;
+}
+
+.sort * {
+    height: 50%;
+}

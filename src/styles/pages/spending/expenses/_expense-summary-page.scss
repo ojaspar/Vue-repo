@@ -1,0 +1,227 @@
+.expense-summary-page {
+    &__card-container {
+        margin-top: 15px;
+        margin-bottom: 24px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $faint-grey;
+    }
+    &__vendor-item-section {
+        font-size: 14px;
+    }
+    &__item-name-text {
+        font-weight: 600;
+    }
+    &__cost-delivered-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+    &__cost-text,
+    &__paid-text,
+    &__cash-text,
+    &__notes-text {
+        color: $dark-grey-1;
+    }
+    &__withholding-less-text {
+        font-style: italic;
+    }
+    &__withholding-amount-text {
+        margin-left: 5px;
+        &--grey {
+            margin-left: 5px;
+            color: $dark-grey-1;
+        }
+    }
+    &__cost-amount-text,
+    &__paid-amount-text,
+    &__cash-text,
+    &__notes-input-text {
+        margin-left: 5px;
+    }
+    &__delivery-status {
+        font-size: 12px;
+
+        &--delivered {
+            color: $primary-green;
+        }
+
+        &--in-progress {
+            color: $primary-orange;
+        }
+
+        &--none {
+            color: $danger-red;
+        }
+    }
+    &__cash-text {
+        font-style: italic;
+    }
+    &__paid-balance-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+    &__balance-amount-text {
+        margin-left: 5px;
+        color: $primary-red;
+    }
+    &__icons-container {
+        margin-top: 14px;
+    }
+    &__icons-container,
+    &__edit-delete-icons-container,
+    &__edit-icon-container,
+    &__delete-icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+    }
+    &__delete-icon-container {
+        margin-left: 31px;
+    }
+    &__edit-text,
+    &__delete-text,
+    &__mark-delivery-text {
+        margin-left: 5px;
+    }
+    &__add-new-item-btn {
+        @include circular-plus-add-entity;
+        font-size: 14px;
+        margin-bottom: 33px;
+        max-width: 175px;
+        background: transparent;
+        & svg {
+            margin-right: 10px;
+            width: 20px;
+        }
+    }
+    &__total-balance-section {
+        font-size: 16px;
+        color: #282828;
+        background-color: $light-blue-3;
+        padding: 10px 13px;
+        margin-bottom: 50px;
+    }
+    &__total-section,
+    &__amount-paid-section,
+    &__balance-section {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    &__balance-section {
+        font-weight: 600;
+    }
+    &__submit-btn {
+        @include primary-button;
+        margin: 0 25px;
+    }
+    &__view-summary-btn {
+        @include white-button;
+        margin: 0 25px;
+    }
+    &__table-header {
+        font-size: 14px;
+        background: $primary-gradient-background;
+        color: #fff;
+        height: 34px;
+        padding: 9px 15px 9px 4px;
+        border-radius: 4px 4px 0px 0px;
+        display: flex;
+        align-items: center;
+    }
+    &__table-body {
+        background: $primary-white;
+        font-size: 14px;
+        border-radius: 4px;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 13px;
+        padding: 7px 15px 7px 4px;
+        border: 1px solid $primary-color;
+        box-shadow: 0px 1px 15px rgba(145, 144, 144, 0.15);
+    }
+    &__table-heading {
+        font-size: 14px;
+        color: $color-black-3;
+        &--icon {
+            width: 2%;
+        }
+        &--number {
+            width: 2.2%;
+        }
+        &--item {
+            width: 24.47%;
+        }
+        &--costing {
+            width: 17.47%;
+        }
+        &--amount-due {
+            width: 9.22%;
+            font-weight: 600;
+        }
+        &--payment {
+            width: 12.65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__balance-due-amount {
+            font-size: 12px;
+            color: $primary-red;
+        }
+        &--vendor {
+            width: 17.6%;
+        }
+        &--status {
+            width: 11%;
+            display: flex;
+            align-items: center;
+        }
+        &__status-text {
+            margin: 0;
+            color: $primary-green;
+        }
+        &--edit-icon {
+            width: 1.5%;
+            margin-right: 14px;
+        }
+        &--delete-icon {
+            width: 1.5%;
+        }
+    }
+    &__total-section {
+        &--xl {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            border-top: 1px solid $dark-grey-1;
+            padding-top: 10px;
+            margin-bottom: 60px;
+        }
+    }
+    &__total-amount-section,
+    &__amount-paid-amount-section,
+    &__balance-amount-section {
+        &--xl {
+            display: flex;
+        }
+    }
+    &__balance-amount-section {
+        &--xl {
+            font-weight: 600;
+        }
+    }
+    &__text {
+        &--pull-right {
+            margin-left: 15px;
+        }
+    }
+
+    &__row-container {
+        margin-bottom: 30px;
+    }
+}

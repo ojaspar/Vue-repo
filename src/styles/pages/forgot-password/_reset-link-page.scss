@@ -1,0 +1,44 @@
+.reset-link {
+    position: relative;
+    padding: 20px 15px;
+    &__logo-container {
+        @include forgot-password-logo-container;
+    }
+    &__medium-plus-container {
+        @include forgot-password-medium-plus-container;
+    }
+    &__medium-plus-inner-container {
+        @include forgot-password-medium-plus-inner-container;
+    }
+    &__center-items {
+        text-align: center;
+    }
+    &__mail-icon {
+        margin: 50px 0;
+    }
+    &__action-text {
+        font-size: 18px;
+        color: $dark-grey-1;
+        margin-bottom: 50px;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 60px;
+        }
+    }
+    &__button-container {
+        display: flex;
+        justify-content: center;
+    }
+    &__button {
+        @include forgot-password-button;
+    }
+    &__sign-in-text {
+        font-size: 14px;
+        text-align: center;
+    }
+    &__click-here-text {
+        color: #f09222;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

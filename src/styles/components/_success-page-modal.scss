@@ -1,0 +1,43 @@
+
+.success{
+    background-color: $primary-white;
+    padding: 3rem 7.5rem;
+    width: 58.7rem;
+    max-width: 100%;
+    margin: 0 auto 0 auto;
+    &__icon-container {
+        margin: 5rem auto 0 auto;
+        text-align: center;
+    }
+    &__icon {
+        width: 12rem;
+        height: 12rem;
+    }
+    &__message{
+        font-size: 2rem;
+        text-align: center;
+        width: 33rem;
+        max-width: 100%;
+        margin: 4.3rem auto 8rem auto;
+        line-height: 2rem;
+    }
+    &__btn {
+        width: 43.5rem;
+        padding: 2rem 0;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        max-width: 100%;
+        background-image: $button-gradient-color;
+        color: $primary-white;
+        font-size: 2rem;
+        &:hover{
+            text-decoration: none;
+            color: $primary-white;
+        }
+    }
+}   
+
+a.success_btn {
+    text-decoration: none;
+}

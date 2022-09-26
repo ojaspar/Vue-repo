@@ -1,0 +1,12 @@
+.auth-layout {
+    &__footer {
+        color: $primary-white;
+        background-color: $primary-color;
+        text-align: center;
+        padding: 8px;
+        font-size: 14px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,238 @@
+.dashboard-container {
+    margin-left: auto;
+    margin-right: auto;
+    @include media-breakpoint-up(md) {
+        margin: 0;
+        width: 100%;
+        padding: 0;
+    }
+    &__no-transaction-notification {
+        background: rgba(167, 214, 231, 0.5);
+        border-radius: 4px;
+        color: $primary-color;
+        font-size: 12px;
+        padding: 13px;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 15px;
+        }
+        &__text {
+            margin: 0;
+            &:first-child {
+                margin-bottom: 9px;
+            }
+            &:nth-child(2) {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.main-header {
+    display: none !important;
+    flex-direction: column;
+    @include media-breakpoint-up(md) {
+        display: none;
+    }
+    @include media-breakpoint-up(lg) {
+        padding: 20px;
+        background-color: $primary-white;
+        box-shadow: $main-header-shadow;
+        color: slategray;
+        &__updates {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.date-filter {
+    display: flex;
+    background-color: $primary-white;
+    border: 1px solid $light-grey-2;
+    padding: 1rem 2rem;
+    margin: 2rem 4rem 2rem 2rem;
+    border-left: none;
+    border-right: none;
+    &__main-heading {
+        font-weight: bold;
+        margin-right: 2rem;
+    }
+    &__range {
+        flex: 0.2;
+        border-left: 1px solid $light-grey-2;
+        &:first-child {
+            margin-left: 1rem;
+        }
+        padding: 0 2rem;
+    }
+}
+
+.main-overview {
+    @include media-breakpoint-up(md) {
+        display: flex;
+        display: -ms-flexbox;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @include media-breakpoint-up(lg) {
+        // margin-left: 2rem;
+        // margin-right: 4rem;
+        margin: 0 0 15px 0;
+    }
+}
+
+.overviewcard {
+    &__info {
+        text-transform: uppercase;
+    }
+}
+.main-cards {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include media-breakpoint-up(md) {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    @include media-breakpoint-up(lg) {
+        display: grid;
+        display: -ms-grid;
+        grid-column-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+        -ms-grid-columns: 1fr 1fr 1fr;
+    }
+}
+
+.card {
+    box-shadow: $card-shadow;
+    margin-bottom: 1.5rem;
+    @include media-breakpoint-up(md) {
+        background-color: $primary-white;
+        margin-bottom: 3rem;
+        -webkit-column-break-inside: avoid;
+        height: 400px;
+        box-sizing: border-box;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 1.25rem;
+    }
+}
+
+.card:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.card:nth-child(2) {
+    -ms-grid-column: 3;
+    grid-column: 3;
+}
+
+.dashboard-graph {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100vw - 30px);
+    @include media-breakpoint-up(md) {
+        margin: 0;
+        width: 100%;
+    }
+    @include media-breakpoint-up(lg) {
+        padding: 12px;
+        margin: 0;
+    }
+}
+
+.main-dashboard {
+    &__header-section {
+        display: none;
+        @include media-breakpoint-down(lg) {
+            display: inline;
+            background-color: $light-blue-9;
+            padding: 10px 8px;
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+        }
+    }
+
+    &__header-text {
+        font-size: 18px;
+        padding: 0 13px;
+        color: $color-black-3;
+        text-align: center;
+    }
+
+    &__stats {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include media-breakpoint-between(xs, md) {
+            flex-direction: column;
+        }
+    }
+
+    &__card-container {
+        &--payable {
+            border-radius: 8px 5px 5px 8px !important;
+            height: 96px;
+            border-left: 6px solid #4aa8ff;
+            @include media-breakpoint-down(xs) {
+                margin-right: 0 !important;
+            }
+        }
+        &--next-delivery {
+            @extend .main-dashboard__card-container--payable;
+            border-left: 6px solid #cdcdcd;
+        }
+        &--pending-delivery {
+            @extend .main-dashboard__card-container--payable;
+            border-left: 6px solid #ffa290;
+            margin-right: 0 !important;
+        }
+    }
+
+    &__card-title {
+        display: contents;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.996px;
+        text-transform: uppercase;
+        color: $primary-black;
+    }
+
+    &__card-text {
+        font-size: 14px;
+        letter-spacing: -0.0428571px;
+        &--dark {
+            color: $color-black-3;
+        }
+    }
+
+    &__mid-section {
+        margin-top: 14px;
+        display: flex;
+    }
+
+    &__table {
+        margin: 15px 0;
+        padding: 0;
+    }
+
+    &__outstanding-orders-section {
+        overflow: auto;
+    }
+
+    &__footer-mobile {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    &__footer-text {
+        font-size: 1.4rem;
+    }
+
+    &__footer-mzuri-logo-container {
+        width: 8rem;
+        height: 3rem;
+        text-align: center;
+        display: inline-block;
+    }
+}

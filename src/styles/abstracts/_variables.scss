@@ -1,0 +1,152 @@
+$primary-font: 'Lato', 'sans-serif';
+$reports-font: 'Montserrat', sans-serif;
+
+/* 
+  ===================
+  screen sizes
+*/
+
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+// white variants
+$primary-white: #ffffff;
+$off-white: #fafafa;
+
+// black variants
+$title-color: #3d3d3d;
+$primary-black: #333333;
+$secondary-black: #687d81;
+$color-black-2: rgba(60, 60, 60, 0.6);
+$color-black-3: #1a1a1a;
+$color-black-4: #4a4a4a;
+$reports-black: #575962;
+$color-black-5: #282828;
+$color-black-6: #595959;
+
+// brown variants
+$light-brown-1: #ebebeb;
+$light-brown-2: #ababab;
+$dark-brown-1: #605c5c;
+$dark-brown-2: #494747;
+$dark-brown-3: #4f4f4f;
+$light-brown-1: #5e5e5e;
+$light-brown-2: #636363;
+$light-brown-3: #e5e3e3;
+$light-brown-4: #d3d3d3;
+
+// grey variants
+$primary-grey: #9fb1b8;
+$sidebar-grey: #e4e7eb;
+$sidebar-icon-border: #c7ced4;
+$color-grey-medium: #818181;
+$color-grey-background: #f4f2f2;
+$faint-grey: #dddddd;
+$light-grey: #e3e3e3;
+$light-grey-1: rgba(219, 223, 225, 0.3);
+$light-grey-2: #ccc;
+$light-grey-3: #f5f5f5;
+$light-grey-4: #e5e5e5;
+$light-grey-5: #ececec;
+$light-grey-6: rgba(166, 166, 166, 0.5);
+$light-grey-7: #eaeaea;
+$light-grey-8: #eceeef;
+$light-grey-9: rgba(190, 188, 188, 0.47);
+$light-grey-10: #e5e3e3;
+$light-grey-11: #eeeeee;
+$light-grey-12: #dadada;
+$light-grey-13: #000;
+$light-grey-14: #f8f8f8;
+$dark-grey-1: #7c7c7c;
+$dark-grey-2: rgba(219, 223, 225, 0.3);
+$dark-grey-3: rgba(167, 214, 231, 0.9);
+$dark-grey-4: #979797;
+$dark-grey-5: #6c6c6c;
+$dark-grey-6: #646464;
+$dark-grey-7: #c7c7c7;
+$dark-grey-8: #878787;
+$disabled-text: #aaaaaa;
+$reports-table-grey: #ebedf2;
+$reports-table-footer: #edf2f7;
+$reddish-grey: #c4c4c4;
+$reddish-grey-1: #ff9d000a;
+$sales-filter-grey: #a6a6a6;
+$banking-dashboard-header-grey: #dedddd;
+
+// red variants
+$dark-error: #a94442;
+$error: #d4a1a0;
+$notification-red: #f72f09;
+$primary-red: #ef3434;
+$light-red: #ffc4c4;
+$light-error: #f2dede;
+$lighter-red: #ebcccc;
+$light-red-1: #ffc4c4;
+$danger-red: #c40000;
+$danger-red-1: #ef3434;
+
+// green variants
+$success: #47b881;
+$success-dark: #02b753;
+$success-light: #c5fdde;
+$primary-green: #00b15b;
+$finance-green: #53d28c;
+// orange variants
+$primary-orange: #fe9a11;
+$invoice-orange: #796d42;
+$finance-orange: #f0a36c;
+$color-orange-1: #f79620;
+$color-orange-2: #fcb62a;
+$color-orange-3: #ff8a48;
+$color-orange-4: #f9eee8;
+// blue variants
+
+$primary-color: #0ca2d9;
+$primary-gradient-background: linear-gradient(180deg, #0ca2d9 22.4%, #0077a3 83.85%);
+$primary-color-1: #24abdc;
+$sales-filter-active: #0077a1;
+$hover-sidebar-link-color: #edf3f5;
+$primary-blue: #648ca6;
+$card-blue: #82bef6;
+$dark-blue: #66788a;
+$light-blue: #e3e4e6;
+$light-blue-2: rgba(219, 245, 254, 0.3);
+$light-blue-3: rgba(167, 214, 231, 0.3);
+$light-blue-4: rgba(219, 245, 254, 0.5);
+$light-blue-5: #d3eaf3;
+$light-blue-6: rgba(0, 119, 161, 0.13);
+$light-blue-7: #acdbed;
+$medium-light-blue: #394263;
+$light-blue-9: #d1e8f0;
+$light-blue-8: rgba(167, 214, 231, 0.5);
+$light-blue-10: #eef8fc;
+$page-header-backbround: #c9e0e9;
+$dashboard-stat-blue: #2482da;
+
+// box shadow
+$auth-box-shadow: 0px 2px 2px rgba(50, 50, 71, 0.06), 0px 2px 4px rgba(50, 50, 71, 0.06);
+$input-box-shadow: 0px 1px 15px rgba(145, 144, 144, 0.15);
+$input-box-shadow-dark: 0px 20px 60px rgba(145, 144, 144, 0.15);
+$form-box-shadow-light: 0px 1px 10px rgba(63, 63, 68, 0.15);
+$selected-entity-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$sidebar-shadow: 0px 0px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+$header-shadow: 0px 4px 10px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
+$main-header-shadow: 0px 1px 15px rgba(63, 63, 68, 0.15);
+$card-shadow: 0px 1px 15px rgba(63, 63, 68, 0.15);
+$button-box-shadow: 0px 2px 5px rgba(41, 41, 41, 0.25);
+$dropdown-box-shadow-1: 0px 2px 20px rgba(3, 0, 0, 0.25);
+$content-page-title-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.24);
+$box-shadow-2: 0px 1px 2px rgba(177, 177, 177, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.05);
+$box-shadow-3: 0px 1.20435px 1.20435px rgba(50, 50, 71, 0.06), 0px 1.20435px 2.4087px rgba(50, 50, 71, 0.06);
+
+// gradient
+$button-gradient-color: linear-gradient(90deg, #0077a1 45.48%, #ff9501 165.85%);
+
+// invoice
+$logo-border: #bde6ff;
+
+//yellow variants
+$primary-yellow: #ff9d00;

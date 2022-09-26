@@ -1,0 +1,17 @@
+.error {
+    &__container {
+        margin-bottom: 5px;
+        position: relative;
+    }
+    &__message {
+        color: $dark-error;
+        font-size: 12px;
+        margin: 0;
+        width: 100%; 
+        left: 0;
+        right: 0;
+        line-height: 12px;
+        text-align: right;
+        position: absolute;
+    }
+}

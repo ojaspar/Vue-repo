@@ -1,0 +1,171 @@
+.document-preview {
+    position: relative;
+
+    &__company-icon-name-section {
+        text-align: center;
+
+        margin: 10px -20px 20px;
+
+        border-bottom: 2px solid $primary-color;
+    }
+
+    &__company-name {
+        font-size: 14px;
+
+        margin: 10px 0 0;
+        color: #333333;
+    }
+
+    &__company-name,
+    &__contact-details {
+        font-weight: bold;
+    }
+
+    &__contact-details {
+        font-size: 14px;
+    }
+
+    &__back-icon {
+        position: absolute;
+        left: 20px;
+        top: -17px;
+        font-size: 16px;
+    }
+
+    &__initials-container {
+        width: fit-content;
+        font-size: 20px;
+        padding: 10px 7px;
+        background: $primary-white;
+        border: 0.4px solid $dark-grey-7;
+        border-radius: 10px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__preview-text {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &__estimate-details-section {
+        margin-bottom: 10px;
+    }
+
+    &__estimate-details-subsection {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+    &__estimate-details-subtext {
+        margin-bottom: 0px;
+
+        &--bold {
+            font-weight: 600;
+        }
+    }
+    &__items-heading-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        font-size: 14px;
+        background: $faint-grey;
+
+        height: 34px;
+        margin: 20px -15px 10px;
+        padding: 0 15px;
+    }
+
+    &__items-heading {
+        margin-bottom: 0;
+
+        color: $primary-black;
+        text-transform: uppercase;
+        font-size: inherit;
+        font-weight: 600;
+    }
+
+    &__items-list-section {
+        display: flex;
+        justify-content: space-between;
+
+        font-size: 14px;
+
+        padding: 0;
+        margin: 0 0 20px;
+
+        border-bottom: 1px solid $light-grey-11;
+
+        &:last-of-type {
+            border: none;
+        }
+    }
+    &__items-list-subsection {
+        & > p {
+            margin: 0;
+        }
+    }
+
+    &__item-type-text {
+        margin-left: 5px;
+        font-style: italic;
+        color: $dark-grey-1;
+    }
+
+    &__item-name-text {
+        margin-bottom: 3px;
+    }
+
+    &__discount {
+        font-size: 12px;
+        color: $dark-grey-8;
+        margin: 2px 0 0;
+    }
+
+    &__total-vat-section {
+        padding: 10px 0;
+        font-size: 14px;
+
+        background: $off-white;
+    }
+
+    &__amount-paid-section {
+        background: $light-grey-11;
+
+        margin: 0 -20px;
+        padding: 10px 20px;
+    }
+
+
+    &__total-text {
+        &--grey {
+            color: $dark-grey-1;
+        }
+        &--bold {
+            font-weight: bold;
+        }
+    }
+    &__total-vat-subsection {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+    &__total-subsection {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__validity-period-text {
+        margin-top: 10px;
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    &__share-button {
+        margin: 50px auto 10px auto;
+        width: 145px;
+        height: 34px;
+    }
+}

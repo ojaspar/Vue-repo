@@ -1,0 +1,91 @@
+.uppercase {
+    text-transform: uppercase !important;
+}
+
+.not-allowed {
+    cursor: not-allowed !important;
+}
+
+.pointer-non-event {
+    pointer-events: none !important;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.linkify {
+    cursor: pointer !important;
+    color: $primary-color !important;
+    text-decoration: underline;
+}
+
+.landing-page-width-primary {
+    width: 44.6rem !important;
+}
+
+.landing-page-width-secondary {
+    width: 36.3rem !important;
+}
+
+.u-margin-bottom-big {
+    margin-bottom: 3.5rem !important;
+}
+
+.bg-primary {
+    background: $primary-color;
+}
+
+.bg-white {
+    background: $primary-white;
+}
+
+.pad-0 {
+    padding: 0;
+}
+
+@media (min-width: 768px) and (max-width: 768px) {
+    .landing-page-width-primary {
+        width: 35rem !important;
+    }
+    .landing-page-width-secondary {
+        width: 30rem !important;
+    }
+}
+
+// Amount
+.amount-col {
+    text-align: right;
+}
+
+.txt-grey-8 {
+    color: $dark-grey-8;
+}
+
+.txt-black {
+    color: $primary-black !important;
+}
+
+.txt-green {
+    color: #52B141 !important;
+}
+
+.txt-red {
+    color: #E12323 !important;
+}
+
+.txt-primary {
+    color: $primary-color !important;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+.txt-12 {
+    font-size: 12px !important;
+}
+
+.txt-14 {
+    font-size: 14px !important;
+}

@@ -1,0 +1,39 @@
+
+.profile-details-m {
+    &__loader-container {
+        text-align: center;
+    }
+
+    &__field-div {
+        margin-top: 20px;
+        border-bottom: 1px solid #EAEAEA;
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    &__field-label{
+        color: $dark-grey-1;
+    }
+
+    &__field-value,
+    &__field-label {
+        padding: 0;
+        margin-bottom: 5px;
+    }
+
+}
+.button {
+    @include user-profile-settings-button;
+    margin-top: 50px;
+}
+
+.btn-layout {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.modal-bnt-layout {
+    width: 100%;
+    text-align: center;
+}

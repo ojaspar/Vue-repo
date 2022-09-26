@@ -1,0 +1,197 @@
+.auth-form {
+    padding: 2.4375rem 8.75rem;
+    &__title {
+        font-size: 3rem;
+    }
+    &__sub-title {
+        font-size: 1.6rem;
+    }
+    &__meta {
+        font-size: 1.6rem;
+        line-height: 1.0625rem;
+        color: $color-grey-medium;
+    }
+    &__form-input {
+        position: relative;
+        margin-bottom: 3rem;
+    }
+    &__signup-input {
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+        &.error {
+            margin-bottom: 0;
+        }
+    }
+    &__login-input {
+        font-size: 1.5rem;
+        margin-bottom: 4.5rem;
+        &.error {
+            margin-bottom: 0;
+        }
+    }
+    &__captcha-container {
+        margin-bottom: 1.5rem;
+    }
+    &__captcha-error {
+        font-size: 1.4rem;
+        color: $error;
+    }
+    &__code-text-container {
+        font-size: 1.4rem;
+        color: $dark-grey-1;
+        text-align: center;
+        margin: 0 auto;
+        width: 70%;
+        margin-bottom: 4rem;
+    }
+    &__select {
+        font-size: 1.5rem;
+
+        &:not(:last-child) {
+            margin-bottom: 2.5rem;
+        }
+    }
+    &__select.error {
+        margin-bottom: 0;
+    }
+    &__btn {
+        background: $button-gradient-color;
+        font-size: 2.2rem;
+        line-height: 1.8125rem;
+        color: $primary-white;
+        margin: 30px auto 0 auto;
+        border: none;
+    }
+
+    &__password-section {
+        display: flex;
+        margin-bottom: 1rem;
+        justify-content: space-between;
+        position: relative;
+        &.login-password-section-error {
+            margin-bottom: 0;
+        }
+        &-input-container {
+            width: 100%;
+            position: relative;
+            & > input:not(:placeholder-shown) + .input-field__label {
+                transform: translate(0.5rem, -3rem);
+                opacity: 1;
+                visibility: visible;
+            }
+            & > input.error + .input-field__label {
+                transform: translate(0.6rem, -5rem);
+            }
+            & > .input-field__label {
+                opacity: 0;
+                visibility: hidden;
+                transform: translate(2rem, 0);
+                bottom: 0;
+                position: absolute;
+                z-index: 2;
+                color: $primary-black;
+                transition: all 0.3s;
+            }
+        }
+        &.error {
+            border-bottom: 1px solid $error;
+        }
+        &-input {
+            align-self: flex-end;
+            margin: 0;
+            flex: 1;
+            box-shadow: none !important;
+            border: none;
+            border-bottom: 1px solid $light-grey-2;
+            padding: 3.75px 7.5px;
+            width: 100%;
+            &:focus {
+                border-bottom: 1px solid $light-blue-7;
+            }
+            &.error {
+                border-bottom: 1px solid $error;
+            }
+        }
+        &__icon-container {
+            align-self: flex-end;
+            width: 10%;
+            padding: 0;
+            border: 1px solid $light-grey-2;      
+            
+        }
+    }
+}
+
+
+
+.login-password-wrapper {
+    position: relative;
+}
+
+.login-password-section-error {
+    border-bottom: 1px solid $error;
+}
+
+.fa-eye,
+.fa-eye-slash {
+    font-size: 16px;
+}
+
+
+.icon-container {
+    width: fit-content;
+            position: absolute;
+            right: 0;
+            top: 10px;
+}
+
+.content-container {
+    padding: 7rem 8.75rem;
+    &__password-input {
+        margin: 4rem 0 3rem;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 576px) {
+    .auth-form {
+        padding: 1rem 2.5rem;
+        &__input,
+        &__select {
+            margin: 0 0 1.25rem 0;
+            font-size: 1.5rem;
+        }
+        &__input.error,
+        &__select.error {
+            margin-bottom: 0;
+        }
+        &__select:not(:last-child) {
+            font-size: 1.1rem;
+        }
+        &__icon-container {
+            bottom: 23%;
+        }
+        &__title {
+            font-size: 2rem;
+        }
+        &__sub-title {
+            font-size: 1.5rem;
+        }
+        &__meta {
+            font-size: 1.3rem;
+        }
+        &__btn {
+            font-size: 1.3rem;
+        }
+        &__password-section {
+            &-input {
+                width: 22rem;
+            }
+        }
+    }
+
+    .fa-eye,
+    .fa-eye-slash {
+        font-size: 1.5rem;
+    }
+}
+

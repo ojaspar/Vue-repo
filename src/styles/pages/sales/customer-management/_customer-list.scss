@@ -1,0 +1,81 @@
+.customers {
+    &__heading {
+        color: $dark-grey-1;
+        font-size: 14px;
+        line-height: 14px;
+        margin: 0 0 5px 0;
+    }
+    &__details {
+        border-top: 1px solid $dark-grey-1;
+        padding: 5px 0;
+        margin: 0;
+    }
+    &__avatar {
+        background: $dark-grey-1;
+        color: $primary-white;
+        max-width: 4rem;
+        height: 4rem;
+        font-size: 14px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info-container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__dropdown {
+        margin-top: 5px;
+    }
+}
+
+.info {
+    margin: 0;
+    &__name {
+        font-size: 14px;
+        line-height: 17px;
+        color: $primary-black;
+        margin-bottom: 5px;
+    }
+    &__text {
+        font-size: 12px;
+        line-height: 14px;
+        color: $dark-grey-1;
+        &--balance {
+            font-size: 13px;
+            color: $notification-red;
+        }
+    }
+    &__icon-box {
+        display: flex;
+        justify-content: flex-end;
+        font-size: small;
+    }
+    &__icon {
+        margin-right: 5px;
+        font-size: small;
+    }
+    &__enter-sales-text {
+        margin-left: 10px;
+        color: $primary-color;
+        text-decoration: underline;
+    }
+}
+
+.icon-text {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.avatar-text {
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+}

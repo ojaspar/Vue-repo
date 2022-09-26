@@ -1,0 +1,233 @@
+.invoice-preview {
+    margin: 0 auto;
+}
+
+.company-information-header {
+    background-color: $light-blue-6;
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 7px solid $color-orange-1;
+    &__company-name,
+    &__company-address {
+        width: 100%;
+    }
+    &__company-name {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+    }
+    &__company-address {
+        color: $light-brown-1;
+        font-size: 1.4rem;
+        margin-bottom: 0;
+    }
+}
+.preview-header {
+    padding: 1rem 0;
+    position: relative;
+    max-width: 80%;
+    margin: 2rem auto;
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+    }
+    &__arrow-up {
+        height: 1.5rem;
+        width: 1.5rem;
+        position: absolute;
+        right: 3rem;
+        top: -0.7rem;
+        background-color: $primary-white;
+        transform: rotate(45deg);
+    }
+    &__share-text {
+        color: $light-brown-2;
+        padding: 1rem 1.5rem 0 1.5rem;
+        font-size: 1.4rem;
+    }
+    &__share-dropdown {
+        position: absolute;
+        outline: none;
+        bottom: -9rem;
+        right: 39%;
+        background-color: $primary-white;
+        border-radius: 5px;
+        box-shadow: $dropdown-box-shadow-1;
+    }
+    &__share-dropdown-item-container {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
+    &__dropdown-icon {
+        height: 2.3rem;
+        width: 2.3rem;
+    }
+    &__share-dropdown-item {
+        padding: 1.5rem;
+        &:hover {
+            background-color: $light-blue-6;
+        }
+    }
+}
+
+.share {
+    &__text {
+        color: $primary-black;
+    }
+}
+
+.download {
+    padding-left: 25px;
+    &__text {
+        color: $invoice-orange;
+    }
+}
+
+.print {
+    border-right: 0.7px solid rgba(60, 60, 60, 0.5);
+    padding: 0 4.5rem;
+    &__text {
+        color: $primary-color;
+    }
+}
+
+.text {
+    margin: 0;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+}
+
+.invoice-text {
+    font-size: 1.6rem;
+    &--md {
+        font-size: 1.8rem;
+    }
+    &--bg {
+        font-size: 2rem;
+    }
+}
+
+.preview {
+    background: $primary-white;
+    box-shadow: $input-box-shadow;
+    padding-bottom: 4.3rem;
+    max-width: 80%;
+    margin: 0 auto;
+    border-radius: 4px;
+    display: grid;
+    grid-template-rows: auto 50px repeat(3, auto);
+}
+
+.logo {
+    border: 1px solid $logo-border;
+    border-radius: 5px;
+    width: 150px;
+    height: 132px;
+}
+
+.company {
+    padding: 3.5rem 5rem 1.5rem;
+
+    &__details {
+        padding-bottom: 2.5rem;
+        border-bottom: 0.7px solid rgba(60, 60, 60, 0.5);
+    }
+}
+
+.side {
+    &__title {
+        font-size: 2.5rem;
+    }
+
+    &__company-name,
+    &__company-country {
+        font-size: 1.4rem;
+        color: $color-black-3;
+        &:last-child {
+            line-height: 20px;
+        }
+    }
+}
+
+.bottom {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.invoice-header {
+    background: $dark-brown-1;
+    border: 0.5px solid $light-red-1;
+    color: $primary-white;
+    font-size: 1.4rem;
+    padding: 0 3rem;
+}
+
+.line-items {
+    font-size: 12px;
+    &__item {
+        padding: 15px 30px;
+        border: 1px solid $light-grey;
+        box-shadow: $input-box-shadow;
+        margin: 5px 0;
+    }
+}
+
+.amount-breakdown {
+    width: 35rem;
+    margin-top: 3rem;
+    font-size: 14px;
+    justify-self: flex-end;
+
+    &__item {
+        padding: 1rem 4.5rem;
+    }
+    &__total {
+        background-color: $light-grey-7;
+        box-shadow: 0px -1px 0px $light-grey-8;
+        width: 100%;
+        padding: 1.5rem 4.5rem;
+        margin-top: 2rem;
+    }
+}
+
+.total-amount {
+    font-size: 14px;
+    padding: 10px 45px;
+    background: $light-blue-3;
+
+    &__item {
+        width: 26rem;
+        font-size: 14px;
+        color: $primary-color;
+    }
+}
+
+.invoice-preview {
+    &__mzuri-logo {
+        width: 6.5rem;
+        height: 2.4rem;
+    }
+    &__btn {
+        @include button;
+        width: 32rem;
+        height: 5.6rem;
+        margin: 6rem auto;
+        font-size: 2rem;
+    }
+}
+
+.bottom-section {
+    &__powered-by-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+    &__all-rights-reserved-section {
+        display: flex;
+        color: $sales-filter-grey;
+        font-size: 1.4rem;
+        justify-content: center;
+    }
+}

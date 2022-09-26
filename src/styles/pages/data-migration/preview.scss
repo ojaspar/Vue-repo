@@ -1,0 +1,47 @@
+.preview {
+    @include media-breakpoint-up(md) {
+        max-width: 500px;
+        margin-left: 40px;
+        padding: 20px 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__heading {
+        font-size: 14px;
+        color: $dark-grey-1;
+        margin-bottom: 4px;
+        font-weight: 500;
+        line-height: 14px;
+    }
+    &__secondary-heading {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    &__extra-information {
+        margin-left: 5px;
+        color: $dark-grey-1;
+    }
+    &__section {
+        padding: 10px 0;
+        border-bottom: 1px solid $faint-grey;
+    }
+    &__bank-name-balance-section {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__bank-name {
+        margin-bottom: 4px;
+    }
+    &__save-btn {
+        margin: 50px auto 10px auto;
+    }
+    &__back-link {
+        text-align: center;
+        font-size: 14px;
+        margin: 0;
+    }
+}

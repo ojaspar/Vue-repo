@@ -1,0 +1,75 @@
+.select-donation {
+    &__proceed-without-donor-search-bar-section {
+        @include media-breakpoint-up(md) {
+            padding: 0 13px;
+        }
+    }
+    &__proceed-without-donor-section {
+        display: flex;
+        align-items: center;
+        margin-bottom: 18px;
+    }
+    &__proceed-without-donor-text {
+        font-size: 14px;
+        font-weight: normal;
+        color: $primary-color;
+        margin: 0;
+        text-decoration: underline;
+    }
+    &__proceed-without-donor-icon {
+        margin-left: 5px;
+    }
+
+    &__headline {
+        font-size: 12px;
+        padding: 0 13px 0 0;
+        border-bottom: 1px solid $light-grey-7;
+        color: $dark-grey-1;
+        margin: 0;
+    }
+    &__phone-email-text,
+    &__interaction-date-text {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+    &__interaction-text,
+    &__balance-pending-text {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+    &__interaction-text {
+        &--italic {
+            font-style: italic;
+        }
+    }
+    &__interaction-date-text {
+        font-style: italic;
+    }
+
+    &__enter-donor-text {
+        margin-left: 10px;
+        color: $primary-color;
+        text-decoration: underline;
+    }
+    &__balance-pending-text {
+        color: #ef3434;
+        margin-bottom: 13px;
+    }
+    &__edit-expanded-details-text {
+        margin-left: 6px;
+        color: $primary-black;
+    }
+    &__no-item-found {
+        font-size: 14px;
+        color: $dark-grey-1;
+    }
+    &__info {
+        font-size: 12px;
+        color: $dark-grey-1;
+    }
+
+    &__total-prepayment-text {
+        color: $primary-color;
+        margin-bottom: 13px;
+    }
+}

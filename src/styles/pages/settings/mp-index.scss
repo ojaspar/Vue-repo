@@ -1,0 +1,132 @@
+.profile-details-mp {
+    &__loader-container {
+        text-align: center;
+    }
+}
+.logo-initials-container {
+    @include initials-container;
+}
+
+.button {
+    @include user-profile-settings-button;
+    border: none;
+}
+
+.modal-bnt-layout {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.mp-index {
+    display: grid;
+    grid-template-columns: 1fr;
+    &__logo-section {
+        margin-bottom: 30px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    &__logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    &__business-name {
+        color: $primary-color;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.user-profile-card {
+    background: #ffffff;
+    border: 1px solid rgba(124, 124, 124, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 20px 13px;
+    width: 100%;
+    &__first-layout {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    &:last-child {
+        margin: 30px 0 80px 0;
+    }
+    &__change-password-link {
+        margin-right: 10px;
+    }
+    &__edit-link,
+    &__change-password-link {
+        font-size: 14px;
+    }
+    &__business-details-loader-container {
+        @include center-flex-item;
+    }
+    &__profile-details-text {
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0;
+    }
+    &__profile--detail-section-heading {
+        font-weight: bold;
+        color: $dark-grey-1;
+        font-size: 14px;
+    }
+
+    &__profile-details-label {
+        font-size: 14px;
+        color: $dark-grey-1;
+    }
+    &__profile-detail-section {
+        border-bottom: 1px solid $light-grey-7;
+        padding-bottom: 5px;
+        margin: 10px 0;
+    }
+    &__name-phone-number-section {
+        display: flex;
+        flex-basis: 48%;
+        flex-direction: column;
+    }
+    &__email-section {
+        flex-basis: 48%;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__business-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2%;
+    }
+}
+
+.__flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.business-profile-page,
+.edit-profile-details-modal,
+.change-password-modal {
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: 600px;
+    @include media-breakpoint-up(lg) {
+        width: 640px;
+    }
+}

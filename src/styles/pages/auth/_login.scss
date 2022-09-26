@@ -1,0 +1,114 @@
+.login {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    &__left-side {
+        @include media-breakpoint-up(md) {
+            padding: 47px 15px 0;
+            width: 330px;
+            margin: 0 auto;
+        }
+        @include media-breakpoint-up(lg) {
+            width: 383px;
+        }
+        @include media-breakpoint-up(xl) {
+            width: 400px;
+        }
+    }
+    @include media-breakpoint-up(md) {
+        box-shadow: $input-box-shadow;
+        padding-right: 0;
+    }
+    background: $primary-white;
+    &__logo {
+        display: block;
+        height: 40px;
+        margin: 20px auto 50px auto;
+        @include media-breakpoint-up(md) {
+            margin: 0 0 45px 0;
+        }
+    }
+    &__heading-primary {
+        color: $primary-color;
+        font-size: 28px;
+    }
+    &__heading-secondary {
+        color: #484848;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+    &__input-label {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    &__input-field {
+        background-color: transparent;
+        border: 1px solid #c4c4c4;
+        height: 40px;
+        font-size: 14px;
+        display: inline-block;
+    }
+    &__password-input-field-container {
+        margin-top: 20px;
+        position: relative;
+        
+        @include media-breakpoint-up(md) {
+            margin-top: 25px;
+        }
+    }
+    &__forgot-password-section {
+        margin-top: 15px;
+        margin-bottom: 25px;         
+    }
+    &__checkbox-label {
+        margin-left: 10px;
+        font-size: 13px;
+        line-height: 13px;
+    }
+    &__forgot-password-text {
+        cursor: pointer;
+        color: $primary-color;
+        &:hover {
+            outline: none;
+            text-decoration: none;
+        }
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    &__signup-text {
+        color: #f09222;
+        &:hover {
+            outline: none;
+            text-decoration: none;
+        }
+    }
+    &__right-image {
+        object-fit: cover;
+        height: 100vh;
+        width: 100%;
+    }
+    &__eye-icon {
+        width: 15px;
+        font-size: 15px;
+        height: 15px;
+        position: absolute;
+        top: 32px;
+        cursor: pointer;
+        right: 15px;
+    }
+    &__have-account-text {
+        text-align: center;
+    }
+    &__button {
+        @include auth-button;
+        width: 100%;
+        margin: 0 auto 30px auto;
+    }
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}

@@ -1,0 +1,108 @@
+.finance-statement-card {
+    background: $primary-white;
+    border-radius: 10px;
+    width: 100%;
+    margin: 0;
+    @include media-breakpoint-down(sm) {
+        padding: 15px;
+    }
+
+    &__loan-details {
+        border-right: 1px solid $light-grey-2;
+        @include media-breakpoint-down(md) {
+            padding: 15px 15px 0;
+        }
+        @include media-breakpoint-down(xs) {
+            border-right: none;
+            padding: 0 0 15px;
+            border-bottom: 1px solid $light-grey-2;
+        }
+    }
+
+    &__capital-details {
+        left: 4%;
+        @include media-breakpoint-down(lg) {
+            left: 3%;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 15px 15px 0;
+        }
+        @include media-breakpoint-down(xs) {
+            left: 0;
+            padding: 20px 0 0;
+        }
+    }
+
+    &__first-header {
+        margin: 0;
+        font-size: 18px;
+        line-height: 120%;
+        color: $primary-color;
+        @include media-breakpoint-down(lg) {
+            font-size: 14px;
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: 18px;
+        }
+    }
+    &__first-body {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 120%;
+        color: $color-black-6;
+        @include media-breakpoint-down(lg) {
+            font-size: 22px;
+        }
+        @include media-breakpoint-down(md) {
+            font-size: 20px;
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: 24px;
+        }
+    }
+    &__second-header {
+        margin: 20px 0 0;
+        font-size: 11.7439px;
+        line-height: 120%;
+        color: $primary-color;
+        @include media-breakpoint-down(lg) {
+            font-size: 13px;
+        }
+        @include media-breakpoint-down(md) {
+            font-size: 11px;
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: 13px;
+        }
+    }
+    &__second-body {
+        font-weight: 600;
+        font-size: 25.68px;
+        line-height: 120%;
+        color: $color-black-6;
+        @include media-breakpoint-down(lg) {
+            font-size: 20px;
+        }
+        @include media-breakpoint-down(md) {
+            font-size: 18px;
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: 22px;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 120%;
+        color: $dark-grey-8;
+        @include media-breakpoint-down(lg) {
+            font-size: 12px;
+        }
+        @include media-breakpoint-down(md) {
+            font-size: 11px;
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+        }
+    }
+}

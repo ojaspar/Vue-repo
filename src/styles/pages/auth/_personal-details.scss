@@ -1,0 +1,36 @@
+.personal-details {
+    min-height: 100vh;
+    position: relative;
+    @include media-breakpoint-up(md) {
+        padding-right: 0;
+    }
+    &__logo {
+       @include signup-process-logo; 
+    }
+    &__medium-plus-container {
+        @include signup-process-medium-plus-container;
+    }
+    &__heading-primary {
+       @include signup-process-heading-primary;
+    }
+    &__heading-secondary {
+        @include signup-process-heading-secondary;
+    }
+    &__input-field {
+        &:last-child {
+            margin-bottom: 50px;
+        }
+    }
+    &__input-field-container-medium-plus, &__block-message-container {
+        @include media-breakpoint-up(md) {
+            max-width: 330px;
+            margin: 0 auto;
+        }
+        @include media-breakpoint-up(lg) {
+            max-width: 405px;
+        }
+    }
+    &__button {
+        @include signup-process-button;
+    }
+}

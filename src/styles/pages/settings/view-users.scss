@@ -1,0 +1,78 @@
+.view-user {
+    max-width: 100%;
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+        grid-gap: 20px;
+        padding: 10px;
+    }
+    &__loader-container {
+        text-align: center;
+        margin-top: 15px;
+    }
+    &__card {
+        background: #ffffff;
+        box-shadow: 0px 2px 2px rgba(50, 50, 71, 0.06), 0px 2px 4px rgba(50, 50, 71, 0.06);
+        border-radius: 5px;
+        min-width: 190px;
+        min-height: 190px;
+        padding: 25px 23px 35px 23px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__card-inner-container {
+        max-width: 160px;
+        margin: 0 auto;
+        text-align: center;
+        flex: 0;
+    }
+    &__initials-container {
+        @include initials-container;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+    }
+    &__user-photo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top;
+        margin-bottom: 15px;
+    }
+    &__name {
+        font-weight: 500;
+        font-size: 16px;
+        margin-top: 15px;
+        margin-bottom: 4px;
+        line-height: 20px;
+    }
+    &__email,
+    &__phone-number {
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 3px;
+        color: $dark-grey-1;
+    }
+    &__add-user-container {
+        border: 2px solid #0ca2d9;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 190px;
+        min-width: 190px;
+        cursor: pointer;
+    }
+    &__add-user-text {
+        font-weight: 500;
+        font-size: 16px;
+        color: #0ca2d9;
+    }
+}

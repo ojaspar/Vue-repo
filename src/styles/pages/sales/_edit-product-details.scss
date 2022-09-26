@@ -1,0 +1,32 @@
+.edit-product-details {
+    &__unit-price-currency-section {
+        margin: 20px 0;
+    }
+    &__notes-text-area-field {
+        height: 68px;
+    }
+    &__checkbox-label {
+        margin-left: 10px;
+    }
+    &__unit-price-container,
+    &__currency-container {
+        position: relative;
+    }
+
+    &__discount-section {
+        position: relative;
+        // margin-top: 20px;
+    }
+    // &__naira-discount-container,
+    // &__percentage-discount-container {
+    //     position: relative;
+    //     margin: 0;
+    //     width: 48%;
+    // }
+
+    &__edit-product-details-button {
+       @include primary-button;
+       margin: 0 auto;
+       margin-top: 50px;
+    }
+}

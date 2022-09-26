@@ -1,0 +1,62 @@
+.top-debtors-list {
+    background: $primary-white;
+    box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+    border-radius: 4px;
+    min-height: 35rem;
+    padding: 2rem 0;
+    font-size: 1.4rem;
+    &__row {
+        padding: 0 2.5rem;
+        color: #66788a;
+    }
+
+    &__header {
+        border-bottom: 0.5px solid rgba(154, 154, 154, 0.5);
+        width: 100%;
+        &__view-all-section {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            color: $primary-color;
+            padding: 0;
+        }
+        &__view-all-text {
+            margin-right: 3px;
+            cursor: pointer;
+        }
+        &__view-all-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+    &__list-section {
+        list-style: none;
+        font-size: 1.6rem;
+        width: 100%;
+        color: $dark-brown-2;
+    }
+    &__no-debtors-text {
+        font-size: 1.6rem;
+        text-align: center;
+        color: $primary-black;
+        margin: 4em auto;
+    }
+    &__list-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        position: relative;
+        &::before {
+            content: "\2022";
+            color: $primary-color;
+            font-weight: bolder;
+            display: inline-block;
+            font-size: 20px;
+            position: absolute;
+        }
+        &__name {
+            margin-left: 2rem;
+        }
+    }
+}

@@ -1,0 +1,184 @@
+.donations-mid-section-container {
+    display: flex;
+}
+
+.donations-mid-section {
+    padding: 0;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__search-and-dates {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 4px;
+        height: 47px;
+    }
+
+    &__search {
+        width: 100%;
+
+        &--container {
+            border-radius: 8px;
+            height: 42px;
+            padding: 10px 10px 7px;
+            width: 100%;
+            display: flex;
+            background: $primary-white;
+            align-items: center;
+            border: 2px solid rgba(124, 124, 124, 0.2);
+
+            @include media-breakpoint-down(lg) {
+                width: 100%;
+            }
+        }
+        &--input {
+            border: none;
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            @include media-breakpoint-down(lg) {
+                width: 100%;
+            }
+            > .form-control {
+                outline: none;
+                border: none;
+                margin-bottom: 0;
+
+                &::placeholder {
+                    font-size: 15px;
+                }
+            }
+        }
+        &--icon {
+            color: $dark-grey-1;
+            height: 15px !important ;
+            width: 18px !important ;
+        }
+    }
+
+    &__dates-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    &__dates {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        &--container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            height: 34px;
+            margin: 20px 10px;
+        }
+        &--from {
+            margin: 0 25px 0 50px;
+            @include media-breakpoint-down(lg) {
+                margin: 0;
+            }
+        }
+        &--to {
+            margin: 0 10px 0 25px;
+            @include media-breakpoint-down(lg) {
+                margin: 0;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0;
+        &--estimate {
+            margin-right: 10%;
+        }
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+    }
+
+    &__others {
+        display: flex;
+        @include media-breakpoint-down(xs) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__desktop-view {
+        margin: 10px 0;
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    &__mobile-view {
+        display: none;
+        @include media-breakpoint-down(sm) {
+            display: inline;
+        }
+    }
+}
+
+.search-icon {
+    color: $dark-grey-1;
+}
+
+.search-input {
+    border: none;
+    > .form-control {
+        &::placeholder {
+            font-size: 14px;
+        }
+    }
+}
+
+.date-input {
+    display: flex;
+    margin-left: 5px;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+    height: 34px;
+    padding: 10px 0px;
+}
+
+.mobile-btn-container {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    @include media-breakpoint-down(xs) {
+        margin-top: 15px;
+        justify-content: flex-end;
+    }
+}
+
+.mobile-dates-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0;
+}
+
+.new-donation-btn {
+    background-color: $primary-color-1;
+    color: $primary-white;
+    padding: 5px 24px;
+    border-radius: 4px;
+    height: 36px;
+    width: 160px;
+    &:active,
+    &:focus {
+        background-color: $primary-color-1;
+        color: $primary-white;
+    }
+}

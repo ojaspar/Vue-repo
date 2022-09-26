@@ -1,0 +1,138 @@
+.donor-transaction-table {
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #dedddd;
+        color: $primary-black;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 17px;
+        margin: 0;
+        border-radius: 5px;
+        padding: 9px 0 9px 30px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        border-radius: 5px;
+        background-color: $primary-white;
+        color: $primary-black;
+        margin: 0;
+        padding: 15px 0 15px 10px;
+        border-top: 0.5px solid #dddddd;
+        &--loader {
+            text-align: center;
+        }
+        &--empty {
+            text-align: center;
+            font-size: 15px;
+            padding: 15px;
+            background-color: $primary-white;
+            color: $primary-black;
+            @include media-breakpoint-between(xs, lg) {
+                border-top: 0.5px solid #dddddd;
+            }
+        }
+    }
+}
+
+.align-right {
+    text-align: right;
+}
+
+.dark-grey {
+    color: $dark-grey-1;
+}
+
+.icon-box {
+    text-align: right;
+    margin: 0;
+}
+
+.card-icon {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.content-text {
+    font-size: 14px;
+    line-height: 17px;
+    &__instant {
+        font-size: 14px;
+        line-height: 17px;
+        color: $success;
+    }
+    &__pledge {
+        font-size: 14px;
+        line-height: 17px;
+        color: #ff9d00;
+    }
+
+    &__m-r {
+        margin-right: 50px !important;
+    }
+}
+
+.large-donor-transaction-table {
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}
+
+.small-donor-transaction-table {
+    margin-top: 20px;
+    display: none;
+    @include media-breakpoint-down(sm) {
+        display: inline;
+    }
+}
+
+.product-transaction-mobile-table {
+    @include media-breakpoint-between(xs, lg) {
+        display: flex;
+        align-items: center;
+
+        margin: 0;
+        width: 100%;
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            border-radius: 5px;
+            border-top: 0.5px solid #dddddd;
+            background-color: $primary-white;
+            color: $primary-black;
+            padding: 20px 0;
+
+            &--details {
+                display: flex;
+                flex-direction: column;
+                line-height: 16px;
+            }
+        }
+    }
+}
+
+.mobile-content {
+    &__text {
+        font-size: 14px;
+        line-height: 17px;
+        margin: 6px 0 0;
+    }
+    &__icon-text {
+        font-size: 14px;
+        line-height: 17px;
+        margin: 6px 0 0;
+        color: #0ca2d9;
+    }
+}
+
+.table-icon {
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 3px;
+    color: #0ca2d9;
+}

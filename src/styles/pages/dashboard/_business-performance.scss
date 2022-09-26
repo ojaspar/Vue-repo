@@ -1,0 +1,84 @@
+.dashboard-date {
+    display: flex;
+    border-bottom: 0.7px solid rgba(151, 151, 151, 0.5);
+    border-top: 0.7px solid rgba(151, 151, 151, 0.5);
+    margin: 0 0 15px 0;
+    @include media-breakpoint-between(xs, md) {
+        border: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    &__date-range-select {
+        @include media-breakpoint-between(xs, md) {
+            border: none !important;
+            color: $primary-color;
+            align-items: center;
+            width: 7.5rem;       
+        }    
+    }
+    &__date-range-select-container {
+        display: flex;
+        align-items: center;   
+    }
+    &__business {
+        color: $primary-black;
+        font-weight: 500;
+        display: flex;
+        align-items: center;   
+    }
+    &__text {
+        font-size: 13px;
+        padding-bottom: 5px;
+        line-height: 16px;
+    }
+    &__sub-text {
+        font-size: 11px;
+        padding-bottom: 5px;
+        line-height: 13px;
+    }
+    &__today,
+    &__week,
+    &__month,
+    &__year {
+        color: $dark-grey-4;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-left: 0.7px solid rgba(151, 151, 151, 0.5);
+        cursor: pointer;
+        @include media-breakpoint-between(xs, md) {
+            display: none;
+        }
+        @include media-breakpoint-between(md, lg) {
+            display: flex;
+        }
+    }
+}
+
+.dashboard-date div {
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.dashboard-date p {
+    margin: 0;
+}
+
+.active-tab {
+    color: $primary-color;
+    font-weight: bolder;
+    background-color: $light-grey;
+}
+
+.dashboard-date-mobile {
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dashboard-date-mobile > span:first-child {
+    white-space: nowrap;
+    padding-right: 10px;
+}

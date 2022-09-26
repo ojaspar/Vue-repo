@@ -1,0 +1,54 @@
+.add-payment-form {
+    border: 1px solid $primary-color;
+    &__table-heading {
+        background-color: $dark-brown-1;
+        color: $primary-white;
+        padding: 1rem 1.5rem;
+        margin-top: 0;
+        & > div {
+            padding: 0;
+        }
+    }
+    &__table-heading-container {
+        padding: 0;
+    }
+    &__field-container {
+        padding: 1rem 1.5rem;
+    }
+    &__label {
+        font-size: 1.4rem;
+        margin: 0;
+        color: $dark-grey-1;
+    }
+    &__input-container, &__amount-received-payment-type-section {
+        margin-bottom: 3rem;
+    }
+    &__split-fields-error-message {
+        position: absolute;
+        color: $error;
+        font-size: 1.1rem;
+    }
+    &__amount-received-payment-type-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__amount-received-input {
+        width: 100%;
+    }
+    &__buttons-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 5rem;
+    }
+    &__add-payment-btn, &__cancel-btn {
+        width: 14rem;
+        height: 3rem;
+        padding: 0;
+    }
+    &__cancel-btn {
+        background: none $primary-white;
+        border:  0.7px solid $dark-grey-1;
+    }
+}

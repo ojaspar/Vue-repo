@@ -1,0 +1,111 @@
+.product-form {
+    &__fields {
+        &--row {
+            margin: 0;
+        }
+        &--input {
+            margin: 0;
+        }
+        &--select {
+            padding: 0;
+        }
+    }
+
+    &__split-field {
+        margin: 0;
+        &--left {
+            padding: 0 5px 0 0;
+        }
+        &--right {
+            padding: 0 0 0 5px;
+        }
+    }
+
+    &__form-input {
+        font-size: 14px;
+    }
+
+    &__select-input {
+        padding: 0 4px !important;
+        @include media-breakpoint-down(sm) {
+            font-size: 12px !important;
+        }
+    }
+
+    &__checkbox {
+        &--input {
+            display: flex;
+            align-items: center;
+
+            > * {
+                cursor: pointer;
+            }
+        }
+
+        &--label {
+            font-size: 14px;
+            line-height: 14px;
+            color: #7c7c7c;
+            margin: 5px 0 5px 5px;
+        }
+    }
+
+    &__row-border {
+        border-top: 1px solid #dbdbdb;
+        margin: 15px 0 0;
+    }
+
+    &__product-list {
+        margin-top: 18px;
+        height: 34px !important;
+
+        div:nth-of-type(1) {
+            width: 100% !important;
+        }
+
+        div:nth-of-type(2) {
+            margin-right: -30px;
+        }
+
+        div:nth-of-type(3) {
+            top: 35px !important;
+            @include media-breakpoint-up(sm) {
+                overflow-x: hidden;
+            }
+        }
+
+        &--right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &--remove-item {
+            margin-top: 18px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    }
+
+    &__add-more-item {
+        font-size: 14px;
+        line-height: 17px;
+        margin-top: 5px;
+        color: $primary-color;
+        display: flex;
+        align-items: center;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 50px 0 13px;
+    }
+
+    &__save-btn {
+        width: 150px;
+        height: 34px;
+        border-radius: 4px;
+    }
+}

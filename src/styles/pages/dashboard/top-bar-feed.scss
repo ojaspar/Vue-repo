@@ -1,0 +1,17 @@
+.topbar {
+    @include media-breakpoint-between(xs, md) {
+        display: none;
+    }
+}
+.welcome {
+    &__header {
+        color: $primary-black;
+        line-height: 29px;
+        font-size: 21px;
+        font-weight: bolder;
+    }
+    &__text {
+        color: $dark-grey-5;
+        font-size: 16px;
+    }
+}

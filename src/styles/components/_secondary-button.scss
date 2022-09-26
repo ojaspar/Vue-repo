@@ -1,0 +1,32 @@
+.app-secondary-btn {
+    color: $primary-color;
+    width: fit-content;
+    min-width: 145px;
+    height: 34px;
+    background: $primary-white;
+    border: 2.41736px solid $primary-color;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint-up(sm) {
+        min-width: 150px;
+    }
+
+    &:hover {
+        color: $primary-color;
+    }
+    &:active,
+    &:focus {
+        background-color: $primary-white;
+        color: $primary-color;
+        border: 0.7px solid $primary-color;
+    }
+    &:disabled {
+        color: $primary-white;
+        cursor: not-allowed;
+        background: none $light-grey-2;
+    }
+}

@@ -1,0 +1,47 @@
+.list-filters {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    max-width: 90%;
+
+    &__filter {
+        color: $sales-filter-grey;
+        padding-bottom: 22px;
+    }
+}
+.list-filters > .active {
+    border-bottom: 2px solid $sales-filter-active;
+    color: $sales-filter-active;
+    font-weight: bold;
+    background: none;
+}
+
+.date-filter {
+    padding: 18px 20px;
+    border: 0.7px solid rgba(60, 60, 60, 0.5);
+    border-right: none;
+    border-left: none;
+    font-size: 14px;
+    margin-bottom: 30px;
+
+    &__left {
+        width: 56%;
+        color: $primary-grey;
+    }
+
+    &__right {
+        width: 20%;
+    }
+}
+
+.from,
+.to,
+.list {
+    margin: 1px solid $sales-filter-grey;
+    width: 33.33%;
+    &__select {
+        font-size: 14px;
+    }
+}

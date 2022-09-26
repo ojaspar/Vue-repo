@@ -1,0 +1,369 @@
+.create-invoice {
+    &__bottom-section {
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: $input-box-shadow;
+        background-color: $primary-white;
+        border-radius: 4px;
+        padding: 1.5rem 0;
+    }
+    &__edit-item-interface {
+        background: $primary-white;
+        box-shadow: $input-box-shadow;
+        border-radius: 4px;
+        border: 1px solid $primary-color;
+        &__heading {
+            background: $dark-brown-1;
+            border-radius: 4px 4px 0 0;
+            display: flex;
+            color: $primary-white;
+            text-transform: uppercase;
+            align-items: center;
+            height: 4rem;
+            margin-bottom: 3rem;
+            padding: 0 1.3rem;
+        }
+        &__heading-text {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        &__form-body {
+            padding: 0 1rem;
+        }
+        &__button {
+            width: 22rem;
+            height: 4rem;
+            margin: 2.5rem auto;
+        }
+    }
+    &__create-new-product-btn {
+        top: -0.4rem;
+    }
+    &__create-new-customer-btn {
+        top: 0.6rem;
+    }
+    &__create-new-product-btn,
+    &__create-new-customer-btn {
+        background-color: transparent;
+        width: 50%;
+        border: none;
+        display: flex;
+        font-size: 13px;
+        color: $primary-color;
+        position: absolute;
+        right: 0;
+        align-items: center;
+        justify-content: flex-end;
+        padding-left: 0;
+        @include media-breakpoint-between(xs, md) {
+            width: 70%;
+        }
+        & > svg {
+            margin-right: 0.5rem;
+            width: 1.8rem;
+        }
+        &:active,
+        &:focus {
+            background-color: transparent;
+        }
+    }
+    &__select-add-new-product-section {
+        position: relative;
+    }
+    &__edit-item-customer-selection {
+        display: block;
+        position: relative;
+        align-items: center;
+        font-size: 1.4rem;
+        border-radius: 4px;
+        margin: 1rem 0 2rem 0;
+        padding-top: 1rem;
+        height: 7.5rem;
+    }
+    &__customer-select {
+        width: 100%;
+        height: 3.4rem;
+    }
+    &__customer-select-container {
+        width: 100%;
+    }
+    &__invoice-number {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+        font-weight: 600;
+    }
+    &__date-selection {
+        text-align: right;
+        height: 7.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__date-selection-container {
+        display: inline-flex;
+        position: relative;
+        align-items: center;
+    }
+
+    &__date-select {
+        width: 17rem;
+        height: 3.4rem;
+    }
+
+    &__customer-select-label,
+    &__date-select-label {
+        color: $dark-grey-1;
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    &__date-select-label {
+        margin-right: 2rem;
+    }
+
+    &__date-error-label {
+        position: absolute;
+        right: 0;
+        bottom: -3rem;
+        width: 100%;
+        font-size: 1.4rem;
+        color: $error;
+    }
+
+    &__split-discount-boxes {
+        & > div {
+            display: inline-block;
+            width: 49.8%;
+            &:not(:first-child) {
+                margin-left: 0.1rem;
+            }
+        }
+    }
+    &__input-container {
+        margin-left: auto;
+        margin-right: auto;
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+        & > label {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+    }
+    &__text-area-container {
+        & > label {
+            font-size: 1.4rem;
+            margin: 0.4rem 0 0;
+        }
+    }
+    &__input {
+        font-size: 1.6rem;
+    }
+    &__select {
+        font-size: 1.6rem;
+    }
+    &__select-container {
+        margin-bottom: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        & > label {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+    }
+    &__table {
+        display: table;
+        width: 100%;
+        border: 1px solid $primary-color;
+        margin-bottom: 5rem;
+        padding-bottom: 2rem;
+    }
+    &__table-heading {
+        display: flex;
+        background-color: $dark-brown-1;
+        text-align: center;
+        color: $primary-white;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        border: 0.5px solid $light-red-1;
+    }
+    &__table-cell {
+        text-align: left;
+        align-items: center;
+        padding: 1rem 1.5em;
+        font-size: 1.2rem;
+    }
+    &__table-icon {
+        width: 1%;
+    }
+    &__table-number {
+        width: 3%;
+    }
+    &__table-item {
+        width: 30%;
+    }
+    &__table-quantity {
+        width: 15%;
+    }
+    &__table-amount {
+        width: 15%;
+    }
+    &__table-unit-price {
+        width: 18%;
+    }
+    &__table-edit-delete-icons {
+        width: 10%;
+        display: flex;
+    }
+    &__delete-icon-container {
+        margin-left: 2rem;
+    }
+    &__edit-icon,
+    &__delete-icon {
+        cursor: pointer;
+        font-size: 1.4rem;
+        &:focus {
+            border: 1px solid transparent;
+        }
+    }
+    &__no-item-in-invoice {
+        width: 100%;
+        text-align: center;
+        &__image {
+            margin-top: 3rem;
+            object-fit: cover;
+            object-position: 50% 50%;
+            width: 50%;
+        }
+        &__text {
+            font-size: 1.6rem;
+            color: $dark-grey-6;
+        }
+    }
+    &__total-section {
+        text-align: right;
+    }
+    &__table-row {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        margin: 0.5rem 0.5rem 0 0.5rem;
+        background: $primary-white;
+        border: 1px solid $light-grey;
+        box-shadow: $input-box-shadow;
+        &--active {
+            border: 1px solid $primary-color;
+        }
+    }
+    &__total-row {
+        display: inline-flex;
+
+        &--blue {
+            background-color: $light-blue-3;
+            font-size: 1.6rem;
+            font-weight: 600;
+            box-shadow: $input-box-shadow;
+            margin-top: 3rem;
+            margin-right: 0.5rem;
+        }
+    }
+    &__dropdown-menu-icon {
+        width: 0.4rem;
+        height: 1rem;
+        cursor: pointer;
+    }
+    &__item-unit-price {
+        font-weight: bolder;
+    }
+    &__delete-btn {
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        fill: red;
+    }
+    &__total-container-section {
+        display: table;
+        width: 100%;
+        border-radius: 4px;
+        margin-top: 3rem;
+        text-align: right;
+        @include media-breakpoint-between(xs, md) {
+            font-size: 1rem;
+        }
+    }
+    &__total-cell {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1rem 1.5rem;
+    }
+    &__error-message {
+        position: absolute;
+        color: $error;
+        &--block {
+            display: block;
+            color: $error;
+            font-size: 1.2rem;
+        }
+    }
+    &__total-section-error-message {
+        position: absolute;
+        color: $error;
+        bottom: -2.7rem;
+    }
+    &__convert-to-receipt-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2.5rem;
+    }
+    &__convert-to-receipt-text {
+        font-size: 1.6rem;
+        color: $primary-color;
+        cursor: pointer;
+    }
+    &__convert-to-receipt-icon {
+        background: $primary-color;
+        height: 2rem;
+        width: 2rem;
+        margin-right: 4px;
+        border-radius: 50%;
+    }
+}
+
+.left-section {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.VAT-text {
+    margin-right: 4rem;
+}
+
+.sub-total-text {
+    margin-right: 0.9rem;
+}
+
+.total-text {
+    margin-right: 2rem;
+}
+
+.preview-send-invoice-btn-section {
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+.preview-send-invoice-btn {
+    color: $primary-white;
+    background-image: $button-gradient-color;
+    display: inline-block;
+    height: 4.5rem;
+    width: 45%;
+    text-transform: uppercase;
+    border: none;
+    &:disabled {
+        background: none $light-grey-2;
+    }
+    @include media-breakpoint-between(xs, md) {
+        width: 50%;
+    }
+}

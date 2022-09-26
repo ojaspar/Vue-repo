@@ -1,0 +1,39 @@
+.total-section {
+    font-size: 14px;
+    justify-content: center;
+    margin-top: 40px;
+    color: #333333;
+    &__one,
+    &__two,
+    &__three {
+        border-right: 1px solid $reports-table-grey;
+    }
+
+    &__one {
+        &--figures {
+            color: #716ACA;
+        }
+    }
+
+    &__two {
+        &--figures {
+            color: #36A3F7;
+        }
+    }
+
+    &__three, &__four {
+        &--figures {
+            color: #F4516C;
+        }
+    }
+
+}
+
+.total-section .col {
+    max-width: 300px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+

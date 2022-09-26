@@ -1,0 +1,29 @@
+.full-page-loader {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__background {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $light-grey-13;
+        opacity: 0.5;
+    }
+
+    &__spinner {
+        color: $primary-color;
+    }
+}

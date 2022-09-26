@@ -1,0 +1,137 @@
+.select-staff {
+    padding: 12px 0;
+
+    &__search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid $primary-color;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 9.5px 10.5px;
+        height: 34px;
+        font-size: 13px;
+        margin-bottom: 16px;
+
+        &--left,
+        &--right {
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+
+        &--left {
+            justify-content: space-between;
+        }
+
+        &--right {
+            justify-content: flex-end;
+        }
+    }
+
+    &__new-staff-button {
+        display: flex;
+        align-items: center;
+
+        &--text {
+            margin-left: 5px;
+            font-size: 14px;
+        }
+    }
+
+    &__headline {
+        color: $dark-grey-1;
+    }
+
+    &__loader {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__no-staff-created-yet {
+        font-size: 14px;
+    }
+}
+
+.search-input {
+    border: none;
+    > .form-control {
+        &::placeholder {
+            font-size: 14px;
+        }
+    }
+}
+
+.search-icon {
+    color: $dark-grey-1;
+}
+
+.staff {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    padding: 8px 10px;
+    min-height: 4rem;
+
+    &:hover {
+        background: $primary-white;
+        box-shadow: $form-box-shadow-light;
+    }
+
+    &__avatar {
+        height: 3rem;
+        max-width: 3rem;
+        border-radius: 50%;
+        padding: 0.375rem;
+        background: $dark-grey-1;
+        color: $primary-white;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--active {
+            @extend .staff__avatar;
+            background: $primary-color;
+        }
+    }
+
+    &__details {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0;
+
+        &--bio {
+            display: flex;
+            flex-direction: column;
+            line-height: 16px;
+
+            & > p {
+                margin: 0;
+                margin-bottom: 6px;
+            }
+        }
+    }
+}
+
+.payment {
+    &__amount {
+        font-size: 11px;
+    }
+
+    &__name {
+        font-size: 14px;
+        color: $primary-black;
+    }
+
+    &__staff-selection {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        &--button {
+            margin-right: 5px;
+        }
+    }
+}

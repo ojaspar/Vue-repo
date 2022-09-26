@@ -1,0 +1,69 @@
+.customer-dashboard {
+    padding: 5px 15px;
+
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        margin-left: -15px;
+        color: $dark-brown-3;
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    &__mobile-add-customer-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        border-radius: 5px;
+        background: $primary-color;
+        color: $primary-white;
+
+        &:focus,
+        :active {
+            border: none;
+            color: $primary-white;
+            background: $primary-color;
+        }
+
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+
+    &__header-section {
+        background-color: $page-header-backbround;
+        padding: 10px 8px;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+    }
+
+    &__header-text {
+        font-size: 18px;
+        padding: 0 13px;
+        color: $color-black-3;
+    }
+
+    &__table {
+        margin: 0 15;
+        padding: 0;
+    }
+
+    &__content {
+        padding: 15px 0;
+        margin: 17px -15px 0;
+        background: $primary-white;
+        box-shadow: 0px 4.62128px 18.4851px rgba(53, 55, 81, 0.06);
+        border-radius: 10px 10px 0 0;
+        @include media-breakpoint-up(md) {
+            min-height: 450px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 0;
+        }
+    }
+}

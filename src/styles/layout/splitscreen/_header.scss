@@ -1,0 +1,38 @@
+.auth-header {
+    &__logo-container {
+      position: absolute;
+      top: 0;
+      z-index: 5;
+      left: 9.9rem;
+    }
+    &__logo {
+        height: 8rem;
+        width: 15rem;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+    .auth-header {
+        &__logo-container {
+            top: 1rem;
+            left: 3rem;
+        }
+        &__logo {
+            height: 4rem;
+            width: 6rem;
+        }
+    }
+ }
+
+ @media (min-width: 768px) and (max-width: 1024px) {
+    .auth-header {
+        &__logo-container {
+            top: 1rem;
+            left: 3rem;
+        }
+        &__logo {
+            height: 4rem;
+            width: 6rem;
+        }
+    }
+ }

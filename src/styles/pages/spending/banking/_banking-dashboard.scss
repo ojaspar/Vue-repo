@@ -1,0 +1,26 @@
+.banking-dashboard {
+    background: inherit;
+    &__header-buttons {
+        display: flex;
+        justify-content: space-between;
+        @include media-breakpoint-down(xs) {
+            display: none;
+        }
+    }
+    &__add-bank-account-btn {
+        background: $primary-white;
+        border: 0.7px solid $dark-grey-1;
+        color: $dark-grey-1;
+        border-radius: 4px;
+    }
+    &__move-funds-btn {
+        background: $primary-color-1;
+        color: $primary-white;
+        padding: 0 20px;
+        border-radius: 4px;
+        &:focus {
+            background: $primary-color-1;
+            color: $primary-white;
+        }
+    }
+}

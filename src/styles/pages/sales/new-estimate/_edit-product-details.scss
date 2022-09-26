@@ -1,0 +1,38 @@
+.edit-product-details-estimate {
+    &__unit-price-currency-section {
+        margin: 20px 0;
+    }
+    &__notes-text-area-field {
+        height: 68px;
+    }
+    &__checkbox-label {
+        margin-left: 10px;
+    }
+    &__unit-price-container,
+    &__currency-container {
+        position: relative;
+    }
+    &__unit-price-container {
+        width: 53.5%
+    }
+    &__currency-container {
+        width: 43.5%;
+    }
+
+    &__discount-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+    &__naira-discount-container,
+    &__percentage-discount-container {
+        position: relative;
+        margin: 0;
+        width: 48%;
+    }
+
+    &__edit-product-details-estimate-button {
+       margin: 50px auto 10px auto;
+    }
+} 

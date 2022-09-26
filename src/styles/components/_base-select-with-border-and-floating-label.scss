@@ -1,0 +1,39 @@
+.base-floating-select {
+    &__select-label {
+        position: absolute;
+        top: -6px;
+        left: 8px;
+        font-size: 11px;
+        line-height: 11px;
+        padding: 0 2px;
+        background-color: $primary-white;
+        color: $dark-grey-1;
+        margin: 0;
+    }
+    &__select-container {
+        position: relative;
+        margin-top: 18px;
+    }
+    &__select-input {
+        height: 34px;
+        width: 100%;
+        font-size: 14px;
+        padding: 0 8px;
+        border: 1px solid $reddish-grey;
+        border-radius: 4px;
+        background: $primary-white;
+
+        &:focus {
+            outline: $primary-color !important;
+            border: 1px solid $primary-color !important;
+        }
+
+        &:disabled {
+            opacity: 1;
+            background: $off-white;
+        }
+    }
+    &__floating-label {
+        margin-bottom: 0;
+    }
+}

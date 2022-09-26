@@ -1,0 +1,11 @@
+.payment-item {
+    &__container {
+        border: 1px solid $reddish-grey;
+        border-radius: 4px;
+        margin-bottom: 0.7rem;
+        font-size: 1.4rem;
+        color: $dark-grey-1;
+        padding: 1rem 1.5rem;
+        background-color: $primary-white;
+    }
+}

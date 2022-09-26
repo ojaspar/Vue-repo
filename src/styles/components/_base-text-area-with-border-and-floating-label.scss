@@ -1,0 +1,42 @@
+.input-container {
+    position: relative;
+    margin-top: 18px;
+}
+
+.text-area {
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid $reddish-grey;
+    width: 100%;
+    &:focus {
+        outline: $primary-color;
+        border: 1px solid $primary-color;
+    }
+}
+
+.text-area-label {
+    position: absolute;
+    font-size: 14px;
+    color: $dark-grey-1;
+    top: 8px;
+    left: 8px;
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-area:focus + p > .text-area-label,
+.text-area + p > .text-area-label.keep-label-floating {
+    position: absolute;
+    top: -6px;
+    left: 7px;
+    padding: 0 2px;
+    font-size: 11px;
+    line-height: 11px;
+    background-color: $primary-white;
+    color: $dark-grey-1;
+}
+
+.floating-label {
+    margin-bottom: 0;
+}

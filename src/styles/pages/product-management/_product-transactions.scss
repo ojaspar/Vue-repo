@@ -1,0 +1,192 @@
+.product-transactions {
+    &__loader {
+        margin-top: 20%;
+    }
+    &__cards {
+        display: grid;
+        grid-auto-rows: 136px;
+        row-gap: 20px;
+        margin-bottom: 30px;
+
+        > * {
+            padding: 0 24px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 23px;
+        }
+
+        &--left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background: $primary-white;
+        }
+        &--right {
+            background: #f7fcff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__selected-product {
+        background: #ffffff;
+        color: $dark-brown-3;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--name {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            color: $dark-brown-3;
+            margin-bottom: 20px;
+        }
+
+        &--amount {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            margin: 0;
+        }
+
+        &--unit {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: $dark-grey-8;
+        }
+
+        &--status-section {
+            @include media-breakpoint-up(lg) {
+                margin-right: 30px;
+            }
+        }
+
+        &--balance {
+            font-size: 12px;
+            line-height: 14px;
+            color: $dark-grey-8;
+            margin: 0;
+        }
+
+        &--status {
+            font-size: 14px;
+            line-height: 17px;
+            margin: 0;
+
+            &--available {
+                color: #27ae60;
+            }
+            &--unavailable {
+                color: #e12323;
+            }
+        }
+
+        &--total {
+            color: $dark-brown-3;
+            font-weight: 600;
+            font-size: 12px;
+
+            &--year {
+                font-size: 24px;
+                line-height: 120%;
+                margin: 5px 0 21px;
+            }
+            &--month {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 20px;
+        color: $dark-brown-3;
+
+        @include media-breakpoint-down(md) {
+            font-size: 16px;
+        }
+
+        &--buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &--export {
+            font-weight: 500;
+            font-size: 12.2353px;
+            line-height: 15px;
+            margin: 0 20px 0;
+            cursor: pointer;
+
+            @include media-breakpoint-down(md) {
+                margin-left: 0;
+            }
+
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 16px;
+        }
+    }
+
+    &__top-section {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 20px 0;
+        margin: 0 -15px 20px;
+        @include media-breakpoint-down(sm) {
+            margin-top: 25px;
+        }
+        @include media-breakpoint-down(xs) {
+            margin: 25px 0 0;
+            background: none;
+        }
+    }
+
+    &__button-container {
+        display: none;
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-top: 20px;
+        }
+    }
+
+    &__button {
+        background-color: $primary-color-1;
+        color: $primary-white;
+        padding: 5px 24px;
+        border-radius: 4px;
+        height: 40px;
+        width: 160px;
+        &:active,
+        &:focus {
+            background-color: $primary-color-1;
+            color: $primary-white;
+        }
+    }
+
+    &__table {
+        margin: 20px -15px 0;
+    }
+}

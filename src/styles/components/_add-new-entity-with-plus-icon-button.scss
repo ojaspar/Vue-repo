@@ -1,0 +1,4 @@
+.default-button-text-class {
+   @include add-new-entity-with-plus-icon-button;
+    justify-content: flex-start;
+}

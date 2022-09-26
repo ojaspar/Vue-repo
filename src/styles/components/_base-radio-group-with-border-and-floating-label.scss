@@ -1,0 +1,40 @@
+.radio-outer-inputs-container {
+    position: relative;
+    border: 1px solid $reddish-grey;
+    padding: 10px 4px;
+    display: flex;
+    height: 34px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+.radio-inner-inputs-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+.radio-label-section {
+    display: flex;
+    align-items: center;
+}
+.radio-label {
+    margin: 0 0 0 4px;
+    border-radius: 4px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.radio-floating-label {
+    position: absolute;
+    top: -7px;
+    left: 6px;
+    padding: 0 2px;
+    font-size: 11px;
+    line-height: 11px;
+    background-color: $primary-white;
+    color: $dark-grey-1;
+}
+
+.radio-input {
+    margin-right: 8px;
+}

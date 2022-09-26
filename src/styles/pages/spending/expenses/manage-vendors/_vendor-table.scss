@@ -1,0 +1,117 @@
+.vendor-table {
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #e0e0e0;
+        color: $primary-black;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 17px;
+        margin: 0;
+        border-radius: 5px 5px 0 0;
+        padding: 8px 5px 8px 22px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        border-radius: 5px;
+        background-color: $primary-white;
+        color: $primary-black;
+        margin: 0;
+        padding: 13px 8px;
+        border-top: 0.5px solid #e0e0e0;
+        &--loader {
+            text-align: center;
+        }
+        &--empty {
+            text-align: center;
+            font-size: 15px;
+            @include media-breakpoint-between(sm, xl) {
+                padding: 13px 5px 13px 20px;
+                background-color: $primary-white;
+                color: $primary-black;
+            }
+        }
+    }
+
+    &__sub {
+        font-size: 12px;
+        color: $dark-grey-1;
+    }
+
+    &__more-options {
+        position: absolute;
+        background: $primary-white;
+        -webkit-box-shadow: $card-shadow;
+        box-shadow: $card-shadow;
+        border-radius: 4px;
+        margin-top: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 110px;
+        outline: none;
+        z-index: 1;
+        max-width: 170px;
+    }
+
+    &__content-action {
+        font-size: 14px;
+        line-height: 17px;
+        padding: 5px;
+        color: $primary-black;
+        margin: 0;
+        &:hover {
+            background: $light-grey-2;
+        }
+    }
+}
+
+.dark--grey {
+    color: $dark-grey-1;
+}
+
+.prepayment {
+    color: $primary-color;
+}
+
+.balance {
+    color: $notification-red;
+}
+
+.activity-text {
+    &__pending {
+        color: $dark-grey-1;
+        font-style: italic;
+    }
+    &__others {
+        color: $primary-black;
+        font-style: italic;
+    }
+}
+
+.recent-vendors,
+.all-vendors {
+    &__heading {
+        color: $dark-grey-1;
+        font-size: 14px;
+        line-height: 14px;
+        margin: 0 0 5px 0;
+    }
+}
+
+.mobile-table {
+    display: none;
+    @include media-breakpoint-down(sm) {
+        display: inline;
+    }
+}
+
+.desktop-table {
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}

@@ -1,0 +1,112 @@
+.add-payment-container {
+    background: $primary-white;
+    box-shadow: 0px 1px 10px rgba(63, 63, 68, 0.15);
+    border-radius: 0.25rem;
+    padding: 4rem 1rem;
+
+    &__button-container {
+        min-height: 4rem;
+    }
+
+    &__button{
+        max-width: 25rem;
+        height: 4rem;
+    }
+
+    &__dark-header {
+        background: $dark-brown-1;
+        color: $primary-white;
+        margin: 0 0 1.5rem;
+        width: 100%;
+        padding: 1rem 2.5rem;
+    }
+
+    &__table {
+        background: $primary-white;
+        border: 0.0625rem solid $primary-color;
+        border-radius: 0.25rem;
+        min-height: 45rem;
+
+        >.container:first-child {
+            padding: 0;
+    }
+
+        &--row {
+            padding: 0.8rem;
+            font-size: 14px;
+            background: $primary-white;
+            border: 0.0625rem solid $reddish-grey;
+            box-shadow: 0px 1px 15px rgba(145, 144, 144, 0.15);
+            border-radius: 0.25rem;
+            height: 4rem;
+            margin: 0.8rem 0;
+            color: $dark-grey-1;
+        }
+    }
+}
+
+.expense-details {
+    &__drawer {
+        background: $light-grey;
+        height: 4.2rem;
+        font-size: 14px;
+        margin: 3rem 0 0;
+    }
+
+    &__header {
+        background: $primary-white;
+        color: $primary-black;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    &__row {
+        font-size: 14px;
+        padding: 1rem;
+        border-bottom: 0.7px solid rgba(166, 166, 166, 0.5);
+        margin: 0;
+    }
+
+    &__body {
+        margin: 1rem 0;
+        font-size: 14px;
+    }
+
+    &__footer {
+        height: 4.2rem;
+        font-size: 13.5px;
+        font-weight: bold;
+        background: $logo-border;
+        padding: 0.8rem;
+        margin: 2rem 0;
+    }
+}
+
+.add-payment-form {
+    background: $primary-white;
+    border: 1px solid $primary-color;
+    border-radius: 0.25rem;
+    height: 45rem;
+    max-height: 45rem;
+    padding-bottom: 10rem;
+
+    &__header {
+        font-size: 14px;
+        background: $dark-brown-1;
+        color: $primary-white;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 1rem 1.25rem;
+    }
+
+    &__input-section {
+        margin-top: 6rem;
+        font-size: 14px;
+        height: 100%;
+
+        &--item {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,191 @@
+.make-payment {
+    padding: 0;
+    &__add-more-button {
+        width: 20rem;
+        margin: 12px 0 0;
+        background: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        color: $primary-color;
+
+        > svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    }
+
+    &__finish-payment-button {
+        margin: 50px auto 0;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__plus-sign {
+        margin-right: 10px;
+        background: transparent;
+    }
+
+    &__summary-section {
+        margin-top: 33px;
+        font-size: 16px;
+        color: $color-black-5;
+        font-style: normal;
+        font-weight: normal;
+        border-top: 1px solid $dark-grey-1;
+
+        &--amount {
+            margin-left: 15px;
+        }
+    }
+}
+
+.payment-draft-container {
+    @include media-breakpoint-up(xl) {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.payment-draft-container {
+    margin-bottom: 8px;
+    @include media-breakpoint-down(xl) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.payment-draft {
+    background: $primary-white;
+    border: 1px solid $light-brown-3;
+    box-shadow: $input-box-shadow;
+    border-radius: 4px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 13px 8px;
+    margin: 0; 
+
+    @include media-breakpoint-up(xl) {
+        flex-direction: row;
+        align-items: center;
+        font-size: 14px;
+        padding: 7px 13px 7px 8px;
+        line-height: 16px;
+        margin: 0;
+        min-height: 48px;
+    }
+
+    &__count {
+        @include media-breakpoint-up(xl) {
+            display: flex;
+            padding: 0;
+
+            &--draggable {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__details {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__details-left,
+    &__details-right {
+        padding: 0;
+    }
+
+    &__details-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    &__details-right-up {
+        justify-content: unset;
+    }
+
+    &__staff-name,
+    &__net-pay,
+    &__chevron {
+        font-size: 14px;
+        margin-bottom: 0;
+        color: $primary-black;
+    }
+
+    &__staff-name {
+        @include media-breakpoint-up(lg) {
+            padding-left: 0;
+        }
+    }
+
+    &__date {
+        color: $primary-color;
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
+
+    &__chevron {
+        font-size: 16px;
+        line-height: 0;
+        margin-bottom: 2px;
+    }
+
+    &__payment-type,
+    &__net-pay,
+    &__deductions,
+    &__notes {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    &__net-pay {
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: inherit;
+            color: $primary-black;
+            font-weight: 600;
+        }
+    }
+
+    &__notes {
+        font-style: italic;
+        color: $dark-grey-1;
+    }
+
+    &__actions {
+        margin-top: 12px;
+        margin-left: 0;
+        font-size: 14px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
+            margin-bottom: 0;
+            display: flex;
+        }
+
+        &--edit,
+        &--delete {
+            margin: 0 26.4px 0 8px;
+            @include media-breakpoint-up(lg) {
+                margin: 0 7px;
+            }
+        }
+
+        &--edit-icon,
+        &--delete-icon {
+            margin: 0 26.4px 0 8px;
+            @include media-breakpoint-up(lg) {
+                margin: 0 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.block-error-message {
+    &__outer-container {
+        display: flex;
+        align-items: center;
+        background-color: rgba(247, 47, 9, 0.05);
+        font-size: 12px;
+        color: #F72F09;
+        min-height: 40px;
+        padding: 6px 10px;
+        margin: 10px 0;
+        &.content-available {
+            background-color: rgba(247, 47, 9, 0.05);
+        }
+        &.no-content {
+            background-color: transparent;
+        }
+    }
+    &__inner-container {
+        word-wrap: break-word;
+        flex: 1;
+    }
+}

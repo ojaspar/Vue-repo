@@ -1,0 +1,186 @@
+.business {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    & > div {
+        width: 20%;
+        text-align: center;
+    }
+    margin-bottom: 5rem;
+    &__category {
+        font-size: 1.3rem;
+    }
+}
+
+.form-input {
+    position: relative;
+}
+
+.error {
+    margin-bottom: 0;
+    border-bottom: 1px solid $error;
+    color: $error;
+}
+
+.business-form-container {
+    position: relative;
+    @include media-breakpoint-up(md) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;    }
+}
+
+.business-form {
+    background: #ffffff;
+    border: 1px solid $primary-color;
+    box-shadow: $input-box-shadow;
+    border-radius: 4px;
+    padding: 3rem 2rem;
+    overflow-y: scroll;
+    width: 100%;
+
+    
+    @include media-breakpoint-up(md) {
+        min-height: 574px;
+        min-width: 574px;
+    }
+
+    &__title {
+        font-size: 3rem;
+    }
+
+    &__sub-title {
+        font-size: 1.5rem;
+    }
+
+    &__back-button {
+        font-weight: normal;
+        font-size: 1.3rem;
+    }
+    // &__select {
+    //     border-right: none;
+    //     border-left: none;
+    //     border-top: none;
+    //     border-bottom: 1px solid $color-black-2;
+    //     margin-top: 20px;
+    // }
+    &__select,
+    &__input {
+        // font-size: 1.5rem;
+        height: 34px;
+        // &--split-left {
+        //     width: 95%;
+        // }
+        // &--split-right {
+        //     width: 100%;
+        // }
+    }
+    // &__input.error,
+    // &__select.error {
+    //     margin-bottom: 0;
+    //     color: $error;
+    // }
+    &__btn {
+        font-size: 1.6rem;
+        line-height: 1.35rem;
+        padding: 1rem 1.5rem;
+        border-radius: 1rem;
+        display: inline-block;
+        width: 30rem;
+        text-align: center;
+    }
+    &__form-footer {
+        padding: 2rem 3rem;
+        text-align: right;
+        position: relative;
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.done-btn {
+    background: $button-gradient-color;
+    margin: 0.5rem;
+}
+
+@media (min-width: 300px) and (max-width: 576px) {
+    .business {
+        position: relative;
+        width: 100%;
+        margin: 0 1rem 5rem 0;
+        line-height: 1.5rem;
+        & > div {
+            width: 33.333%;
+        }
+        .avatar {
+            max-width: 100%;
+            text-align: left;
+        }
+        .rounded-circle {
+            width: 100%;
+        }
+    }
+    .business-form {
+        overflow-y: auto;
+        top: 2rem;
+        &__title {
+            font-size: 1.5rem;
+            width: 100%;
+        }
+        &__sub-title {
+            font-size: 0.9rem;
+        }
+        &__input,
+        // &__select {
+        //     font-size: 0.9rem;
+        // }
+        &__form-footer {
+            padding: 1rem 0rem;
+            right: 0;
+        }
+
+        &__btn {
+            font-size: 12px;
+        }
+    }
+}
+@media (min-width: 400px) and (max-width: 1024px) {
+    .business {
+        position: relative;
+        width: 100%;
+        margin: 2rem 0;
+        & > div {
+            width: 33.3333%;
+        }
+        line-height: 1.5rem;
+        .avatar {
+            max-width: 6rem;
+            text-align: left;
+        }
+        .rounded-circle {
+            width: 100%;
+        }
+    }
+
+    .business-form {
+        overflow: auto;
+        &__title {
+            font-size: 1.8rem;
+            width: 100%;
+        }
+        &__sub-title {
+            font-size: 1.1rem;
+        }
+
+        // &__input,
+        // &__select {
+        //     font-size: 0.9rem;
+        // }
+    }
+}

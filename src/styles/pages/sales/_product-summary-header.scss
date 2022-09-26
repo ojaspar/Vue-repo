@@ -1,0 +1,12 @@
+.product-summary-page {
+    &__table-header {
+        height: 34px;
+        background: $primary-gradient-background;
+        border-radius: 4px 4px 0px 0px;
+        display: flex;
+        padding: 10px 15px 10px 4px;
+        font-size: 14px;
+        align-items: center;
+        border-radius: 4px;
+    }
+}

@@ -1,0 +1,13 @@
+.expense-summary-page {
+    &__table-header {
+        border-radius: 4px 4px 0px 0px;
+        padding: 9px 15px 9px 4px;
+        font-size: 14px;
+        background: $primary-gradient-background;
+        color: #fff;
+        height: 34px;
+        border-radius: 4px 4px 0px 0px;
+        display: flex;
+        align-items: center;
+    }
+}

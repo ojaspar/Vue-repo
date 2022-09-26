@@ -1,0 +1,290 @@
+//desktop styles
+.account-details-top-section {
+    margin-left: 15px;
+    &__first-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        justify-content: space-between;
+        border: 1px solid #e9e9ea;
+        padding: 9px 13px;
+        margin-right: 4px;
+    }
+
+    &__second-row {
+        display: flex;
+        align-items: center;
+        &__transfer-btn {
+            display: flex;
+            align-self: center;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.bank-details {
+    display: flex;
+    align-items: center;
+    &__name {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.996px;
+        text-transform: uppercase;
+    }
+    &__currency-name {
+        display: flex;
+        align-items: center;
+        color: $primary-black;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.996px;
+        text-transform: uppercase;
+    }
+
+    &__edit {
+        margin-left: 2px;
+        font-size: 12px;
+        line-height: 120%;
+        cursor: pointer;
+        text-decoration-line: underline;
+        color: $dark-grey-1;
+    }
+}
+
+.balance {
+    border-radius: 4px;
+    padding: 6px 10px 6px 15px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.5px solid rgba(124, 124, 124, 0.2);
+    box-shadow: inset 0px 0px 5px rgba(124, 122, 122, 0.55);
+    &__amount {
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.06px;
+        color: $primary-black;
+    }
+    &__text {
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: -0.05px;
+        color: $dark-grey-1;
+        margin-left: 5px;
+    }
+}
+
+.search-and-dates {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 21px;
+    background: $light-grey-11;
+    border: 0.5px solid rgba(124, 124, 124, 0.2);
+    box-shadow: 0px 0px 0px rgba(51, 51, 51, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+    border-radius: 4px;
+    height: 47px;
+}
+
+.search {
+    &__container {
+        border-radius: 8px;
+        height: 42px;
+        padding: 10px 10px 7px;
+        width: 50%;
+        display: flex;
+        background: $primary-white;
+        align-items: center;
+        border: 4px solid rgba(124, 124, 124, 0.2);
+    }
+    &__input {
+        border: none;
+        width: 100%;
+        > .form-control {
+            outline: none;
+            border: none;
+            margin-bottom: 3px;
+            &::placeholder {
+                font-size: 15px;
+            }
+        }
+    }
+    &__icon {
+        color: $dark-grey-1;
+        height: 15px !important ;
+        width: 18px !important ;
+    }
+}
+
+.dates-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.dates {
+    display: flex;
+    &__container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 34px;
+        margin: 20px 10px;
+    }
+    &__from {
+        @include media-breakpoint-down(lg) {
+            margin: 0;
+        }
+    }
+    &__to {
+        @include media-breakpoint-down(lg) {
+            margin: 0;
+        }
+    }
+}
+
+.fund-transfer-btn {
+    font-size: 14px;
+    line-height: 17px;
+    border-radius: 4px;
+    padding: 10px 10px 29px;
+    color: $primary-white;
+    background-color: $primary-color-1;
+    &:focus {
+        color: $primary-white;
+        background-color: $primary-color-1;
+    }
+    @include media-breakpoint-down(lg) {
+        padding: 0;
+        width: max-content;
+    }
+}
+
+//mobile styles
+.mid-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-card {
+    align-items: center;
+    background: $primary-white;
+    border-radius: 4px;
+    padding: 21px 13px 9px 13px;
+    box-shadow: 0px 0px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+    &__text {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.996px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $primary-black;
+    }
+    &__balance {
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.06px;
+        color: $primary-color;
+    }
+    &__other-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.medium-screen {
+    @include media-breakpoint-down(xs) {
+        display: none !important;
+    }
+}
+
+.xs-screen {
+    @include media-breakpoint-up(sm) {
+        display: none !important;
+    }
+}
+
+.mobile-search-and-dates {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px !important;
+    background: $light-grey-11;
+    border: 0.5px solid rgba(124, 124, 124, 0.2);
+    box-shadow: 0px 0px 0px rgba(51, 51, 51, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+    border-radius: 4px;
+}
+
+.mobile-search {
+    &__container {
+        border-radius: 8px;
+        height: 42px;
+        padding: 10px 10px 7px;
+        display: flex;
+        background: $primary-white;
+        align-items: center;
+        border: 4px solid rgba(124, 124, 124, 0.2);
+
+        @include media-breakpoint-down(sm) {
+            width: 40%;
+        }
+    }
+    &__input {
+        border: none;
+        width: 100%;
+        > .form-control {
+            outline: none;
+            border: none;
+            margin-bottom: 3px;
+            &::placeholder {
+                font-size: 15px;
+            }
+        }
+    }
+    &__icon {
+        color: $dark-grey-1;
+        height: 15px !important ;
+        width: 18px !important ;
+    }
+}
+
+.mobile-dates {
+    display: flex;
+    margin-top: -15px;
+}
+
+.xs-dates-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.xs-dates-container > div > div > div > .datefield-input {
+    width: 40vw !important;
+}
+
+.btn-container {
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    margin: 15px 0 0;
+}
+
+.mobile-transfer-btn {
+    font-size: 14px;
+    border-radius: 4px;
+    height: 34px;
+    width: 150px;
+    padding: 0 20px;
+    color: $primary-white;
+    background-color: $primary-color-1;
+    &:focus {
+        color: $primary-white;
+        background-color: $primary-color-1;
+    }
+}

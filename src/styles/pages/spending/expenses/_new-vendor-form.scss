@@ -1,0 +1,61 @@
+.add-vendor-form {
+    padding: 0;
+
+    &__label {
+        margin-bottom: 0;
+        color: $dark-grey-1;
+    }
+
+    &__input {
+        &--row {
+            margin: 0;
+            border-radius: 4px;
+        }
+
+        &--field {
+            padding: 5px;
+            font-size: 16px;
+        }
+    }
+
+    &__radio-inner-inputs {
+        margin-top: 10px;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+
+    &__more-details {
+        text-align: end;
+
+        &--link {
+            color: $primary-color;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 12px;
+        }
+    }
+
+    &__save-btn {
+        background-color: $primary-color;
+        color: $primary-white;
+        border-radius: 4px;
+        height: 34px;
+        width: 145px;
+        &:active,
+        &:focus {
+            background-color: $primary-color;
+            color: $primary-white;
+        }
+    }
+}
+
+.radio-container {
+    margin-top: 20px;
+    border: 1px solid #ced4da;
+}

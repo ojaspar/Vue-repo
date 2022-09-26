@@ -1,0 +1,73 @@
+.action-btn {
+    color: $primary-color;
+    width: fit-content;
+    min-width: 130px;
+    height: 34px;
+    background: $primary-white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 1px 2px rgba(177, 177, 177, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @include media-breakpoint-down(sm) {
+        min-width: 100px;
+    }
+
+    &:hover {
+        color: $primary-color;
+    }
+    &:active,
+    &:focus {
+        background-color: $primary-white;
+        color: $primary-color;
+        border: 0.7px solid $primary-color;
+    }
+    &:disabled {
+        color: $primary-white;
+        cursor: not-allowed;
+        background: none $light-grey-2;
+    }
+
+    &__icon {
+        margin-left: 10px;
+        width: 16px !important;
+        height: 25px;
+    }
+
+    &__all-actions {
+        position: absolute;
+        background: $primary-white;
+        -webkit-box-shadow: $card-shadow;
+        z-index: 1;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 165px;
+        outline: none;
+        top: 102px;
+        right: 15px;
+        font-size: 14px;
+        line-height: 120%;
+        padding: 5px 0;
+        box-shadow: 0px 1px 2px rgba(177, 177, 177, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.05);
+        :first-child {
+            margin-top: 5px;
+        }
+    }
+
+    &__action {
+        cursor: pointer;
+        width: 100%;
+        padding: 5px 15px;
+        margin-bottom: 5px;
+        color: $primary-color;
+        &:hover {
+            background: $primary-color;
+            color: $primary-white;
+        }
+    }
+}

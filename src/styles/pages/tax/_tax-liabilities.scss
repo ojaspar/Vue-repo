@@ -1,0 +1,38 @@
+.tax-liabilities {
+    padding: 0;
+
+    &__cards {
+        display: grid;
+        row-gap: 20px;
+
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 15px;
+
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.buttons-section {
+    display: flex;
+    align-items: center;
+
+    &__pay {
+        margin-right: 20px;
+    }
+
+    &__pay,
+    &__view {
+        max-width: 50px;
+    }
+
+    &__view {
+        color: $primary-color;
+        border: 1px solid $primary-color;
+    }
+}
+
+.app-primary-btn.buttons-section__pay {
+    min-width: 50px;
+}

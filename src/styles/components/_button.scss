@@ -1,0 +1,14 @@
+.app-btn {
+    color: $primary-white;
+    box-shadow: $button-box-shadow;
+    border: none;
+    background: $button-gradient-color;
+    &:hover {
+        color: $primary-white
+    }
+    &:disabled {
+        color: $primary-white;
+        cursor: not-allowed;
+        background: none $light-grey-2;
+    }
+}

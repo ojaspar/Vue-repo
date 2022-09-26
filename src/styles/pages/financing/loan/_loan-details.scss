@@ -1,0 +1,21 @@
+.loan-details {
+    &__payment-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 20px 0;
+        @include media-breakpoint-down(xs) {
+            display: none;
+        }
+
+        &--bottom {
+            display: none;
+            @include media-breakpoint-down(xs) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 20px 0;
+            }
+        }
+    }
+}

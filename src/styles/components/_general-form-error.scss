@@ -1,0 +1,19 @@
+.general-form-error {
+    &__container {
+        width: 100%;
+        padding: 10px 5px;
+        margin-bottom: 20px;
+        background-color: $light-error;
+        border-radius: 4px;
+    }
+    &__message {
+        color: $danger-red;
+        font-size: 14px;
+        margin: 0;
+        width: 100%;
+        left: 0;
+        right: 0;
+        line-height: 12px;
+        text-align: left;
+    }
+}

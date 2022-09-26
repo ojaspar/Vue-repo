@@ -1,0 +1,96 @@
+.progress-tracker {
+    &__progress-container {
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        margin: 0 auto;
+        &::after,
+        &::before {
+            content: none;
+        }
+    }
+    &__progress-inner-container {
+        width: 592px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        counter-reset: stepCount;
+        &::before,
+        &::after {
+            content: none;
+        }
+    }
+    &__outer-circle {
+        display: flex;
+        flex-grow: 1;
+        position: relative;
+        border-radius: 50%;
+        &.active {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 157, 0, 0.4);
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            height: 0.15rem;
+            z-index: -1;
+        }
+        &.active::before {
+            left: 1.5rem;
+            width: 20rem;
+        }
+        &.inactive:before {
+            left: 0;
+            width: 18rem;
+        }
+        &.fourth-circle::before {
+            display: none;
+        }
+        &.active-line::before {
+            background: #ff9d00;
+        }
+        &.inactive-line::before {
+            background: rgba(196, 196, 196, 0.51);
+        }
+        &.active + .progress-tracker__progress-label {
+            transform: translateX(-32%);
+        }
+    }
+    &__inner-circle {
+        width: 24px;
+        height: 24px;
+        top: 50%;
+        left: 50%;
+        margin: -12px 0px 0px -12px;
+        display: flex;
+        counter-increment: stepCount;
+        content: counter(stepCount);
+        align-items: center;
+        position: absolute;
+        justify-content: center;
+        color: $primary-white;
+        border-radius: 50%;
+        &.active {
+            background: #ff9d00;
+        }
+        &.inactive {
+            background: #c4c4c4;
+        }
+    }
+    &__progress-item-container {
+        position: relative;
+        border-radius: 50%;
+        display: flex;
+    }
+    &__progress-label {
+        font-size: 14px;
+        position: absolute;
+        top: 40px;
+        transform: translateX(-50%);
+        display: block;
+        width: 15rem;
+        text-align: center;
+    }
+}

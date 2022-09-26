@@ -1,0 +1,68 @@
+.document-preview-download {
+    color: $primary-white;
+    background: $primary-color;
+
+    border: none;
+    border-radius: 5px;
+
+    width: 145px;
+    height: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+
+    @include media-breakpoint-up(sm) {
+        width: 150px;
+    }
+
+    &:hover {
+        color: $primary-white;
+        text-decoration: none;
+    }
+}
+
+.document-preview-button-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 50px auto;
+}
+
+.document-preview-page {
+    &__logo-wrapper {
+        margin: 0 auto 15px;
+
+        width: 75px;
+        height: 70px;
+
+        border-radius: 5px;
+
+        position: relative;
+
+        object-fit: contain;
+        object-position: center;
+    }
+
+    &__logo-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        cursor: pointer;
+
+        background: $dark-grey-3;
+
+        border-radius: inherit;
+
+        height: inherit;
+        width: inherit;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

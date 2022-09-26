@@ -1,0 +1,25 @@
+.donation-schemes {
+    padding: 0 15px;
+    &__content {
+        margin-top: 15px;
+    }
+    &__header-section {
+        background-color: $page-header-backbround;
+        padding: 10px 8px;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+        text-align: center;
+        @include media-breakpoint-down(sm) {
+            margin-top: 10px;
+        }
+    }
+    &__header-text {
+        font-size: 18px;
+        padding: 0 13px;
+        color: $color-black-3;
+    }
+    &__table {
+        margin: 0 15;
+        padding: 0;
+    }
+}

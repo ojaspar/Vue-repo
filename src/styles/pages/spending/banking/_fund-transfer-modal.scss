@@ -1,0 +1,69 @@
+.fund-transfer-modal {
+    border-radius: 1rem;
+
+    &__heading {
+        width: 100%;
+        height: 30px;
+        padding: 20px 10px;
+        border-radius: 5px 5px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $primary-color;
+
+        &--text {
+            color: $primary-white;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}
+
+.close-btn {
+    color: $primary-white;
+    font-size: 25px;
+}
+
+#first-transfer-modal {
+    &___BV_modal_header_ {
+        border: none;
+        padding: 0;
+    }
+    &___BV_modal_body_ {
+        border: none;
+        padding: 0 15px 15px;
+    }
+    &___BV_modal_footer_ {
+        display: none;
+    }
+    &___BV_modal_content_ {
+        border: none;
+        border-radius: 5px;
+        margin-top: 40px;
+        @include media-breakpoint-between(md, xl) {
+            width: 600px;
+        }
+    }
+}
+
+#second-transfer-modal {
+    &___BV_modal_header_ {
+        border: none;
+        padding: 0;
+    }
+    &___BV_modal_body_ {
+        border: none;
+        padding: 0 15px 15px;
+    }
+    &___BV_modal_footer_ {
+        display: none;
+    }
+    &___BV_modal_content_ {
+        border: none;
+        border-radius: 5px;
+        margin-top: 40px;
+        @include media-breakpoint-between(md, xl) {
+            width: 600px;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.reports {
+    font-family: $reports-font;
+    background: $primary-white;
+    padding-bottom: 40px;
+    max-width: 850px;
+
+    &__period {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 12px 0;
+        margin-top: 20px;
+
+        &__text {
+            color: $primary-black;
+        }
+
+        &__selection > select {
+            margin-left: 10px;
+            border: 1px solid $light-grey-2;
+            border-radius: 5px;
+        }
+
+        &__selection > label {
+            display: inline;
+        }
+    }
+
+    &__section {
+        margin-bottom: 60px; 
+        
+        &:last-child {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__section-header {
+        padding: 1rem 8rem;
+
+        margin-bottom: 0;
+
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+.reports .active {
+    background-color: unset;
+    font-weight: unset;
+}
+
+.nav-tabs .nav-link {
+    font-size: 16px;
+}

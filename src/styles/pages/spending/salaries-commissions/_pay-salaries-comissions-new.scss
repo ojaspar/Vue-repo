@@ -1,0 +1,190 @@
+.salaries-commissions {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $primary-gradient-background;
+        border-radius: 4px 4px 0px 0px;
+        height: 34px;
+        padding: 0 13px;
+        font-size: 14px;
+        color: $primary-white;
+
+        &--br-4 {
+            border-radius: 4px;
+        }
+
+        &--right {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    position: relative;
+    overflow-x: hidden;
+    &__button-container {
+        justify-content: center;
+    }
+    &__button-info-section {
+        color: #0ca2d9;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    &__transcation-layout {
+        box-shadow: 0px 4.62128px 18.4851px rgba(53, 55, 81, 0.06);
+        margin-top: -20px;
+        margin-bottom: 20px;
+        @media only screen and (min-width: 768px) {
+            max-width: 605px;
+            margin: 10px auto 0px auto;
+            box-shadow: none;
+        }
+    }
+
+    &__medium-plus-container {
+        @include signup-process-medium-plus-container;
+        @media only screen and (min-width: 768px) {
+            max-width: 605px;
+            padding-top: 0px;
+            margin: 10px auto 60px auto;
+        }
+    }
+    &__content {
+        @media only screen and (min-width: 768px) {
+            margin: 0px auto 60px auto;
+            padding: 20px 39px 1px 39px;
+        }
+    }
+    &__heading-primary {
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    &__destination-text {
+        font-size: 12px;
+    }
+    &__otp-field {
+        width: 55px;
+        height: 75px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        @include media-breakpoint-up(md) {
+            width: 65px;
+        }
+    }
+    &__otp-field-container {
+        display: inline-flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        @include media-breakpoint-up(md) {
+            max-width: 330px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0 auto 40px auto;
+        }
+        @include media-breakpoint-up(lg) {
+            max-width: 400px;
+        }
+    }
+    &__block-error-message-container {
+        @include media-breakpoint-up(md) {
+            margin: 0 auto;
+            max-width: 330px;
+        }
+        @include media-breakpoint-up(lg) {
+            max-width: 400px;
+        }
+    }
+    &__receive-otp-text {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    &__resend-code-text {
+        margin-left: 5px;
+        cursor: pointer;
+        color: #f09222;
+        font-size: 14px;
+        &:hover {
+            color: #0ca2d9;
+            text-decoration: none;
+        }
+    }
+    &__bio-data-text {
+        &--orange {
+            text-decoration: none;
+            color: #f09222;
+        }
+    }
+    &__have-account-text {
+        font-size: 16px;
+        text-align: center;
+    }
+    &__signin-text {
+        color: #f09222;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &__terms-and-conditions-text {
+        margin-bottom: 50px;
+        font-size: 14px;
+    }
+    &__button {
+        @include signup-process-button;
+    }
+    &__right-image {
+        object-fit: cover;
+        height: 100vh;
+        width: 100%;
+    }
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 50px 0 59px;
+    }
+    &__save-btn {
+        background-color: $primary-color;
+        color: $primary-white;
+        border-radius: 4px;
+        height: 34px;
+        width: 145px;
+        &:active,
+        &:focus {
+            background-color: $primary-color;
+            color: $primary-white;
+        }
+    }
+    &__date {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #4f4f4f;
+        margin-left: 20px;
+        margin-left: 0;
+        margin: 13px 5px 0 0;
+
+        @media only screen and (min-width: 768px) {
+            margin: 13px 15px 0 0;
+        }
+    }
+    &__date-dashed {
+        border: 0.5px dashed #0ca2d9;
+        padding-left: 6px;
+    }
+}
+
+.margin-tp {
+    margin-top: 18px;
+}
+
+.vdp-datepicker__clear-button {
+    display: none !important;
+}

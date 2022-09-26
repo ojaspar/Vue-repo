@@ -1,0 +1,112 @@
+.customer-table {
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $primary-color;
+        color: $primary-white;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0;
+        padding-left: 30px;
+        height: 34px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        border-radius: 5px;
+        background-color: $primary-white;
+        color: $primary-black;
+        margin: 0;
+        padding: 13px 5px 13px 20px;
+        border-top: 0.5px solid #e0e0e0;
+        &--loader {
+            text-align: center;
+        }
+        &--empty {
+            text-align: center;
+            font-size: 15px;
+            padding: 15px;
+            background-color: $primary-white;
+            color: $primary-black;
+            @include media-breakpoint-between(xs, lg) {
+                background: none;
+            }
+        }
+        &--ml {
+            margin-left: 50px;
+        }
+    }
+
+    &__more-options {
+        position: absolute;
+        background: $primary-white;
+        -webkit-box-shadow: $card-shadow;
+        box-shadow: $card-shadow;
+        border-radius: 4px;
+        margin-top: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 110px;
+        outline: none;
+        z-index: 1;
+        max-width: 170px;
+    }
+
+    &__content-action {
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 17px;
+        padding: 5px;
+        color: $primary-black;
+        margin: 0;
+        &:hover {
+            background: $light-grey-2;
+        }
+    }
+
+    &__desktop {
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    &__mobile {
+        display: none;
+        @include media-breakpoint-down(sm) {
+            display: inline;
+        }
+    }
+
+    &__mobile-content {
+        padding: 20px 0 17px;
+        margin: 0 15px;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark-brown-3;
+        border-bottom: 1px solid $faint-grey;
+
+        p:nth-of-type(1) {
+            font-weight: 600;
+        }
+
+        &:last-child {
+            border: none;
+        }
+    }
+}
+
+.dark--grey {
+    color: $dark-grey-1;
+}
+
+.prepayment {
+    color: $primary-color;
+}
+
+.balance {
+    color: $notification-red;
+}

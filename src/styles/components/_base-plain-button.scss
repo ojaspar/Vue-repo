@@ -1,0 +1,33 @@
+.base-plain-btn {
+    color: $primary-color;
+    width: fit-content;
+    min-width: 145px;
+    height: 34px;
+    background: $primary-white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px rgba(177, 177, 177, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint-up(sm) {
+        min-width: 150px;
+    }
+
+    &:hover {
+        color: $primary-color;
+    }
+    &:active,
+    &:focus {
+        background-color: $primary-white;
+        color: $primary-color;
+        border: 0.7px solid $primary-color;
+    }
+    &:disabled {
+        color: $primary-white;
+        cursor: not-allowed;
+        background: none $light-grey-2;
+    }
+}

@@ -1,0 +1,84 @@
+.dashboard-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px -15px 20px;
+    border-bottom: 2px solid $light-grey-12;
+
+    &__content {
+        display: flex;
+        margin: 0 0 -2px;
+        justify-content: flex-start;
+    }
+
+    &__mobile-view {
+        display: none;
+        @include media-breakpoint-down(lg) {
+            padding: 0 0 9px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid $primary-color-1;
+        }
+    }
+
+    &__filter-buttons {
+        display: flex;
+        flex-flow: row wrap;
+
+        @media screen and (min-width: 536px) {
+            &--add-donation {
+                margin-left: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 536px) {
+            flex-direction: column;
+
+            &--add-donation {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+.status-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 0 50px 8px;
+    text-align: center;
+    cursor: pointer;
+    color: $dark-grey-1;
+    &:first-child {
+        justify-content: start;
+    }
+    &__select {
+        font-weight: bold;
+        color: $primary-color-1;
+    }
+}
+
+.status-text-select {
+    > .form-control {
+        border: none;
+        width: auto;
+        height: auto;
+        background-color: #fafafa;
+    }
+}
+
+.active-status {
+    font-weight: bold;
+    color: $primary-color-1;
+    border-bottom: 2px solid $primary-color-1;
+}
+
+.desktop-view {
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+}

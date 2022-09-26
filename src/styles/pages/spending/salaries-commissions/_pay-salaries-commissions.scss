@@ -1,0 +1,76 @@
+.salaries-commissions {
+    padding: 0;
+
+    @include media-breakpoint-down(lg) {
+        position: relative;
+        margin-left: 0;
+        max-width: 500px;
+    }
+
+    &__header-section {
+        background-color: $light-blue-9;
+        padding: 1rem 0.8125rem;
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    &__header-text {
+        margin: 0;
+        font-size: 16px;
+        color: $primary-black;
+        padding: 0 13px;
+    }
+
+}
+
+.salaries-commissions-content {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $primary-gradient-background;
+        border-radius: 4px 4px 0px 0px;
+        height: 34px;
+        padding: 0 13px;
+        font-size: 14px;
+        color: $primary-white;
+
+        &--br-4 {
+            border-radius: 4px;
+        }
+
+        &--right {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__left,
+    &__right {
+        border-radius: 4px;
+    }
+
+    &__left {
+        min-height: 48rem;
+        margin: 0;
+        padding: 0;
+
+        @include media-breakpoint-up(xl) {
+            margin-right: 30px;
+        }
+
+        @include media-breakpoint-up(md) {
+            padding: 0 13px 10px;
+            background: $primary-white;
+            box-shadow: $form-box-shadow-light;
+        }
+    }
+
+    &__body {
+        min-height: 400px;
+
+        @include media-breakpoint-up(md) {
+            padding: 0 13px;
+        }
+    }
+}

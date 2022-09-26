@@ -1,0 +1,367 @@
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    grid-area: sidenav;
+
+    background: $primary-gradient-background;
+    box-shadow: $sidebar-shadow;
+
+    overflow-y: auto;
+    overflow-x: auto;
+
+    width: 80%;
+    max-width: 100%;
+    height: 100%;
+
+    transition: all 0.3s ease-in-out;
+
+    position: fixed;
+
+    @include media-breakpoint-up(md) {
+        position: fixed;
+
+        height: 100%;
+        width: 131px;
+        max-width: 131px;
+
+        overflow-y: visible;
+        overflow-x: visible;
+
+        z-index: 4;
+
+        transform: translateX(0);
+    }
+
+    @include media-breakpoint-up(xl) {
+        width: calc(131 * 100vw / 1200);
+        max-width: calc(131px * 1800 / 1200);
+    }
+
+    &__close-icon {
+        font-size: 25px;
+        color: $primary-white;
+
+        z-index: 4;
+    }
+    &__close-icon-container {
+        display: flex;
+
+        position: absolute;
+        left: 23px;
+        top: 15px;
+
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+    &.active {
+        background-color: $primary-gradient-background;
+        transform: translateX(0);
+    }
+    &.inactive {
+        background-color: $primary-gradient-background;
+        transform: translateX(-100%);
+
+        @include media-breakpoint-up(md) {
+            transform: translateX(0);
+        }
+    }
+
+    &__list {
+        background: inherit;
+
+        list-style: none;
+
+        margin-top: 60px;
+
+        @include media-breakpoint-between(md, lg) {
+            height: 100%;
+            font-size: 1.2rem;
+        }
+    }
+    &__company-name {
+        margin-bottom: 0.5rem;
+    }
+
+    &__list-item {
+        position: relative;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        background-color: $primary-gradient-background;
+        font-size: 12px;
+        color: $primary-white;
+
+        &:first-child {
+            cursor: none;
+        }
+
+        &:last-child {
+            // don't show the logout option in the medium screen upwards. This will continue to work as long as
+            // the logout option is the last one
+            @include media-breakpoint-up(md) {
+                display: none;
+            }
+        }
+
+        &.company {
+            padding: 2rem 1.5rem;
+            border-top: 1px solid $sidebar-grey;
+            border-bottom: 1px solid $sidebar-grey;
+            @include media-breakpoint-between(md, lg) {
+                font-size: 1.4rem;
+            }
+        }
+
+        &.highlight {
+            background-color: $primary-white;
+            color: $primary-color;
+        }
+
+        &:hover {
+            cursor: pointer;
+            @include media-breakpoint-up(md) {
+                background-color: $primary-white;
+                color: $primary-color;
+            }
+        }
+    }
+
+    &__list-item-nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        -webkit-box-align: center !important;
+        -webkit-box-pack: justify !important;
+
+        @include media-breakpoint-up(xl) {
+            height: calc(50 * 100vw / 1200);
+        }
+    }
+
+    &__icon-container {
+        height: 65px;
+        width: 17px;
+
+        background-color: inherit;
+        box-sizing: border-box;
+        border-radius: 5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 17px;
+
+        margin: 0 20px;
+
+        @include media-breakpoint-between(md, xl) {
+            height: 50px;
+            width: 40px;
+
+            flex: 0 0 40px;
+
+            padding: 1rem;
+            margin: 0 5px;
+        }
+    }
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__submenu-container {
+        @include media-breakpoint-up(md) {
+            position: absolute;
+
+            background-color: $primary-white;
+            top: 0;
+
+            box-shadow: 3px 3px 3px rgba(63, 63, 68, 0.01);
+
+            border: 1px solid $light-grey-11;
+            border-left: none;
+
+            width: fit-content;
+
+            left: 131px;
+
+            color: $primary-black;
+            z-index: 7;
+            translate: 3s ease-in-out;
+        }
+
+        @media (min-width: 1200px) {
+            left: calc(131 * 100vw / 1200);
+        }
+
+        @media (min-width: 1800px) {
+            left: calc(131px * 1800 / 1200);
+        }
+    }
+    &__submenu-icon,
+    &__submenu-selected-arrow-icon {
+        margin-right: 8px;
+        @include media-breakpoint-down(md) {
+            margin-right: 1rem;
+        }
+    }
+    &__submenu {
+        &__link {
+            @include media-breakpoint-up(md) {
+                text-decoration: none;
+                color: $primary-black;
+                white-space: nowrap;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $primary-black;
+                }
+            }
+        }
+        &__item {
+            font-size: 12px;
+
+            height: calc(50 * 100vw / 1200);
+
+            display: flex;
+            align-items: center;
+
+            border-bottom: 1px solid #efefef;
+
+            &:focus {
+                outline: none;
+            }
+
+            @include media-breakpoint-down(lg) {
+                height: 50px;
+            }
+
+            @include media-breakpoint-up(md) {
+                padding: 7px 14px;
+            }
+            @include media-breakpoint-up(lg) {
+                padding: 14px 21px;
+
+                font-size: 12px;
+
+                &:hover {
+                    border-left: 2px solid $primary-color;
+
+                    padding: 14px 20px 14px 19px;
+
+                    background-color: $hover-sidebar-link-color;
+                }
+            }
+        }
+    }
+
+    &__submenu-mobile-item {
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__dropdown-mobile {
+        color: $primary-white;
+        background-color: $primary-color;
+
+        padding: 0;
+    }
+    &__submenu-mobile {
+        color: $primary-white;
+
+        transition: opacity 1s ease-in;
+
+        margin-left: 5.5rem;
+        padding: 10px;
+
+        &.active {
+            position: relative;
+
+            transform: translateY(0);
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &.inactive {
+            position: absolute;
+
+            opacity: 0;
+            transform: translateY(-100%);
+
+            visibility: hidden;
+        }
+    }
+    &__submenu-link-mobile {
+        position: relative;
+
+        color: $primary-white;
+
+        &::before {
+            content: '\2022';
+            color: $primary-white;
+
+            position: absolute;
+
+            width: 5px;
+            left: -36px;
+
+            font-weight: bolder;
+        }
+
+        &:active {
+            color: $primary-white;
+            text-decoration: none;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        height: 24px;
+    }
+
+    &__logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $primary-white;
+
+        width: 100%;
+        height: 27px;
+
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.text-container {
+    &__title {
+        font-size: 12px;
+        font-family: Roboto;
+        letter-spacing: -0.0571429px;
+        font-style: normal;
+        font-weight: 500;
+
+        color: #eee;
+
+        margin-bottom: 0;
+
+        margin-bottom: 0;
+
+        @include media-breakpoint-up(xl) {
+            font-size: calc(12 * 100vw / 1200);
+        }
+    }
+
+    &__title.active-title-text {
+        color: $primary-color;
+    }
+    &__description {
+        font-size: 12px;
+    }
+}

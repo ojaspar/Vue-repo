@@ -1,0 +1,63 @@
+.formatted-date-picker {
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+        padding: 0 15px !important;
+    }
+
+    @include media-breakpoint-down(sm) {
+        background: $primary-white;
+        padding: 15px;
+        margin: -15px -15px 10px 0;
+        justify-content: space-between;
+        box-shadow: 0px 19.3389px 29.0083px rgba(0, 0, 0, 0.06), 0px 2.41736px 7.25209px rgba(0, 0, 0, 0.04),
+            0px 0px 1.20868px rgba(0, 0, 0, 0.04);
+    }
+
+    &__container {
+        @include media-breakpoint-down(sm) {
+            margin: 5px 10px 0 0;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #4f4f4f;
+        margin: 0 20px 5px 0;
+        white-space: nowrap;
+    }
+
+    &__input {
+        border: 1px dashed $primary-color;
+        color: $primary-color;
+        padding: 10px 8px;
+        font-size: 14px;
+        height: 30px;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+            border: 1px dashed $primary-color;
+            color: $primary-color;
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 17px;
+        padding: 6px;
+        color: $primary-color;
+        border: 0.5px dashed #0ca2d9;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+}

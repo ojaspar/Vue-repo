@@ -1,0 +1,73 @@
+.suppliers {
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        font-size: 18px;
+
+        &--text {
+            margin-bottom: 0;
+        }
+    }
+
+    &__list {
+        border-top: 1px solid $light-grey-10;
+        margin: 10px -15px 0;
+
+        padding: 10px 0 15px;
+
+        display: grid;
+        row-gap: 5px;
+    }
+
+    &__list-item {
+        list-style: none;
+
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        row-gap: 5px;
+
+        padding: 5px 15px;
+        font-size: 14px;
+
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 130px 1fr;
+        }
+
+        & > * {
+            margin-bottom: 0;
+        }
+
+        &--name {
+            word-break: break-all;
+        }
+
+        &--phone {
+            font-style: italic;
+        }
+
+        &--phone,
+        &--message {
+            text-align: right;
+        }
+
+        &:nth-of-type(2n) {
+            background: $light-grey-3;
+        }
+    }
+
+    &__empty-list {
+        padding: 10px 0 15px;
+
+        min-height: 100%;
+
+        background: $primary-white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 14px;
+    }
+}

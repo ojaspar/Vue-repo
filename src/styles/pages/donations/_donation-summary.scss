@@ -1,0 +1,227 @@
+.donation-summary-page {
+    &__card-container {
+        margin-top: 15px;
+        margin-bottom: 24px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $faint-grey;
+    }
+
+    &__icons-container {
+        margin-top: 14px;
+    }
+    &__icons-container,
+    &__edit-delete-icons-container,
+    &__edit-icon-container,
+    &__delete-icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+    }
+    &__delete-icon-container {
+        margin-left: 31px;
+    }
+    &__edit-text,
+    &__delete-text {
+        margin-left: 5px;
+    }
+    &__add-new-item-btn {
+        @include circular-plus-add-entity;
+        font-size: 14px;
+        margin-bottom: 33px;
+        max-width: 201px;
+        background-color: $off-white;
+        margin: 20px 0 10px;
+        & svg {
+            margin-right: 10px;
+            width: 20px;
+        }
+    }
+    &__total-section {
+        &--xl {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            border-top: 1px solid $dark-grey-1;
+            padding-top: 10px;
+        }
+    }
+    &__total-balance-section {
+        font-size: 16px;
+        color: #282828;
+        background-color: $light-blue-3;
+        padding: 10px 13px;
+        margin-bottom: 50px;
+    }
+    &__total-section,
+    &__amount-paid-section,
+    &__balance-section {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        font-size: 16px;
+    }
+
+    &__balance-section {
+        font-weight: 600;
+    }
+    &__submit-btn {
+        @include primary-button;
+        margin: 50px 20px 0;
+    }
+    &__view-summary-btn {
+        @include white-button;
+        margin: 50px 20px 0;
+    }
+    &__table-header {
+        background: $primary-gradient-background;
+        border-radius: 4px 4px 0px 0px;
+        display: flex;
+        padding: 10px 15px 10px 4px;
+        font-size: 14px;
+        align-items: center;
+        border-radius: 4px;
+        color: $primary-white;
+        height: 34px;
+        color: $primary-white;
+    }
+    &__table-body {
+        background: $primary-white;
+        font-size: 14px;
+        border-radius: 4px;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 13px;
+        padding: 7px 15px 7px 4px;
+        border: 1px solid $primary-color;
+        box-shadow: 0px 1px 15px rgba(145, 144, 144, 0.15);
+    }
+
+    &__table-heading {
+        font-size: 14px;
+        color: $color-black-3;
+
+        &--number-truncated {
+            width: 2.8%;
+        }
+
+        &--item-truncated {
+            width: 30.2%;
+        }
+
+        &--form-truncated {
+            width: 30%;
+        }
+
+        &--description {
+            width: 25%;
+        }
+
+        &--description-truncated {
+            width: 40%;
+        }
+        &--icon {
+            width: 2%;
+        }
+
+        &--number {
+            width: 2.2%;
+        }
+        &--item {
+            width: 17%;
+        }
+
+        &--type {
+            width: 12%;
+            margin-left: 41px;
+        }
+
+        &--value {
+            width: 15%;
+        }
+        &--form {
+            width: 17%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--italics {
+            font-style: italic;
+        }
+
+        &__type-text {
+            margin: 0;
+
+            &--instant {
+                color: $primary-green;
+            }
+
+            &--pledge {
+                color: $primary-orange;
+            }
+        }
+
+        &__icons {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 25px;
+        }
+
+        &--attachment-icon {
+            width: 1.5%;
+            margin-right: 14px;
+        }
+        &--edit-icon {
+            width: 1.5%;
+            margin-right: 14px;
+        }
+        &--delete-icon {
+            width: 1.5%;
+        }
+    }
+
+    &__mobile {
+        font-size: 14px;
+
+        &--dropdown-icon,
+        &--type-text {
+            text-align: right;
+        }
+
+        .col,
+        .col-12 {
+            margin-bottom: 8px;
+        }
+
+        &--icons-section {
+            max-width: 175px;
+            font-size: 12px;
+            margin-top: 12px;
+        }
+
+        &--edit,
+        &--delete {
+            display: flex;
+            max-width: 50%;
+        }
+
+        &--edit {
+            padding-right: 0;
+        }
+
+        &--delete {
+            padding-left: 0;
+        }
+
+        &--edit-icon,
+        &--delete-icon {
+            margin-right: 8px;
+        }
+
+        &--summary-section {
+            @include media-breakpoint-between(xs, xs) {
+                flex-direction: column;
+            }
+        }
+    }
+}

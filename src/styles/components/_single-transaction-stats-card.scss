@@ -1,0 +1,52 @@
+.single-transaction-stats {
+    display: flex;
+    align-items: center;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0;
+        //margin-left: 80px;
+        @include media-breakpoint-down(xs) {
+            //margin-left: 0;
+        }
+    }
+
+    &__card {
+        background: #ffffff;
+        height: 95.5px;
+        padding: 12.6px 54px;
+        box-shadow: 0px 1.15135px 2.3027px rgba(177, 177, 177, 0.25), 0px 1.15135px 4.6054px rgba(0, 0, 0, 0.05);
+        border-radius: 4.6054px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include media-breakpoint-down(lg) {
+            padding: 20px;
+        }
+        @include media-breakpoint-down(xs) {
+            width: 50%;
+        }
+    }
+
+    &__card-header {
+        font-size: 16px;
+        line-height: 21px;
+        letter-spacing: -0.0572973px;
+        color: $dark-grey-1;
+        text-align: center;
+    }
+
+    &__card-body {
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: -0.0687568px;
+        text-align: center;
+        color: #ff9d00;
+        @include media-breakpoint-down(lg) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}

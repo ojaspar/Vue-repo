@@ -1,0 +1,14 @@
+.add-new-customer {
+    &__bottom-section {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__submit-button {
+        margin-top: 50px;
+        height: 34px;
+        width: 145px;
+        background: $primary-color;
+        color: $primary-white;
+    }
+}

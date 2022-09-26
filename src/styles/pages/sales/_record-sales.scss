@@ -1,0 +1,556 @@
+.record-sales {
+    &__header-wrapper {
+        &__wrapper {
+            padding: 0;
+            margin: 0;
+        }
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        background-color: $light-blue-9;
+        height: 4rem;
+        font-size: 1.6rem;
+        padding: 1rem 1.5rem;
+        border-radius: 4px;
+    }
+    &__header-text {
+        color: $color-black-3;
+        font-weight: 600;
+    }
+    &__top-header {
+        border: 0.7px solid $primary-color;
+        position: relative;
+        z-index: 2;
+        padding: 1.5rem 3rem;
+        margin: 1rem auto 1.5rem auto;
+        background-color: $light-grey-4;
+        box-shadow: $input-box-shadow;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        &__add-new-logo-icon {
+            margin-right: 5px;
+        }
+        &__logo {
+            display: inline-block;
+            margin: 1.5rem 0 1rem 0;
+        }
+        &__add-logo-section {
+            display: flex;
+            justify-content: center;
+        }
+        &__add-logo-text {
+            font-size: 1.4rem;
+        }
+        &__company-logo-section {
+            border: 0.5px dashed $primary-color;
+            background-color: $light-grey-3;
+            justify-content: center;
+            text-align: center;
+            border-radius: 4px;
+            width: 14.2rem;
+            height: 9.2rem;
+            cursor: pointer;
+        }
+        &__company-text-information {
+            text-align: center;
+        }
+        &__company-name {
+            font-size: 2.5rem;
+            color: $primary-color;
+        }
+        &__company-address,
+        &__company-profile {
+            font-size: 1.4rem;
+            color: $dark-grey-5;
+        }
+        &__company-profile {
+            font-size: 1.4rem;
+            &__icon {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__bottom-section {
+        width: 100%;
+        margin: 1rem auto;
+        box-shadow: $input-box-shadow;
+        background-color: $primary-white;
+        border-radius: 4px;
+        padding: 1.5rem 0;
+    }
+    &__add-payment {
+        &__payment-details-section {
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            padding: 1rem 1.5rem;
+            background-color: $light-grey-5;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 4px;
+            cursor: pointer;
+            outline-color: $primary-color;
+            &__table-heading {
+                background-color: $primary-white;
+                box-shadow: none;
+                font-size: 1.6rem;
+                font-weight: 600;
+                padding: 1rem 1.5rem;
+                color: $color-black-4;
+                & > div {
+                    padding: 0;
+                }
+            }
+            &__table-heading-container {
+                padding: 0;
+                margin-bottom: 3rem;
+            }
+        }
+        &__no-payment-text {
+            margin: 2rem auto;
+            text-align: center;
+            font-size: 1.6rem;
+            padding: 1rem 1.5rem;
+        }
+        &__payment-details-text {
+            font-size: 1.6rem;
+            color: $primary-color;
+        }
+        &__payment-details-arrow {
+            width: 2rem;
+            height: 2rem;
+            font-size: 1.6rem;
+            color: $dark-grey-1;
+        }
+        &__amount-due-balance-section {
+            background-color: $light-blue-5;
+            margin: 3rem 0;
+            padding: 1rem 1.5rem;
+            font-size: 1.6rem;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+        }
+        &__amount-received-section {
+            color: #0b9549;
+        }
+        &__balance-section {
+            color: #f72f09;
+        }
+        &__loader-container {
+            margin: 5rem auto;
+            text-align: center;
+        }
+        &__btn {
+            color: $light-brown-2;
+            border: 1px solid $light-brown-2;
+            width: 40%;
+            height: 4rem;
+            border-radius: 4px;
+            margin: 2rem auto;
+        }
+    }
+    &__edit-item-interface {
+        background: $primary-white;
+        box-shadow: $input-box-shadow;
+        border-radius: 4px;
+        border: 1px solid $primary-color;
+        &__heading {
+            background: $dark-brown-1;
+            border-radius: 4px 4px 0 0;
+            display: flex;
+            color: $primary-white;
+            text-transform: uppercase;
+            align-items: center;
+            height: 4rem;
+            margin-bottom: 3rem;
+            padding: 0 1.3rem;
+        }
+        &__heading-text {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        &__form-body {
+            padding: 0 1rem;
+        }
+        &__button {
+            width: 22rem;
+            height: 4rem;
+            margin: 2.5rem auto;
+        }
+    }
+    &__create-new-product-btn {
+        top: -0.4rem;
+    }
+    &__create-new-customer-btn {
+        top: 0.6rem;
+    }
+    &__create-new-product-btn,
+    &__create-new-customer-btn {
+        background-color: transparent;
+        width: 55%;
+        border: none;
+        display: flex;
+        font-size: 13px;
+        color: $primary-color;
+        position: absolute;
+        right: 0;
+        align-items: center;
+        justify-content: flex-end;
+        padding-left: 0;
+        padding-right: 0;
+        @include media-breakpoint-between(xs, md) {
+            width: 70%;
+        }
+        & > svg {
+            margin-right: 0.5rem;
+            width: 1.8rem;
+        }
+        &:active,
+        &:focus {
+            background-color: transparent;
+        }
+    }
+    &__select-add-new-product-section {
+        position: relative;
+    }
+    &__edit-item-customer-selection {
+        display: block;
+        position: relative;
+        align-items: center;
+        font-size: 1.4rem;
+        border-radius: 4px;
+        margin: 1rem 0 2rem 0;
+        padding-top: 1rem;
+        height: 7.5rem;
+    }
+    &__customer-select {
+        width: 100%;
+        height: 3.4rem;
+    }
+    &__customer-select-container {
+        width: 100%;
+    }
+    &__invoice-number {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+        font-weight: 600;
+    }
+    &__label {
+        color: $dark-grey-1;
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    &__split-discount-boxes,
+    &__amount-paid-payment-method-split {
+        & > div {
+            display: inline-block;
+            &:not(:first-child) {
+                margin-left: 0.1rem;
+            }
+        }
+    }
+    &__split-discount-boxes {
+        & > div {
+            width: 49.8%;
+        }
+    }
+    &__input-container,
+    &__amount-paid-input-container,
+    &__payment-type-select-container {
+        margin-left: auto;
+        margin-right: auto;
+        &:not(:last-child) {
+            margin-bottom: 0.7rem;
+        }
+        & > label {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+    }
+    &__order-completion-section-error-message {
+        color: $error;
+        font-size: 1.3rem;
+    }
+    &__order-completion-question {
+        display: flex;
+        align-items: center;
+        margin-top: 1.6rem;
+        font-size: 1.6rem;
+        &.error-wrapper {
+            border: 1px solid $error;
+        }
+    }
+
+    &__order-question-text {
+        margin: 0;
+    }
+
+    &__radio-button-container {
+        margin-left: 2rem;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        & > label {
+            margin: 0 0 0 0.3rem;
+        }
+    }
+
+    &__radio-button {
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 1px solid $primary-black;
+    }
+    &__amount-paid-input-container {
+        width: 65%;
+    }
+    &__payment-type-select-container {
+        width: 34.6%;
+    }
+    &__text-area-container {
+        & > label {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+    }
+    &__input {
+        font-size: 1.6rem;
+    }
+    &__select,
+    &__payment-method-select {
+        font-size: 1.6rem;
+    }
+    &__date-selection-container {
+        margin-bottom: 1rem;
+    }
+    &__select-container {
+        margin-bottom: 0.7rem;
+        margin-left: auto;
+        margin-right: auto;
+        & > label {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+    }
+
+    &__table {
+        display: table;
+        width: 100%;
+        border: 1px solid $primary-color;
+        margin-bottom: 5rem;
+        padding-bottom: 2rem;
+    }
+    &__table-heading {
+        display: flex;
+        background-color: $dark-brown-1;
+        text-align: center;
+        color: $primary-white;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        border: 0.5px solid $light-red-1;
+    }
+    &__table-cell {
+        text-align: left;
+        align-items: center;
+        padding: 1rem 1.5em;
+        font-size: 1.2rem;
+    }
+    &__table-icon {
+        width: 1%;
+    }
+    &__table-number {
+        width: 3%;
+    }
+    &__table-item {
+        width: 30%;
+    }
+    &__table-quantity {
+        width: 15%;
+    }
+    &__table-amount {
+        width: 15%;
+    }
+    &__table-unit-price {
+        width: 18%;
+    }
+    &__table-edit-delete-icons {
+        width: 10%;
+        display: flex;
+    }
+    &__delete-icon-container {
+        margin-left: 2rem;
+    }
+    &__edit-icon,
+    &__delete-icon {
+        cursor: pointer;
+        font-size: 1.4rem;
+        &:focus {
+            border: 1px solid transparent;
+        }
+    }
+    &__no-item-in-invoice {
+        width: 100%;
+        text-align: center;
+        &__image {
+            margin-top: 3rem;
+            object-fit: cover;
+            object-position: 50% 50%;
+            width: 50%;
+        }
+        &__text {
+            font-size: 1.6rem;
+            color: $dark-grey-6;
+        }
+    }
+    &__total-section {
+        text-align: right;
+    }
+    &__table-row {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        margin: 0.5rem 0.5rem 0 0.5rem;
+        background: $primary-white;
+        border: 1px solid $light-grey;
+        box-shadow: $input-box-shadow;
+        &--active {
+            border: 1px solid $primary-color;
+        }
+    }
+    &__total-row {
+        display: flex;
+        justify-content: space-between;
+        &--blue {
+            background-color: $light-blue-3;
+            font-size: 1.6rem;
+            font-weight: 600;
+            box-shadow: $input-box-shadow;
+            margin: 3rem 0.5rem 0 0.5rem;
+        }
+    }
+    &__dropdown-menu-icon {
+        width: 0.4rem;
+        height: 1rem;
+        cursor: pointer;
+    }
+    &__item-unit-price {
+        font-weight: bolder;
+    }
+    &__delete-btn {
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        fill: red;
+    }
+    &__total-container-section {
+        display: table;
+        width: 100%;
+        border-radius: 4px;
+        margin-top: 3rem;
+        text-align: right;
+        @include media-breakpoint-between(xs, md) {
+            font-size: 1rem;
+        }
+    }
+    &__total-cell {
+        justify-content: flex-end;
+    }
+    &__total-cell,
+    &__amount-received-cell {
+        display: flex;
+        width: 50%;
+        align-items: center;
+        padding: 1rem 1.5rem;
+    }
+    &__amount-paid-error-message,
+    &__payment-type-error-message {
+        font-size: 1.2rem;
+    }
+    &__error-message,
+    &__amount-paid-error-message,
+    &__payment-type-error-message {
+        position: absolute;
+        color: $error;
+        &--block {
+            display: block;
+            color: $error;
+            font-size: 1.2rem;
+        }
+    }
+    &__total-section-error-message {
+        position: absolute;
+        color: $error;
+        bottom: -2.7rem;
+    }
+    &__convert-to-receipt-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2.5rem;
+    }
+    &__convert-to-receipt-text {
+        font-size: 1.6rem;
+        color: $primary-color;
+        cursor: pointer;
+    }
+    &__convert-to-receipt-icon {
+        background: $primary-color;
+        height: 2rem;
+        width: 2rem;
+        margin-right: 4px;
+        border-radius: 50%;
+    }
+}
+
+.edit-record-sales {
+    &__loader-container {
+        width: 100%;
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+
+.total-text {
+    margin-right: 2rem;
+}
+
+.record-sale-btn-section {
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+.record-sale-btn {
+    color: $primary-white;
+    background-image: $button-gradient-color;
+    display: inline-block;
+    height: 4.5rem;
+    width: 45%;
+    text-transform: uppercase;
+    border: none;
+    &:disabled {
+        background: none $light-grey-2;
+    }
+    @include media-breakpoint-between(xs, md) {
+        width: 50%;
+    }
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    transition: opacity 0.2s ease-in;
+}
+
+.fade-leave-active {
+    transition: opacity 0.2s ease-in;
+}
+
+.fade-leave-to {
+    opacity: 0;
+}

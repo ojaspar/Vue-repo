@@ -1,0 +1,189 @@
+.item-details-form {
+    width: 605px;
+
+    @include media-breakpoint-down(lg) {
+        width: 440px;
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 15px;
+    }
+
+    &__header {
+        height: 34px;
+        background: $primary-color;
+        border-radius: 5px 5px 0px 0px;
+        margin-top: 8px;
+        font-size: 16px;
+        line-height: 23px;
+        padding: 5px 15px;
+        color: $primary-white;
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    &__body {
+        padding: 0 15px 15px;
+        box-shadow: 0px 19.3389px 29.0083px rgba(0, 0, 0, 0.06), 0px 2.41736px 7.25209px rgba(0, 0, 0, 0.04),
+            0px 0px 1.20868px rgba(0, 0, 0, 0.04);
+        border-radius: 0 0 5px 5px;
+
+        @include media-breakpoint-up(lg) {
+            min-height: 440px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 0;
+            box-shadow: none;
+        }
+
+        @include media-breakpoint-up(md) {
+            background: $primary-white;
+        }
+    }
+
+    &__quick-expense-link {
+        color: $primary-color;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    &__checkbox {
+        &--input {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: #878787;
+        }
+
+        &--label {
+            font-size: 12px;
+            line-height: 14px;
+            margin: 0 0 0 5px;
+            color: #878787;
+            cursor: pointer;
+        }
+    }
+
+    &__row {
+        display: flex;
+        width: 100%;
+
+        @include media-breakpoint-down(lg) {
+            flex-direction: column;
+        }
+    }
+
+    &__col {
+        width: 50%;
+        display: flex;
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+        }
+
+        &--amount {
+            width: 50%;
+            @include media-breakpoint-down(lg) {
+                margin-right: 0;
+            }
+        }
+
+        &--currency {
+            width: 50%;
+            @include media-breakpoint-down(lg) {
+                margin-right: 0;
+            }
+        }
+
+        &--quantity {
+            margin-left: 15px;
+            width: 50%;
+            @include media-breakpoint-down(lg) {
+                margin-left: 0;
+            }
+        }
+
+        &--unit {
+            width: 50%;
+            @include media-breakpoint-down(lg) {
+            }
+        }
+
+        &--received {
+            width: 50%;
+            @include media-breakpoint-down(lg) {
+                margin-right: 0;
+            }
+        }
+
+        &--remaining {
+            width: 50%;
+            @include media-breakpoint-down(lg) {
+                margin-right: 0;
+            }
+        }
+
+        &--supply-due-date {
+            padding-left: 15px;
+            width: 50%;
+            @include media-breakpoint-down(lg) {
+                padding-left: 0;
+                width: 100%;
+            }
+        }
+
+        &--left {
+            padding-left: 0;
+            @include media-breakpoint-down(lg) {
+                padding: 0;
+            }
+        }
+
+        &--right {
+            padding-right: 0;
+            @include media-breakpoint-down(lg) {
+                padding: 0;
+            }
+        }
+    }
+
+    &__amount-text {
+        font-size: 12px;
+        line-height: 14px;
+        margin: 0;
+        height: 14px;
+        font-style: italic;
+        color: $dark-grey-1;
+    }
+
+    &__input-with-select {
+        display: flex;
+
+        @include media-breakpoint-down(md) {
+            display: block;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    &__expense-items-container {
+        position: relative;
+    }
+
+    &__expense-items-loader {
+        position: absolute;
+        top: 42%;
+        right: 13px;
+    }
+}

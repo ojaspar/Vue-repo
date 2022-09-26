@@ -1,0 +1,126 @@
+.add-staff-payment {
+    margin: 0;
+    padding: 0;
+
+    &__row {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 14px;
+
+        &--input {
+            font-size: 16px;
+            padding: 0 5px;
+            color: $primary-black;
+        }
+
+        &--radio {
+            width: 14px;
+            height: 12.47px;
+            height: calc(1.5em + 0.75rem + 2px);
+            font-size: 14px;
+        }
+
+        &--text-area {
+            height: 80px;
+            @extend .add-staff-payment__row--input;
+        }
+
+        &--select {
+            @extend .add-staff-payment__row--input;
+            font-size: 14px;
+        }
+
+        &--radio-custom-label {
+            margin-bottom: 0;
+            color: $dark-grey-1;
+        }
+
+        &--show-deductions {
+            text-decoration-line: underline;
+            color: $primary-color;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    &__bio-section {
+        @extend .add-staff-payment__row;
+        display: flex;
+        align-items: center;
+        background: $primary-white;
+        border: 1px solid $dark-grey-1;
+        box-shadow: $input-box-shadow;
+        border-radius: 4px;
+        height: 34px;
+        padding: 9px 0;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 15px 0 0;
+
+        &--full-name {
+            margin-left: 9px;
+        }
+    }
+
+    &__loader {
+        margin: 20px auto;
+    }
+
+    &__button-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    &__button-info-section {
+        position: absolute;
+        bottom: 40px;
+        color: $primary-color;
+        font-size: 12px;
+    }
+}
+
+.add-staff-payment-input {
+    &__label {
+        margin-bottom: 0;
+        color: $dark-grey-1;
+    }
+    &__radio-container {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        padding: 0 8px;
+    }
+
+    &__radio-label {
+        @extend .add-staff-payment-input__label;
+        margin-left: 10px;
+        line-height: 1px;
+        cursor: pointer;
+    }
+
+    &__button-area {
+        margin-top: 60px;
+        justify-content: space-between;
+    }
+
+    &__button {
+        height: 34px;
+    }
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+textarea.form-control {
+    min-height: 80px;
+}
+
+.justify-flex-start {
+    justify-content: flex-start;
+}

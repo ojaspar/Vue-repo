@@ -1,0 +1,140 @@
+.add-payment {
+    &__header-wrapper {
+        &__wrapper {
+            padding: 0;
+            margin: 0;
+        }
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        background-color: $light-blue-9;
+        height: 4rem;
+        font-size: 1.6rem;
+        padding: 1rem 1.5rem;
+        border-radius: 4px;
+    }
+    &__header-text {
+        color: $color-black-3;
+        font-weight: 600;
+    }
+    &__customer-info-payment-details-section {
+        background: $primary-white;
+        padding: 2.5rem 1.7rem 7rem 1.7rem;
+        box-shadow: $form-box-shadow-light;
+    }
+    &__customer-and-add-payment-btn-section {
+        width: 100%;
+        margin: 0 auto 2.2rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__customer-text {
+        font-size: 1.6rem;
+        color: $dark-grey-1;
+        margin-right: 0.8rem;
+    }
+    &__customer-name {
+        font-size: 1.6rem;
+        color: $primary-black;
+        font-weight: 600;
+    }
+    &__button {
+        width: 22rem;
+        height: 3.8rem;
+    }
+    &__main-table-payment-details-section {
+        border: 1px solid $primary-color;
+        padding: 0;
+    }
+    &__main-table-heading {
+        background-color: $dark-brown-1;
+        color: $primary-white;
+        padding: 1rem 3rem;
+        margin-top: 0;
+    }
+    &__main-table-heading-container {
+        padding: 0;
+    }
+    &__payment-items-payment-details-section {
+        padding: 0 1.5rem 1.2rem 1.5rem;
+    }
+    &__payment-details-section {
+        margin-top: 2.8rem;
+        margin-bottom: 2rem;
+        padding: 1rem 1.5rem;
+        background-color: $light-grey-5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 4px;
+        cursor: pointer;
+        outline-color: $primary-color;
+        &__table-heading {
+            background-color: $primary-white;
+            box-shadow: none;
+            font-size: 1.6rem;
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+            color: $color-black-4;
+            & > div {
+                padding: 0;
+            }
+        }
+        &__table-heading-container {
+            padding: 0;
+            margin-bottom: 3rem;
+        }
+    }
+    &__no-payment-text {
+        margin: 2rem auto;
+        text-align: center;
+        font-size: 1.6rem;
+        padding: 1rem 1.5rem;
+    }
+    &__payment-details-text {
+        font-size: 1.6rem;
+        color: $primary-color;
+    }
+    &__payment-details-arrow {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.6rem;
+        color: $dark-grey-1;
+    }
+    &__amount-due-balance-section {
+        background-color: $light-blue-5;
+        padding: 1rem 1.5rem;
+        font-size: 1.6rem;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+    }
+    &__amount-received-section {
+        color: #0b9549;
+    }
+    &__balance-section {
+        color: #f72f09;
+    }
+    &__loader-container {
+        margin: 5rem auto;
+        text-align: center;
+    }
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    transition: opacity 0.2s ease-in;
+}
+
+.fade-leave-active {
+    transition: opacity 0.2s ease-in;
+}
+
+.fade-leave-to {
+    opacity: 0;
+}

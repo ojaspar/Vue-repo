@@ -1,0 +1,51 @@
+.manage-expense-mobile {
+    &__top-section {
+        margin: -15px -15px 30px;
+        padding: 0 15px 5px;
+        background: $primary-white;
+    }
+    &__vendor {
+        margin-bottom: 15px;
+        padding-bottom: 25px;
+    }
+
+    &__tx-date {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0 20px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        font-style: italic;
+        color: $primary-color;
+    }
+
+    &__stats {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: #2e2e2e;
+
+        &--right {
+            font-weight: 600;
+            font-size: 18px;
+            text-align: end;
+        }
+    }
+
+    &__split-between {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__space-bottom {
+        > * {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__more-actions {
+        top: 262px !important;
+    }
+}

@@ -1,0 +1,166 @@
+.full-business-profile-page {
+    @include media-breakpoint-up(md) {
+        background: $primary-white;
+
+        width: 90%;
+
+        padding: 0 20px 40px;
+        margin: 0 auto;
+
+        position: relative;
+    }
+
+    @include media-breakpoint-up(lg) {
+        width: 65%;
+
+        padding: 0 40px 40px;
+    }
+
+    &__header {
+        display: none;
+
+        @include media-breakpoint-up(md) {
+            height: 34px;
+
+            display: flex;
+            align-items: center;
+            color: $primary-white;
+            font-size: 14px;
+
+            padding: 0 20px;
+            margin: 0 -20px;
+
+            border-radius: 4px 4px 0 0;
+
+            background: $primary-color;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin: 0 -40px;
+        }
+    }
+
+    &__logo-section {
+        margin: 10px 0;
+
+        display: flex;
+        justify-content: center;
+
+        @include media-breakpoint-up(sm) {
+            margin: 30px 0 0;
+
+            justify-content: flex-start;
+        }
+    }
+
+    &__submit-button {
+        margin: 50px auto 15px;
+    }
+
+    &__logo-wrapper {
+        height: 99px;
+        width: 96px;
+
+        border-radius: 4px;
+
+        border: 1px solid #878787;
+    }
+
+    &__logo-container {
+        height: 100%;
+        width: 100%;
+
+        position: relative;
+        border-radius: inherit;
+    }
+
+    &__empty-logo,
+    &__logo {
+        width: 100%;
+        height: 100%;
+
+        border-radius: inherit;
+    }
+
+    &__empty-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        text-align: center;
+
+        line-height: 12px;
+
+        padding: 5px 0;
+
+        border: 0.822708px solid #878787;
+    }
+
+    &__edit-icon {
+        position: absolute;
+
+        right: -5px;
+        bottom: -4px;
+
+        background: $primary-white;
+
+        border-radius: 50%;
+        border: 1px solid #878787;
+
+        padding: 3px;
+    }
+
+    &__business-name {
+        color: $primary-color;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    &__section-header {
+        font-size: 14px;
+        font-weight: 600;
+
+        margin: 30px 0;
+    }
+
+    &__disabled-field {
+        border: none !important;
+        border-bottom: 1px solid $light-grey-7 !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        background: inherit;
+    }
+
+    &__disabled {
+        @extend .full-business-profile-page__disabled-field;
+
+        + .floating-label > .keep-label-floating {
+            padding: 0 !important;
+            left: 0;
+
+            color: $primary-black;
+        }
+
+        + .base-floating-select__floating-label > .base-floating-select__select-label {
+            left: 2px;
+        }
+
+        .datefield-input {
+            border: none;
+
+            padding: 5px;
+        }
+
+        .datefield-floating-label {
+            left: 6px;
+
+            padding: 0;
+        }
+    }
+}

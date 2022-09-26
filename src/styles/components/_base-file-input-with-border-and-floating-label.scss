@@ -1,0 +1,56 @@
+.file-label {
+    position: absolute;
+    top: -7px;
+    left: 8px;
+    background-color: $primary-white;
+    color: $dark-grey-1;
+    line-height: 10px;
+    font-size: 12px;
+}
+
+.file-input {
+    font-size: 12px;
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}
+
+.file-input-container {
+    display: flex;
+    height: 34px;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+    border: 1px solid $reddish-grey;
+    border-radius: 4px;
+    padding: 18px 8px;
+}
+
+.hide-default-file-input-text {
+    padding: 18px 8px 18px 0px !important;
+}
+.hide-default-file-input-text input[type='file'] {
+    width: 100px;
+    color: transparent;
+    visibility: hidden;
+}
+.moveFileUploadTextClose {
+    left: 88px;
+    font-size: 14px;
+    position: absolute;
+    word-break: break-all;
+    text-align: left;
+    margin-bottom: 0;
+}
+.browse-btn-layout {
+    background: $light-grey-11;
+    border-radius: 4px 0px 0px 4px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 14px;
+    color: $dark-grey-1;
+}

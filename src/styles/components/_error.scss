@@ -1,0 +1,13 @@
+.Error {
+    font-size: 1.5rem;
+    background: $light-error;
+    border-radius: 0.625rem 0.625rem 0rem 0rem;
+    padding: 1.5rem;
+    color: $dark-error;
+}
+
+@media (min-width: 300px) and (max-width: 576px) {
+    .Error {
+        font-size: 1.3rem;
+    }
+}

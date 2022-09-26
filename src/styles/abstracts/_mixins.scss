@@ -1,0 +1,444 @@
+@mixin button {
+    background-image: $button-gradient-color;
+    box-shadow: $button-box-shadow;
+    color: $primary-white;
+}
+
+@mixin dropdown-anchor {
+    background: $primary-white;
+    height: 2.5rem;
+    width: 2.5rem;
+    position: absolute;
+    top: -0.75rem;
+    left: 0;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+@mixin dropdown-actions {
+    position: absolute;
+    left: 3rem;
+    right: 0;
+    top: 3.5rem;
+    bottom: 1.7856rem;
+    background: $primary-white;
+    -webkit-box-shadow: $card-shadow;
+    box-shadow: $card-shadow;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 14rem;
+    outline: none;
+    z-index: 1;
+    max-width: 17rem;
+}
+
+@mixin dropdown-action {
+    padding: 1rem 1.5rem;
+    margin: 0;
+    &:hover {
+        background: $light-grey-2;
+    }
+}
+
+@mixin circular-plus-add-entity {
+    padding-left: 0;
+    border: none;
+    display: flex;
+    color: $primary-color;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@mixin primary-button {
+    width: 150px;
+    height: 34px;
+    color: $primary-white;
+    background-color: $primary-color;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+@mixin danger-button {
+    width: 150px;
+    height: 34px;
+    color: $primary-white;
+    background-color: $dark-error;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+@mixin auth-button {
+    background: $primary-color;
+    border-radius: 5px;
+    width: 330px;
+    height: 40px;
+    color: $primary-white;
+}
+
+@mixin white-button {
+    width: 150px;
+    height: 34px;
+    color: $primary-black;
+    background-color: $primary-white;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+@mixin button-with-embedded-svg {
+    display: flex;
+    align-items: center;
+    border: none;
+    text-align: left;
+    color: $primary-color;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 0;
+    & svg {
+        width: 24px;
+        margin-right: 5px;
+    }
+}
+
+@mixin secondary-button-with-blue-border {
+    background: $primary-white;
+    box-shadow: 0px 0.883041px 8.83041px rgba(0, 0, 0, 0.1);
+    border-radius: 3.53216px;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin data-migration-setup-add-entity {
+    .setup-add-entity {
+        &__right-side-heading {
+            // margin-top: 102px;
+            font-weight: 500;
+            font-size: 16px;
+            margin-bottom: 28px;
+            &--grey {
+                color: $primary-black;
+            }
+
+            @media only screen and (min-width: $md) {
+                margin-top: 40px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+                width: 349px;
+            }
+            @include media-breakpoint-up(lg) {
+                width: 491px;
+            }
+        }
+        &__add-bank-heading {
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        &__delete-edit-section {
+            margin-bottom: 0;
+        }
+        &__delete-entity-icon {
+            font-size: 16px;
+            color: $primary-red;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        &__entity-title-list-section {
+            width: 330px;
+            position: relative;
+            margin: 0;
+
+            @include media-breakpoint-up(md) {
+                width: 349px;
+                margin: 0 auto;
+            }
+            @include media-breakpoint-up(lg) {
+                width: 360px;
+            }
+        }
+        &__title-text {
+            font-size: 16px;
+            background: rgba(190, 188, 188, 0.47);
+            border-radius: 4px;
+            padding: 8px 13px;
+        }
+        &__list-section {
+            @include media-breakpoint-down(sm) {
+                box-shadow: 0px 10px 13px -7px#e6e5e5;
+                width: 310px;
+                margin-bottom: 20px;
+                align-items: unset !important;
+            }
+            font-size: 14px;
+            display: flex;
+            // align-items: center;
+            justify-content: space-between;
+            padding: 13px 15px 10px 15px;
+            box-shadow: 0px 2px 2px rgba(50, 50, 71, 0.06), 0px 2px 4px rgba(50, 50, 71, 0.06);
+            margin-bottom: 15px;
+            background: $primary-white;
+
+            cursor: pointer;
+            // &:hover {
+            //     background: $primary-white;
+            // }
+            border-bottom: 1px solid $faint-grey;
+            p {
+                margin-bottom: 0.5rem !important;
+            }
+            img {
+                cursor: pointer;
+            }
+        }
+        &__account-number {
+            font-size: 16px;
+            color: #0ca2d9;
+        }
+        &__list-amount {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: $dark-brown-3;
+        }
+        &__list-name,
+        &__bank-name {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: $dark-brown-3;
+        }
+        &__add-entity-button {
+            margin-top: 20px;
+            &--entity-added {
+                @include media-breakpoint-up(md) {
+                    width: 349px;
+                }
+                @include media-breakpoint-up(lg) {
+                    width: 491px;
+                }
+                margin: 30px auto 0 auto;
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+        &__add-entity-btn {
+            @include add-new-entity-with-plus-icon-button;
+            justify-content: flex-end;
+        }
+    }
+}
+
+@mixin add-new-entity-with-plus-icon-button {
+    display: flex;
+    align-items: center;
+    border: none;
+    color: $primary-color;
+    font-size: 14px !important;
+    font-weight: 500;
+    padding-left: 0;
+    background: transparent;
+    & svg,
+    .alternative-icon {
+        width: 20px !important;
+        margin-right: 5px;
+    }
+}
+
+@mixin data-migration-add-entity-modal {
+    .add-entity-modal {
+        &__header-text {
+            display: inline;
+            font-size: 16px;
+            text-align: center;
+            margin: 0;
+            &--grey {
+                color: $dark-grey-1;
+            }
+        }
+        &__list-name {
+            color: $primary-color;
+            text-decoration: underline;
+        }
+        &__cancel-btn {
+            display: block;
+            position: absolute;
+            right: 15px;
+            font-size: 25px;
+            top: -4px;
+            cursor: pointer;
+        }
+    }
+}
+
+@mixin initials-container {
+    width: fit-content;
+    font-size: 20px;
+    padding: 10px 7px;
+    background: $primary-white;
+    border: 0.4px solid $dark-grey-7;
+    border-radius: 10px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+@mixin signup-process-logo {
+    display: block;
+    width: 97px;
+    height: 37px;
+    margin: 20px auto;
+}
+
+@mixin signup-process-medium-plus-container {
+    text-align: center;
+
+    @media only screen and (min-width: $md) {
+        box-shadow: $auth-box-shadow;
+        background: $primary-white;
+        padding-top: 20px;
+        max-width: 592px;
+        margin: 53px auto 60px auto;
+        padding-bottom: 1px;
+    }
+}
+
+@mixin signup-process-large-plus-container {
+    text-align: center;
+
+    @media only screen and (min-width: $md) {
+        box-shadow: $auth-box-shadow;
+        background: $primary-white;
+        padding-top: 20px;
+        max-width: 1100px;
+        margin: 0px auto 60px auto;
+        padding-bottom: 1px;
+    }
+}
+
+@mixin signup-process-button {
+    @include auth-button;
+    width: 100%;
+    height: 40px;
+    margin: 40px auto 20px auto;
+
+    @media only screen and (min-width: $md) {
+        width: 330px;
+    }
+
+    @media only screen and (min-width: $lg) {
+        width: 400px;
+    }
+}
+
+@mixin signup-process-heading-primary {
+    text-align: center;
+    color: $primary-color;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+@mixin signup-process-heading-secondary {
+    text-align: center;
+    font-size: 16px;
+    color: $dark-grey-1;
+    margin-bottom: 0;
+}
+
+@mixin user-profile-settings-button {
+    background: $primary-color;
+    display: inline-block;
+    border-radius: 4px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    width: 145px;
+    height: 34px;
+    text-align: center;
+    color: $primary-white;
+    cursor: pointer;
+    outline: none;
+}
+
+@mixin user-settings-button-container {
+    width: 100%;
+    text-align: center;
+}
+
+@mixin center-flex-item {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin forgot-password-medium-plus-container {
+    @media only screen and (min-width: $md) {
+        text-align: center;
+        box-shadow: $auth-box-shadow;
+        background: $primary-white;
+        padding: 100px 0;
+        max-width: 592px;
+        margin: 83px auto 60px auto;
+    }
+}
+
+@mixin forgot-password-medium-plus-inner-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+@mixin forgot-password-button {
+    background: $primary-color;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    width: 330px;
+    height: 50px;
+    margin-top: 50px;
+    text-align: center;
+    color: $primary-white;
+    cursor: pointer;
+    outline: none;
+
+    @media only screen and (min-width: $md) {
+        width: 100%;
+    }
+}
+
+@mixin forgot-password-logo-container {
+    min-width: 97px;
+    display: inline-flex;
+    justify-content: center;
+    height: 37px;
+
+    @media only screen and (min-width: $md) {
+        max-width: 592px;
+        left: 40px;
+        position: absolute;
+    }
+}
+
+@mixin initials-container {
+    font-size: 20px;
+    padding: 10px 7px;
+    border-radius: 40%;
+    background: $primary-white;
+    border: 0.4px solid $dark-grey-7;
+    border-radius: 10px;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-right: 10px;
+}

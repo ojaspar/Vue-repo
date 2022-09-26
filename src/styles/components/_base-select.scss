@@ -1,0 +1,12 @@
+.select > select {
+    border-bottom: 1px solid $light-grey-2;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.select > select.error {
+    color: $error;
+    border-bottom: 1px solid $error;
+}
+

@@ -1,0 +1,277 @@
+.add-expense-content {
+    margin-top: 5px;
+
+    &__header {
+        border-radius: 4px 4px 0px 0px;
+        padding: 9px 13px;
+        font-size: 14px;
+        background: $primary-gradient-background;
+        color: #fff;
+        height: 34px;
+        border-radius: 4px 4px 0px 0px;
+        padding: 9px 13px;
+
+        &--br-4 {
+            border-radius: 4px;
+        }
+    }
+
+    &__left,
+    &__right {
+        border-radius: 4px;
+    }
+
+    &__left {
+        
+        background: $off-white;
+
+        @include media-breakpoint-up(md) {
+            padding: 10px 13px;
+            background: $primary-white;
+            box-shadow: $form-box-shadow-light;
+        }
+    }
+
+    &__right {
+        padding: 0;
+        display: none;
+
+        &--xl {
+            margin-left: 30px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &__body {
+        min-height: 400px;
+
+        @include media-breakpoint-between(md, lg) {
+            padding: 10px 13px;
+            background: $primary-white;
+            box-shadow: $form-box-shadow-light;
+        }
+
+        &--xl {
+            padding: 10px 13px;
+        }
+    }
+
+    label {
+        font-size: 14px;
+        color: $dark-grey-1;
+        margin-bottom: 0;
+    }
+
+    &__cart-container {
+        position: relative;
+    }
+
+    &__cart-count {
+        height: 12px;
+        width: 12px;
+        background: $notification-red;
+        color: $primary-white;
+        border-radius: 50%;
+        font-size: 11px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 62.5%;
+        right: 4.17%;
+        top: -2.48%;
+        bottom: 96.82%;
+    }
+}
+
+.add-new-expense-item {
+    padding: 0;
+
+    &__container {
+        background: $primary-white;
+        border: 0.7px solid $reddish-grey;
+        box-shadow: 0px 1px 15px rgba(145, 144, 144, 0.15);
+        border-radius: 4px;
+        display: flex;
+    }
+
+    &__button {
+        width: 145px;
+        height: 34px;
+        margin: 47px auto 20px;
+        background: $primary-color;
+        color: $primary-white;
+
+        &--left,
+        &--right {
+            margin-right: 5px;
+        }
+    }
+
+    &__icon {
+        color: $primary-color;
+        font-size: 16px;
+    }
+
+    &__input {
+        &--row {
+            margin: 0;
+            border-radius: 4px;
+        }
+
+        &--field {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        &--select {
+            padding: 0 5px;
+        }
+
+        &--radio {
+            width: 14px;
+            height: 12.47px;
+            height: calc(1.5em + 0.75rem + 2px);
+            font-size: 14px;
+        }
+    }
+
+    &__label {
+        margin-bottom: 0;
+        color: $dark-grey-1;
+    }
+    &__radio-container {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        padding: 0 8px;
+    }
+
+    &__radio-label {
+        @extend .add-new-expense-item__label;
+        margin-left: 10px;
+        line-height: 1px;
+        cursor: pointer;
+    }
+
+    &__payment-status-container {
+        border: 1px solid $reddish-grey;
+        margin-top: 20px;
+        justify-content: space-between;
+    }
+
+    &__show-measurement-types {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $primary-white;
+        border: 1px solid $primary-color;
+        box-shadow: $input-box-shadow;
+        border-radius: 4px;
+        width: 23px;
+        height: 23px;
+        color: $primary-color;
+        position: absolute;
+        top: 43%;
+        right: 5px;
+        font-size: 14px;
+    }
+
+    &__payment-input-notification {
+        position: absolute;
+        top: 50%;
+        right: 7px;
+    }
+}
+
+.select-expense {
+    &__headline {
+        font-size: 12px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid $light-grey-7;
+        color: $dark-grey-1;
+    }
+
+    &__no-item-found {
+        font-size: 14px;
+        color: $dark-grey-1;
+        padding: 0;
+    }
+
+    &__info {
+        font-size: 12px;
+        line-height: 18px;
+        color: $dark-grey-1;
+    }
+
+    &__edit,
+    &__select {
+        color: $primary-black;
+        font-weight: 400;
+        margin-bottom: 0;
+
+        &--icon {
+            margin-right: 8px;
+        }
+    }
+
+    &__loader {
+        margin-top: 30%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button-row {
+        margin-top: 7px;
+        display: flex;
+    }
+}
+
+.vendor-request-loading {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.page-title {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.text-area-field,
+.add-new-expense-item,
+.add-expense-group-select {
+    margin-top: 1rem;
+}
+
+.no-resource {
+    &__illustration {
+        margin-top: 4rem;
+        width: 30rem;
+    }
+
+    &__text {
+        margin-top: 3rem;
+    }
+
+    &__button {
+        margin-top: 2rem;
+        width: 30rem;
+        height: 4rem;
+    }
+}
+
+.add-vendor {
+    &__submit-button {
+        width: 20rem;
+    }
+}
+
+#edit-expense___BV_modal_footer_ {
+    display: none;
+}

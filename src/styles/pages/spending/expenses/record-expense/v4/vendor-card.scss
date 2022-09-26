@@ -1,0 +1,96 @@
+.expense-vendor-card {
+    width: 300px;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+
+    @include media-breakpoint-down(md) {
+        width: 255px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+
+    &--no-details {
+        @extend .expense-vendor-card;
+        @include media-breakpoint-down(sm) {
+            border-radius: 5px;
+        }
+    }
+
+    &__header {
+        height: 34px;
+        background: $primary-color;
+        border-radius: 5px 5px 0px 0px;
+        font-size: 16px;
+        line-height: 23px;
+        padding: 5px 15px;
+        color: $primary-white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include media-breakpoint-down(sm) {
+            color: $primary-color;
+            background: $primary-white;
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        &--no-vendor {
+            @extend .expense-vendor-card__header;
+            @include media-breakpoint-down(sm) {
+                border-radius: 5px;
+            }
+        }
+
+        &--name {
+            @include media-breakpoint-down(sm) {
+                color: $primary-black;
+                font-size: 16px;
+            }
+        }
+
+        &--mobile-button {
+            text-decoration: underline;
+            @include media-breakpoint-up(md) {
+                display: none;
+            }
+        }
+    }
+
+    &__details {
+        font-size: 12px;
+        line-height: 14px;
+        padding: 15px;
+        background: #f3f3f3;
+        color: #4f4f4f;
+
+        &--empty {
+            font-size: 12px;
+            line-height: 14px;
+            padding: 15px;
+            background: #f3f3f3;
+            color: #4f4f4f;
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+    }
+
+    &__button {
+        color: $primary-color;
+        background: $primary-white;
+        padding: 7px 0 10px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 14px;
+        line-height: 17px;
+        box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+        border-radius: 0 0 5px 5px;
+
+        @include media-breakpoint-down(sm) {
+            color: $primary-color;
+            background: $primary-white;
+        }
+    }
+}

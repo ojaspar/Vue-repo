@@ -1,0 +1,74 @@
+.desktop-table {
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}
+
+.banking-table {
+    margin: 20px 15px;
+    &__header {
+        display: flex;
+        text-align: left;
+        justify-content: space-between;
+        background: $banking-dashboard-header-grey;
+        border-radius: 4px 4px 0px 0px;
+        padding: 9.45px 0 7.55px;
+        font-size: 14px;
+        font-weight: bold;
+        color: $primary-black;
+    }
+
+    &__content {
+        display: flex;
+        text-align: left;
+        justify-content: space-between;
+        padding: 24px 0 13px;
+        font-size: 14px;
+        color: $primary-black;
+        border-bottom: 0.5px solid $faint-grey;
+        &--loading {
+            color: $color-grey-medium;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            padding: 35px 0;
+            font-size: 35px;
+            line-height: 17px;
+            border-bottom: 0.5px solid $faint-grey;
+        }
+    }
+
+    &__more-options {
+        position: absolute;
+        background: $primary-white;
+        -webkit-box-shadow: $card-shadow;
+        box-shadow: $card-shadow;
+        border-radius: 4px;
+        margin: 10px 0 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100px;
+        outline: none;
+        z-index: 1;
+        max-width: 150px;
+    }
+
+    &__content-action {
+        cursor: pointer;
+        font-size: 13px;
+        line-height: 17px;
+        padding: 5px;
+        color: $primary-black;
+        margin: 0;
+        &:hover {
+            background: $light-grey-2;
+        }
+    }
+
+    &__amount {
+        @include media-breakpoint-between(md, lg) {
+            padding-right: 0;
+        }
+    }
+}

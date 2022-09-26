@@ -1,0 +1,26 @@
+.otp-verification-content {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    &__heading {
+        margin-top: 40px;
+    }
+    &__otp-input-container {
+        max-width: 260px;
+        margin: 24px auto 0 auto;
+    }
+    &__otp-box {
+        width: 50px;
+        height: 50px;
+        background: #f9f9f9;
+        border-radius: 3px;
+        text-align: center;
+    }
+    &__button {
+        @include user-profile-settings-button;
+        margin-top: 50px;
+    }
+    &__button-container {
+        @include user-settings-button-container;
+    }
+}

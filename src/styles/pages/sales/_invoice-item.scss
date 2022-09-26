@@ -1,0 +1,54 @@
+.invoice-item {
+    background: #ffffff;
+    box-shadow: $input-box-shadow;
+    border-radius: 4px;
+    padding: 12px 15px;
+
+    &__customer {
+        height: 40px;
+    }
+
+    &__status {
+        width: 122px;
+        border-radius: 3px;
+    }
+
+    &__col-customer {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    &__col-products {
+        flex: 0 0 18%;
+        max-width: 18%;
+    }
+}
+
+.invoice-item-avatar {
+    width: 4rem;
+    border-radius: 50%;
+}
+
+.amount.completed {
+    color: $success-dark;
+}
+
+.amount.paid {
+    color: $primary-color;
+}
+
+.amount.pending {
+    color: $dark-error;
+}
+
+.status {
+    &__pending {
+        color: $dark-error;
+    }
+    &__completed {
+        color: $success-dark;
+    }
+    &__progress {
+        color: $primary-black;
+    }
+}

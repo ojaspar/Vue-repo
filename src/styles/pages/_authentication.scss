@@ -1,0 +1,62 @@
+.authentication {
+    position: relative;
+    overflow: hidden;
+}
+
+.company {
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 9.9rem;
+        transform: translateY(-50%);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.form-right {
+    top: 50%;
+    transform: translateY(-50%);
+    left: -8rem;
+}
+
+.form {
+    width: 58rem;
+    height: auto;
+    background: $primary-white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 300px) and (max-width: 576px) {
+    .form-right {
+        position: absolute;
+        top: 30rem;
+        left: 40%;
+        transform: translate(-50%, -50%);
+    }
+
+    .auth-form-container {
+        position: absolute;
+        width: 30rem;
+        left: 0%;
+        transform: translate(-50%, -50%);
+    }
+
+    .company {
+        &__text-box {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 1024px) {
+    .company {
+        &__text-box {
+            left: 3rem;
+        }
+    }
+}

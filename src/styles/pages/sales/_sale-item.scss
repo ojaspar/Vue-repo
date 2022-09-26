@@ -1,0 +1,23 @@
+.sale-item {
+    background: #ffffff;
+    box-shadow: $input-box-shadow;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    &__options-icon {
+        cursor: pointer;
+    }
+    
+    &__options-actions{
+        @include dropdown-actions;
+    }
+    &__options-anchor {
+        @include dropdown-anchor;
+    }
+
+    &__options-action {
+       @include dropdown-action;
+    }
+}
+

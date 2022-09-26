@@ -1,0 +1,65 @@
+.estimates {
+    width: 921px;
+    margin: 25px auto;
+
+    @include media-breakpoint-down(lg) {
+        width: 734px;
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+
+    @include media-breakpoint-down(xs) {
+        margin: 0;
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #2e2e2e;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 20px;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 16px;
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: 14px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            display: none;
+        }
+
+        &--customer {
+            color: $primary-color;
+            margin-left: 5px;
+        }
+    }
+
+    &__body {
+        margin-top: 13px;
+        background: $primary-white;
+        box-shadow: 0px 4px 4px rgba(50, 50, 71, 0.08), 0px 4px 8px rgba(50, 50, 71, 0.06);
+
+        @include media-breakpoint-down(xs) {
+            background: none;
+            box-shadow: none;
+        }
+
+        &--actions {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include media-breakpoint-down(xs) {
+                display: none;
+            }
+        }
+    }
+}

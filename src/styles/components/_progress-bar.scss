@@ -1,0 +1,23 @@
+.progress {
+    height: 0.3125rem;
+    margin-bottom: 0.9375rem;
+    width: 100%;
+}
+.progress-bar {
+    background: $primary-color;
+    border-radius: 1.25rem 0rem 0rem 1.25rem;
+
+    &--completed {
+        background: $success-dark;
+    }
+}
+.progress-text {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    width: 26px;
+    height: 16px;
+    letter-spacing: 0.996px;
+    margin-left: 5px;
+    font-style: normal;
+}

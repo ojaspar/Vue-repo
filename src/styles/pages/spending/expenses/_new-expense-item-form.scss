@@ -1,0 +1,100 @@
+.add-new-expense-item {
+    padding: 0;
+
+    &__container {
+        background: $primary-white;
+        border: 0.7px solid $reddish-grey;
+        box-shadow: 0px 1px 15px rgba(145, 144, 144, 0.15);
+        border-radius: 4px;
+        display: flex;
+    }
+
+    &__button {
+        width: 145px;
+        height: 34px;
+        margin: 47px auto 20px;
+        background: $primary-color;
+        color: $primary-white;
+
+        &--left,
+        &--right {
+            margin-right: 5px;
+        }
+    }
+
+    &__icon {
+        color: $primary-color;
+        font-size: 16px;
+    }
+
+    &__input {
+        &--row {
+            margin: 0;
+            border-radius: 4px;
+        }
+
+        &--field {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        &--select {
+            padding: 0 5px;
+        }
+
+        &--radio {
+            width: 14px;
+            height: 12.47px;
+            height: calc(1.5em + 0.75rem + 2px);
+            font-size: 14px;
+        }
+    }
+
+    &__label {
+        margin-bottom: 0;
+        color: $dark-grey-1;
+    }
+    &__radio-container {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        padding: 0 8px;
+    }
+
+    &__radio-label {
+        @extend .add-new-expense-item__label;
+        margin-left: 10px;
+        line-height: 1px;
+        cursor: pointer;
+    }
+
+    &__payment-status-container {
+        border: 1px solid $reddish-grey;
+        margin-top: 20px;
+        justify-content: space-between;
+    }
+
+    &__show-measurement-types {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $primary-white;
+        border: 1px solid $primary-color;
+        box-shadow: $input-box-shadow;
+        border-radius: 4px;
+        width: 23px;
+        height: 23px;
+        color: $primary-color;
+        position: absolute;
+        top: 43%;
+        right: 5px;
+        font-size: 14px;
+    }
+
+    &__payment-input-notification {
+        position: absolute;
+        top: 50%;
+        right: 7px;
+    }
+}

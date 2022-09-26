@@ -1,0 +1,131 @@
+.expense-item-card-pwm {
+    padding: 0 13px;
+
+    @include media-breakpoint-down(xl) {
+        padding: 0;
+    }
+
+    &__item-details-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background: #f7f7f7;
+        border: 1px solid $dark-grey-1;
+        border-radius: 4px; 
+        padding: 10px 16px;
+
+        @include media-breakpoint-up(md) {
+            margin: 15px 13px 0;
+        }
+    }
+    &__item-name-container {
+        display: flex;
+        align-items: center;
+        margin: 8px 0;
+    }
+    &__item-name-text {
+        font-weight: 600;
+        font-size: 14px;
+        margin-left: 9.95px;
+        margin-bottom: 0;
+    }
+
+    &__item-cost-payment-section {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 8px;
+        padding-bottom: 9px;
+        border-top: 1px solid $faint-grey;
+        border-bottom: 1px solid $faint-grey;
+
+        &--edit-payment {
+            line-height: 23px;
+        }
+    }
+    &__text {
+        &--grey {
+            color: $dark-grey-1;
+        }
+    }
+    &__less-text {
+        font-style: italic;
+    }
+    &__item-cost-text {
+        margin: 0;
+    }
+    &__cost-text {
+        color: $dark-grey-1;
+    }
+    &__item-cost-amount {
+        font-size: 14px;
+    }
+    &__item-cost-payment-container {
+        margin-left: 9.95px;
+        font-size: 14px;
+    }
+    &__select-label {
+        margin: 0;
+    }
+    &__item-cost-text,
+    &__item-payment-text {
+        margin: 0;
+    }
+    &__item-paid-text {
+        color: $dark-grey-1;
+    }
+    &__amount {
+        margin-left: 5px;
+    }
+    &__bank-text {
+        margin-left: 5px;
+        color: $dark-grey-1;
+    }
+    &__vendor-section {
+        display: flex;
+        align-items: center;
+        padding-top: 8px;
+        padding-bottom: 13px;
+    }
+    &__vendor-text {
+        font-size: 14px;
+        margin-left: 13px;
+        margin-bottom: 0;
+    }
+    &__input {
+        margin-bottom: 20px;
+    }
+    &__checkbox-input-container {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &__checkbox-label {
+        margin-left: 5px;
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+    &__add-new-vendor-btn {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        font-size: 14px !important;
+        padding: 0;
+        border: none;
+        &:active,
+        &:hover {
+            background-color: transparent;
+        }
+        & svg {
+            width: 16px;
+            margin-right: 8px;
+        }
+    }
+
+    &__balance-amount {
+        &--deficit {
+            color: $danger-red;
+        }
+    }
+}

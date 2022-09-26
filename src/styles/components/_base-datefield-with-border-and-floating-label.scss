@@ -1,0 +1,56 @@
+.datefield-floating-label {
+    position: absolute;
+    background-color: $primary-white;
+    top: -5px;
+    left: 8px;
+    padding: 0 2px;
+    line-height: 11px;
+    font-size: 11px;
+    color: $dark-grey-1;
+}
+.datefield-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 18px;
+    height: 34px;
+    border-radius: 4px;
+    padding: 10px 0px;
+}
+
+.datefield-input {
+    border-radius: 4px;
+    border: 1px solid $reddish-grey;
+    padding: 10px 8px;
+    font-size: 14px;
+    height: 34px;
+    width: 100%;
+    &:focus {
+        outline: $primary-color !important;
+        border: 1px solid $primary-color !important;
+    }
+}
+
+.vdp-datepicker {
+    width: 100%;
+
+    &__clear-button {
+        position: absolute;
+        right: 8px;
+        font-size: 20px;
+    }
+
+    &__calendar {
+        .cell.day {
+            font-size: 16px !important;
+        }
+
+        header,
+        .cell.month,
+        .cell.year,
+        .day-header,
+        .day__month_btn {
+            font-size: 14px !important;
+        }
+    }
+}

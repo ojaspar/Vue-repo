@@ -1,0 +1,38 @@
+.mobile-banking-dashboard {
+    @include media-breakpoint-between(md, xl) {
+        display: none;
+    }
+}
+
+.banking-mobile-table {
+    margin: 15px 15px;
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 15px 10px 0;
+        color: $primary-black;
+        border-bottom: 0.5px solid $faint-grey;
+        &--loading {
+            color: $color-grey-medium;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            padding: 20px 0;
+            font-size: 20px;
+            line-height: 17px;
+            border-bottom: 0.5px solid $faint-grey;
+        }
+    }
+    &__account-name {
+        font-size: 14px;
+        line-height: 17px;
+        color: $primary-color-1;
+    }
+    &__account-balance {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.05px;
+        color: $primary-black;
+    }
+}

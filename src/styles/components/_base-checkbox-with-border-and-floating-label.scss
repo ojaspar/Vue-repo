@@ -1,0 +1,47 @@
+.base-floating-checkbox {
+    &__floating-label {
+        position: absolute;
+        top: -10px;
+        left: 6px;
+        background-color: $primary-white;
+        color: $dark-grey-1;
+        font-size: 11px;
+        padding: 0 2px;
+        margin: 0;
+    }
+    &__label {
+        margin: 0 0 0 5px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+    }
+    &__input-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin: 20px 0 4px;
+        border: 1px solid $reddish-grey;
+        height: 34px;
+        border-radius: 4px;
+        padding: 10px 8px 10px 8px;
+    }
+
+    &__input-container label {
+        display: inline-block;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    &__input-container input {
+        vertical-align: middle;
+        margin-right: 3px;
+        margin-left: 5px;
+    }
+    &__input-container label span {
+        vertical-align: middle;
+    }
+
+    &__input-label {
+        margin-left: 5px;
+        text-align: left;
+    }
+}

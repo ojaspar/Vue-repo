@@ -1,0 +1,29 @@
+start-trial {
+    min-height: 100vh;
+    position: relative;
+    @include media-breakpoint-up(md) {
+        padding-right: 0;
+    }
+    &__logo {
+        @include signup-process-logo;
+    }
+    &__medium-plus-container {
+        @include signup-process-medium-plus-container;
+    }
+    &__party-pooper-image {
+        margin-bottom: 30px;
+    }
+    &__heading-container {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+    &__heading-primary {
+        @include signup-process-heading-primary;
+    }
+    &__heading-secondary {
+        @include signup-process-heading-secondary;
+    }
+    &__button {
+        @include signup-process-button;
+    }
+}

@@ -1,0 +1,227 @@
+.tax-page {
+    padding: 0;
+
+    @include media-breakpoint-between(md, md) {
+        padding: 0 17px;
+    }
+}
+
+.tax-page-container {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 3.53216px;
+    max-width: 500px;
+    margin: 0;
+    min-height: 500px;
+    
+    background: $primary-white;
+
+    @include media-breakpoint-down(sm) {
+        background: $off-white;
+    }
+
+    @include media-breakpoint-up(md) {
+        box-shadow: 0px 0.883041px 8.83041px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 30px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        max-width: 779px;
+        padding: 30px 100px;
+    }
+
+    &__disabled-field {
+        border: none !important;
+        border-bottom: 1px solid $light-grey-7 !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        background: inherit;
+
+        + .floating-label > .keep-label-floating {
+            padding: 0 !important;
+            left: 0;
+        }
+    }
+
+    &__heading {
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__checkbox-input {
+        margin: 0;
+    }
+
+    &__submit-button {
+        margin: 30px auto;
+    }
+
+    &__uploaded-file {
+        margin: 20px 0;
+
+        cursor: pointer;
+        height: 80px;
+
+        display: flex;
+        flex-direction: column;
+
+        &--thumbnail {
+            position: relative;
+
+            height: 50px;
+
+            filter: drop-shadow(0px 4.62128px 18.4851px rgba(53, 55, 81, 0.06));
+            border-radius: 5px 5px 0px 0px;
+            background: $dark-grey-2;
+        }
+
+        &--text-area {
+            display: flex;
+            justify-content: center;
+
+            font-size: 14px;
+            text-align: center;
+
+            background: $primary-white;
+            box-shadow: 0px 4.62128px 18.4851px rgba(53, 55, 81, 0.06);
+            border-radius: 0px 0px 5px 5px;
+
+            padding: 5px 0;
+        }
+
+        &--icon {
+            margin-left: 10px;
+        }
+
+        &--pdf-icon {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            height: 35px;
+        }
+    }
+
+    &__tax-profile {
+        margin-top: 30px;
+    }
+
+    &__tax-station-name {
+        position: relative;
+    }
+
+    &__registration-status {
+        font-size: 14px;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &--pending {
+            color: $primary-red;
+        }
+
+        &__approved {
+            color: $success;
+        }
+    }
+
+    &__progress-bar-container {
+        margin-top: 30px;
+    }
+
+    &__success-page-buttons {
+        margin-top: 30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & > div:first-child {
+            @include media-breakpoint-down(xs) {
+                margin-bottom: 20px;
+            }
+
+            button {
+                width: max-content;
+
+                background: $primary-color;
+                color: $primary-white;
+
+                border-radius: 5px;
+                border: none;
+            }
+        }
+
+        & > div:last-child {
+            button {
+                width: max-content;
+
+                background: $primary-white;
+                border: 2px solid $primary-color;
+
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.progress.tax-forms-progress-bar {
+    border-radius: 1.25rem;
+
+    height: 10px;
+    border: 1px solid #d9d9d9;
+
+    background: $primary-white;
+
+    .progress-bar {
+        background: $primary-green;
+    }
+}
+
+.tax-station {
+    margin: 20px 0;
+}
+
+.empty-tax-station {
+    width: 100%;
+    border: 1px dashed $primary-black;
+    border-radius: 4px;
+    height: 140px;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $primary-white;
+
+    @include media-breakpoint-up(md) {
+        height: 228px;
+    }
+
+    &__add-new {
+        @include secondary-button-with-blue-border;
+        height: 35px;
+        width: 45%;
+        margin-top: 10px;
+
+        @include media-breakpoint-up(md) {
+            width: 27%;
+        }
+
+        &:focus {
+            color: $primary-color;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,190 @@
+.no-entity {
+    position: relative;
+    &__image {
+        width: 100%;
+    }
+    &__text-btn-section {
+        position: absolute;
+        bottom: 6%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    &__main-text {
+        font-size: 3.3rem;
+        color: #4d5078;
+    }
+    &__sub-text {
+        margin-top: 1.7rem;
+        font-size: 2rem;
+        color: rgba(77, 80, 120, 0.72);
+    }
+    &__plus-sign {
+        fill: $primary-white;
+        width: 1.7rem;
+        height: 1.7rem;
+        margin-bottom: 0.2rem;
+        margin-right: 2rem;
+    }
+    &__btn {
+        margin-top: 5rem;
+        width: 25.5rem;
+        height: 5.6rem;
+        border-radius: 5px;
+        display: inline-block;
+        color: $primary-white;
+        text-transform: uppercase;
+        background: $button-gradient-color;
+    }
+}
+
+// transitions
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    transition: opacity 0.3s ease-out;
+}
+
+.fade-leave-active {
+    transition: opacity 0.2s ease-in;
+}
+
+.fade-leave-to {
+    opacity: 0;
+}
+
+.search-entity {
+    display: flex;
+    align-items: center;
+    &__input {
+        font-size: 1.3rem;
+        padding: 0 5rem;
+        border: none;
+        &::-webkit-input-placeholder,
+        &:-ms-input-placeholder,
+        &::placeholder {
+            font-size: inherit;
+            font-family: inherit;
+        }
+        @include media-breakpoint-between(xs, md) {
+            font-size: 0.95rem;
+            padding: 0 3rem;
+        }
+    }
+    &__input:focus {
+        box-shadow: $input-box-shadow-dark;
+        outline: none;
+    }
+    &__input-container {
+        border: 0.7px solid $primary-color;
+        box-shadow: $input-box-shadow;
+        display: flex;
+        flex-grow: 2;
+    }
+    &__btn {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        border: none;
+        right: 12%;
+        width: 15rem;
+        padding: 0;
+        font-size: 1.3rem !important;
+        box-shadow: none;
+        outline: none;
+        margin-right: -10rem;
+        transition: all 0.2s;
+        @include media-breakpoint-between(xs, md) {
+            display: none;
+        }
+    }
+    &__btn:active {
+        box-shadow: $input-box-shadow-dark;
+        transform: translateY(1px);
+        outline: none;
+    }
+}
+.entity-avatar-icon {
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    width: 1.57rem;
+    @include media-breakpoint-between(xs, md) {
+        width: 1.3rem;
+    }
+}
+
+.entity-display {
+    box-shadow: $form-box-shadow-light;
+    padding: 0 2rem;
+    background-color: $primary-white;
+}
+
+.selected-entity,
+.all-entity-items {
+    &__header {
+        margin-bottom: 4rem;
+        align-items: center;
+        width: 100%;
+    }
+    &__heading {
+        margin-left: 1rem;
+        font-size: 1.3rem;
+    }
+    &__icon {
+        width: 1.3rem;
+    }
+    &__line {
+        border-bottom: 0.7px solid rgba(60, 60, 60, 0.5);
+        display: flex;
+        flex-grow: 1;
+    }
+    &__items {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        & > div {
+            width: 16.6667%;
+        }
+    }
+}
+
+.selected-entity-text,
+.all-entity-items-text {
+    font-size: 1.3rem;
+}
+
+.products-selection-btn {
+    background: $button-gradient-color;
+    font-size: 2.2rem;
+    line-height: 1.8125rem;
+    color: $primary-white;
+    border: none;
+    width: 20%;
+    &:hover {
+        color: $primary-white;
+    }
+    &:disabled {
+        background: none $light-grey-2;
+    }
+    @include media-breakpoint-between(xs, md) {
+        width: 50%;
+    }
+}
+
+.vendor-selection-for-all-other-expenses-container {
+    margin: 2rem 0;
+}
+
+.vendor-selection-for-all-other-expenses-checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.vendor-selection-for-all-other-expenses-checkbox-label {
+    font-size: 1.5rem;
+    margin: 0 0 0 0.7rem;
+}

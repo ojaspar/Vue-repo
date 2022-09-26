@@ -1,0 +1,45 @@
+.preview-page {
+    padding: 20px 15px;
+    &__title {
+        font-size: 14px;
+        line-height: 17px;
+        color: #7c7c7c;
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 17px;
+        color: $primary-black;
+    }
+    &__notes {
+        margin-top: 40px;
+    }
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 50px 0 0;
+    }
+    &__transfer-btn {
+        width: 133px;
+        height: 34px;
+        border-radius: 4px;
+        color: $primary-white;
+        background-color: $primary-color-1;
+        &:focus {
+            color: $primary-white;
+            background-color: $primary-color-1;
+        }
+    }
+}
+
+.split {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 0.5px solid $faint-grey;
+}

@@ -1,0 +1,203 @@
+.customer-transaction {
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #dedddd;
+        color: $primary-black;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 17px;
+        margin: 0;
+        border-radius: 5px;
+        height: 34px;
+        padding: 9px 0 8px 30px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        border-radius: 5px;
+        background-color: $primary-white;
+        color: $primary-black;
+        margin: 0;
+        padding: 9px 0 8px 10px;
+        border-top: 0.5px solid $faint-grey;
+        &--loader {
+            text-align: center;
+        }
+        &--empty {
+            text-align: center;
+            font-size: 15px;
+            padding: 15px;
+            background-color: $primary-white;
+            color: $primary-black;
+            @include media-breakpoint-between(xs, lg) {
+                border-top: 0.5px solid $faint-grey;
+            }
+        }
+    }
+}
+
+.align-right {
+    text-align: right;
+}
+
+.dark-grey {
+    color: $dark-grey-1;
+}
+
+.icon-box {
+    text-align: right;
+    margin: 0;
+}
+
+.card-icon {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.m-t {
+    margin-top: 19px !important;
+}
+
+.m-r {
+    margin-right: 50px !important;
+}
+
+.content-text {
+    font-size: 14px;
+    line-height: 17px;
+    &__pending {
+        font-size: 14px;
+        line-height: 17px;
+        color: $notification-red;
+    }
+    &__estimate {
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark-grey-1;
+    }
+    &__completed {
+        font-size: 14px;
+        line-height: 17px;
+        color: $success;
+    }
+    &__meta {
+        margin: 3px 0 0 0;
+        font-size: 12px;
+        line-height: 14px;
+        color: $primary-color;
+        &--date {
+            color: $dark-grey-1;
+            font-size: 12px;
+            margin: 3px 0 0 0;
+            line-height: 14px;
+        }
+        &--balance {
+            font-size: 12px;
+            line-height: 14px;
+            margin: 3px 0 0 0;
+            color: $notification-red;
+        }
+    }
+}
+
+.large-customer-transaction {
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+}
+
+.medium-customer-transaction {
+    margin-top: 20px;
+    display: none;
+    @include media-breakpoint-between(sm, lg) {
+        display: inline;
+    }
+}
+
+.small-customer-transaction {
+    margin-top: 20px;
+    display: none;
+    @include media-breakpoint-down(xs) {
+        display: inline;
+    }
+}
+
+.transaction-mobile-table {
+    @include media-breakpoint-between(xs, lg) {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            border-radius: 5px;
+            border-top: 0.5px solid $faint-grey;
+            background-color: $primary-white;
+            color: $primary-black;
+            padding: 20px 0;
+            &--details {
+                display: flex;
+                flex-direction: column;
+                line-height: 16px;
+            }
+        }
+    }
+}
+
+.mobile-content {
+    &__meta {
+        font-size: 12px;
+        line-height: 14px;
+        color: $primary-color;
+        margin-bottom: 0;
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 17px;
+        margin: 6px 0 0;
+    }
+    &__balance {
+        font-size: 14px;
+        line-height: 17px;
+        margin: 6px 0 0;
+        color: $notification-red;
+    }
+    &__pending {
+        font-size: 12px;
+        line-height: 14px;
+        margin: 6px 0 0;
+        color: $notification-red;
+    }
+    &__estimate {
+        font-size: 12px;
+        line-height: 14px;
+        margin: 6px 0 0;
+        color: $dark-grey-1;
+    }
+    &__completed {
+        font-size: 12px;
+        line-height: 14px;
+        margin: 6px 0 0;
+        color: $success;
+    }
+    &__dark-grey {
+        font-size: 14px;
+        line-height: 17px;
+        margin: 6px 0 0;
+        color: $dark-grey-1;
+    }
+    &__right {
+        padding-top: 0;
+    }
+}
+
+.table-icon {
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 3px;
+}

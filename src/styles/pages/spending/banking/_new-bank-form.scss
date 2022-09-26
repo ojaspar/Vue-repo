@@ -1,0 +1,114 @@
+.bank-form {
+    border-radius: 1rem;
+
+    &__heading {
+        width: 100%;
+        height: 30px;
+        padding: 20px 10px;
+        border-radius: 5px 5px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $primary-color;
+
+        &--text {
+            color: $primary-white;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    &__input {
+        padding: 0;
+    }
+
+    &__select-input {
+        padding: 0 4px !important;
+        &:focus {
+            border: none;
+            outline: 0.5px solid $primary-color;
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 12px !important;
+        }
+    }
+
+    &__split-field {
+        margin: 0;
+        &--left {
+            padding: 0 5px 0 0;
+            @include media-breakpoint-down(sm) {
+                padding: 0;
+            }
+        }
+        &--right {
+            padding: 0 0 0 5px;
+            @include media-breakpoint-down(sm) {
+                padding: 0;
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 50px 0 0;
+    }
+
+    &__save-btn {
+        width: 133px;
+        height: 34px;
+    }
+}
+
+.close-btn {
+    color: $primary-white !important;
+    font-size: 25px !important;
+    cursor: pointer;
+}
+
+#bank-form-modal-for-adding {
+    &___BV_modal_header_ {
+        border: none;
+        padding: 0;
+    }
+    &___BV_modal_body_ {
+        border: none;
+        padding: 13px;
+    }
+    &___BV_modal_footer_ {
+        display: none;
+    }
+    &___BV_modal_content_ {
+        border: none;
+        border-radius: 5px;
+        margin-top: 40px;
+        @include media-breakpoint-between(md, xl) {
+            width: 600px;
+        }
+    }
+}
+
+#bank-form-modal-for-editing {
+    &___BV_modal_header_ {
+        border: none;
+        padding: 0;
+    }
+    &___BV_modal_body_ {
+        border: none;
+        padding: 13px;
+    }
+    &___BV_modal_footer_ {
+        display: none;
+    }
+    &___BV_modal_content_ {
+        border: none;
+        border-radius: 5px;
+        margin-top: 40px;
+        @include media-breakpoint-between(md, xl) {
+            width: 600px;
+        }
+    }
+}

@@ -1,0 +1,199 @@
+.new-customer-form {
+    background: $primary-white;
+    border: 1px solid $primary-color;
+    box-shadow: $input-box-shadow;
+    border-radius: 6px;
+    padding: 3rem 2rem;
+    max-width: 70rem;
+    width: 65rem;
+    overflow-y: none;
+    margin-bottom: 2.5rem;
+
+    &__container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+    &__title {
+        font-size: 2.3rem;
+    }
+    &__btn {
+        font-size: 2rem;
+        line-height: 1.35rem;
+        padding: 1rem 1.5rem;
+        border-radius: 0.8rem;
+        display: inline-block;
+        width: 26rem;
+        height: 6rem;
+    }
+    &__footer {
+        margin: 50px 0 10px;
+    }
+}
+
+.form-input {
+    position: relative;
+    &__label {
+        margin-left: 4rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        margin: 0.5rem 4rem 2rem;
+        border: 0.7px solid $primary-color;
+        box-shadow: $input-box-shadow;
+        border-radius: 4px;
+        padding: 3px 0;
+        &--error {
+            border-color: $dark-error;
+            padding: 0;
+        }
+    }
+}
+
+.input-field__new-customer:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.select__new-customer:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.icon {
+    color: $primary-color;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.customer-info {
+    &__label {
+        font-size: 1.6rem;
+    }
+    &__container {
+        margin-top: -1.2rem;
+    }
+}
+
+.select__new-customer {
+    border: none;
+    font-size: 1.6rem;
+    margin: -0.3rem 0 0.2rem 0;
+}
+
+.done-btn {
+    background: linear-gradient(90deg, #0077a1 45.48%, #ff9501 165.85%);
+    margin: 0.5rem;
+}
+
+.close-btn {
+    color: $dark-error;
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-right: 2rem;
+}
+
+.input-field {
+    &__new-customer {
+        border: none;
+        font-size: 1.6rem;
+        margin: -0.3rem 0 0.1rem 0;
+        padding: 0;
+    }
+}
+
+.parsley-required {
+    &__new-customer-input {
+        color: $error;
+        font-size: 1.3rem;
+        margin-bottom: 0.15rem;
+    }
+    &__new-customer-select {
+        color: $error;
+        font-size: 1.3rem;
+        margin: 0 0 0.15rem 1rem;
+    }
+}
+
+#add-customer-form-modal {
+    &___BV_modal_header_ {
+        border: none;
+    }
+    &___BV_modal_body_ {
+        margin-top: -1.6rem;
+    }
+    &___BV_modal_footer_ {
+        display: none;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 576px) {
+    .new-customer-form {
+        width: 100vw;
+        top: 2rem;
+        padding: 0.5rem 0 1rem 0;
+
+        &__title {
+            font-size: 1.5rem;
+            width: 100%;
+        }
+        &__btn {
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            width: 10rem;
+        }
+    }
+
+    .form-input {
+        font-size: 1.3rem;
+        &__label {
+            font-size: 1.3rem;
+            line-height: 1.9rem;
+        }
+        &__new-customer {
+            font-size: 1.3rem;
+        }
+        &__container {
+            margin: 1rem 1rem;
+        }
+    }
+
+    .customer-info {
+        &__label {
+            font-size: 1.3rem;
+        }
+    }
+
+    .close-btn {
+        font-size: 1.8rem;
+    }
+
+    .icon {
+        font-size: 1.5rem;
+    }
+
+    .select__new-customer {
+        font-size: 1.3rem;
+    }
+}
+@media (min-width: 400px) and (max-width: 1024px) {
+    .new-customer-form {
+        overflow: auto;
+
+        &__title {
+            font-size: 1.8rem;
+            width: 100%;
+        }
+        &__input,
+        &__select {
+            font-size: 0.9rem;
+        }
+    }
+}

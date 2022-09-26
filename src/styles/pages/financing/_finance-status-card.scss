@@ -1,0 +1,28 @@
+.finance-card {
+    padding: 15px 5px 7px 20px;
+    border: 1px solid $light-brown-3;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    &__text {
+        font-style: normal;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 44px;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.996px;
+    }
+    &__progess {
+        height: 15px !important;
+        border-radius: 30px;
+        margin: 0 10px 10px 30px;
+        &--loan {
+            background: $finance-orange;
+            border-radius: 30px;
+        }
+        &--capital {
+            background: $finance-green;
+            border-radius: 30px;
+        }
+    }
+}
